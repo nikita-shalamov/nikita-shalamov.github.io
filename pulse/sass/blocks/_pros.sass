@@ -1,0 +1,40 @@
+.pros
+    padding: 73px 0 65px 0
+    min-height: 470px
+    &__list
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+    &__item
+        margin-top: 65px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    &__item-title
+        margin-top: 30px
+        color: #0D0D0D
+        text-align: center
+        font-size: 18px
+        font-weight: 700
+        line-height: normal
+    &__descr
+        margin-top: 20px
+        width: 270px
+        color: #0D0D0D
+        text-align: center
+        font-size: 14px
+        font-weight: 300
+        line-height: 18px
+        span 
+            color: #F00
+            font-size: 14px
+            font-weight: 300
+            line-height: 18px
+            text-decoration-line: underline
+    &__icon
+        &_animated
+            animation: heartbeat 1.5s ease infinite
+            &:hover
+                animation-play-state: paused
