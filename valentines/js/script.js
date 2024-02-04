@@ -37,6 +37,7 @@ document.getElementById('yesButton').addEventListener('click', function() {
 document.getElementById('noButton').addEventListener('click', function() {
     document.getElementById('img1').classList.add('hidden');
     document.getElementById('sad_img').classList.add('active_photo');
+    document.getElementById('noButton').classList.add('hidden');
 });
 
 function updateMainHeight() {
