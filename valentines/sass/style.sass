@@ -1,0 +1,96 @@
+
+@font-face
+    font-family: "Buba"
+    src: url("../fonts/BUBA_regular.woff2") format("woff2")
+
+*
+    font-family: "Buba"
+    box-sizing: border-box
+    background-color: rgb(252, 254, 252)
+
+.container
+    position: relative
+    width: 1140px
+    height: 100%
+    margin: 0 auto
+    padding: 50px 0
+
+.main
+    position: relative
+    width: 100%
+    max-height: 800px
+    display: flex
+    justify-content: center
+    align-items: center
+    &__block
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    &__title
+        color: #F5B9D9
+        font-size: 45px
+        text-align: center
+    &__image
+        margin: 0 auto
+        max-width: 400px
+        img
+            width: 100%
+    &__buttons
+        position: relative
+        margin: 0 auto
+        margin-top: 50px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        gap: 110px
+    &__button
+        font-size: 30px
+        color: #fff
+        width: 140px
+        height: 65px
+        border-radius: 12px
+        border: none
+        background-color: #F5B9D9
+        cursor: pointer
+        transition: 0.2s all
+    &__second-title
+        display: none
+    &__descr
+        margin-top: 80px
+
+.hovered_first
+    position: absolute
+    transform: translate(-10vh, -40vh)
+
+.hovered_second
+    position: absolute
+    transform: translate(25vh, -30vh)
+
+.hovered_third
+    position: absolute
+    transform: translate(-15vh, -50vh)
+
+.hovered_fourth
+    position: absolute
+    transform: translate(-10vh, -100vh)
+    transition: 0.3s all
+
+.first_photo
+    display: block
+
+.second_photo
+    display: none
+
+.hidden
+    display: none
+
+.active_photo
+    display: block
+
+.active
+    display: block
+
+
+
+@import 'media'
