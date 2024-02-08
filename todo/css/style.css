@@ -25,7 +25,7 @@
   height: 73px;
   border: none;
   border-radius: 10px;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   padding: 0px 190px 0px 15px;
   color: #636363;
   font-size: 18px;
@@ -33,7 +33,7 @@
 }
 .adding__input input::placeholder {
   font-size: 18px;
-  color: #AFAFAF;
+  color: #afafaf;
 }
 .adding__submit-btns {
   position: absolute;
@@ -133,9 +133,6 @@
   cursor: pointer;
 }
 
-.calendar {
-  padding: 0 100px;
-}
 .calendar__block {
   display: flex;
   justify-content: space-between;
