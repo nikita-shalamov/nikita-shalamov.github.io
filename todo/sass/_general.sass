@@ -1,0 +1,172 @@
+
+$main-color: #62a4e2
+
+*
+    box-sizing: border-box
+    font-family: "Work Sans", sans-serif
+
+.container
+    width: 1140px
+    padding: 40px
+    margin: 0 auto
+
+.adding
+    width: 100%
+    height: 150px
+    &__input
+        margin: 0 auto
+        position: relative
+        width: 740px
+        height: 73px
+        input
+            position: absolute
+            width: 740px
+            height: 73px
+            border: none
+            border-radius: 10px
+            background-color: #FAFAFA
+            padding: 0px 190px 0px 15px
+            color: #636363
+            font-size: 18px
+            box-shadow: 0 7px 30px 0px rgba(150, 170, 180, 0.5)
+            &::placeholder
+                font-size: 18px
+                color: #AFAFAF
+
+    &__submit-btns
+        position: absolute
+        top: 6px
+        right: 6px
+        display: flex
+        align-items: center
+        button
+            width: 170px
+            height: 60px
+            background-color: $main-color
+            border: none
+            border-radius: 10px
+            font-size: 18px
+            color: #fff
+            cursor: pointer
+        i
+            cursor: pointer
+            margin-right: 20px
+            font-size: 30px
+            color: $main-color
+    &__calendar
+        width: 100%
+        height: 300px
+    &__select-date
+        margin: 0 auto
+        margin-top: 20px
+        transform: translateX(40px)
+        width: 300px
+        position: relative
+        height: 300px
+    &__select-time
+        margin-top: 5px
+        padding: 0 18px
+        width: 100%
+        height: 30px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        background-color: #fff
+        i
+            z-index: 2
+    &__time
+        width: 90px
+        height: 30px
+        border-radius: 10px
+        display: flex
+        justify-content: center
+        align-items: center
+        box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 1)
+        z-index: 2
+        input
+            width: 40px
+            height: 25px
+            border: none
+            border-radius: 10px
+            background-color: #fff
+            text-align: center
+            color: $main-color
+            font-weight: 700
+            &::placeholder
+                opacity: 0.7
+                color: $main-color
+                
+    &__time-text
+        font-size: 15px
+        color: $main-color
+        font-weight: 700
+        z-index: 2
+    &__time-divider 
+        height: 20px
+        width: 1px
+        background-color: #dddddd
+    &__confirm
+        display: none
+        position: absolute
+        right: 22px
+        margin-top: 15px
+        width: 100px
+        height: 30px
+        background-color: $main-color
+        border: none
+        border-radius: 10px
+        font-size: 18px
+        color: #fff
+        cursor: pointer
+
+.calendar
+    padding: 0 100px
+    &__block
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        width: 100%
+        height: 600px
+        overflow: auto
+        &::-webkit-scrollbar
+            display: none
+    &__times
+        margin-top: 62px
+        width: 100px
+        display: flex
+        flex-direction: column
+        gap: 26px
+        &-item
+            font-size: 14px
+    &__days
+        display: grid
+        grid-template-columns: repeat(7, 1fr)
+        grid-template-rows: 30px
+        width: 100%
+    &__day
+        margin-left: 10px
+        text-align: start
+        font-size: 16px
+        font-weight: 600
+    &__wrapper
+        width: 100%
+    &__items
+        margin-right: 10px
+        width: 100%
+        height: 100%
+        display: grid
+        grid-template-columns: repeat(7, auto)
+        grid-template-rows: repeat(24, 42px)
+        grid-auto-flow: column
+        border-radius: 20px
+        border: 0.7px solid #c0c0c0
+    &__item
+        border: 0.7px solid #c0c0c0
+
+.color-calendar
+    height: 350px
+    z-index: 1
+
+.hidden
+    transform: translateY(-100vh)
+
