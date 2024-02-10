@@ -58,11 +58,11 @@ $main-color: #62a4e2
         height: 300px
     &__select-date
         margin: 0 auto
-        margin-top: 20px
         transform: translateX(40px)
         width: 300px
         position: relative
         height: 300px
+        z-index: 2
     &__select-time
         margin-top: 5px
         padding: 0 18px
@@ -120,12 +120,33 @@ $main-color: #62a4e2
         cursor: pointer
     &__input-form
         display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 100px
+    &__next-date
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 20px
+    &__btn-cal
+        width: 35px
+        height: 35px
+        background-color: #fff
+        border: none
+        border-radius: 5px
+        box-shadow: 0 7px 50px -8px #38505d
+        cursor: pointer
+        i
+            color: $main-color
+            font-size: 20px
+    &__date
+        display: flex
         justify-content: space-between
         align-items: center
-    &__btn
-        width: 30px
-        height: 30px
-        background-color: #dddddd
+    &__date-start, &__date-end
+        font-size: 16px
+        font-weight: 600
 
 
 .calendar
@@ -158,6 +179,7 @@ $main-color: #62a4e2
         font-size: 16px
         font-weight: 600
     &__wrapper
+        position: relative
         width: 100%
     &__items
         margin-right: 10px
@@ -171,6 +193,19 @@ $main-color: #62a4e2
         border: 0.7px solid #c0c0c0
     &__item
         border: 0.7px solid #c0c0c0
+    &__task
+        font-size: 12px
+        width: 130px
+        height: 40.6666666687px
+        position: absolute
+        left: calc(14.2857142857%*6)
+        top: calc(861px + 30px)
+        margin-top: 1px
+        margin-left: 1px
+        padding: 4px
+        background-color: rgba(159, 202, 243, 0.8)
+        color: rgb(0, 77, 122)
+        border-radius: 7px
 
 .color-calendar
     height: 350px
