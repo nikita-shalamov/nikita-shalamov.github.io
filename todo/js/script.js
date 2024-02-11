@@ -112,17 +112,16 @@ function addDescr(e) {
 
     const descrDate = document.createElement('div');
     descrDate.classList.add('calendar__item-desc-dates');
-    descrDate.textContent = tasks[e.target.id][1] + ' ' + tasks[e.target.id][2] + 
-                                                    ':' + tasks[e.target.id][3] + 
-                                                    ' - ' + tasks[e.target.id][4] + 
-                                                    ':' + tasks[e.target.id][5];
+    descrDate.innerHTML = `${tasks[e.target.id][1]}<br>${tasks[e.target.id][2]}:${tasks[e.target.id][3]} - ${tasks[e.target.id][4]}:${tasks[e.target.id][5]}`;
+
+
     descr.append(descrDate);
 
     descr.classList.add('calendar__item-descr');
     descr.id = `descr${e.target.id}`;
     let top = parseFloat(e.target.style.top.split('px')[0]) + parseInt(e.target.style.height.split('.')[0]) + 5;
     top = 'top: ' + top + 'px; ';
-    const left = 'left: ' + e.target.style.left;
+    const left = `left: ${e.target.style.left}`
     descr.style.cssText = top + left;
     calendarWrapper.append(descr);
 }
@@ -144,14 +143,15 @@ function addNewTask() {
 
         const top = 'top: ' + ((parseInt(startHoursInput.value)*60 + parseInt(startMinutesInput.value)) * 0.7006944444 + 30) + 'px; ';
         const height = 'height: ' + (((parseInt(endHoursInput.value)*60 + parseInt(endMinutesInput.value))-(parseInt(startHoursInput.value)*60 + parseInt(startMinutesInput.value)))*0.7006944444) + 'px;';
-        const left = 'left: ' + (14.2857142857 * findPlace(calendarNumbers1[1], selectedDay)) + '%';
+        const left = 'left: ' + (14.2857142857 * findPlace(calendarNumbers1[1], selectedDay)) + '%; ';
+        const width = 'width: calc(100% / 7 - 3px);'
 
         const calendarWrapper = document.querySelector('.calendar__wrapper');
         const task = document.createElement('div');
         task.id = taskId;
         task.textContent = tasks[taskId][0];
         task.classList.add('calendar__task');
-        task.style.cssText = top + height + left;
+        task.style.cssText = top + height + left + width;
 
         calendarWrapper.append(task);
     }
@@ -258,14 +258,15 @@ function displayCurrentWeek(currentWeekId) {
 function addTask(text, place, startHours, startMinutes, endHours, endMinutes, id) {
     const top = 'top: ' + ((startHours*60 + startMinutes) * 0.7006944444 + 30) + 'px; ';
     const height = 'height: ' + (((endHours*60 + endMinutes)-(startHours*60 + startMinutes))*0.7006944444) + 'px;';
-    const left = 'left: ' + (14.2857142857*place) + '%';
+    const left = 'left: ' + (14.2857142857*place) + '%; ';
+    const width = 'width: calc(100% / 7 - 3px);'
 
     const calendarWrapper = document.querySelector('.calendar__wrapper');
     const task = document.createElement('div');
     task.id = id;
     task.textContent = text;
     task.classList.add('calendar__task');
-    task.style.cssText = top + height + left;
+    task.style.cssText = top + height + left + width;
 
     calendarWrapper.append(task);
 }
