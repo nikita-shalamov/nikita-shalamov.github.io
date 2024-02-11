@@ -8,7 +8,7 @@ let tasks = {
     1: ['Тестовая задача 1', '2.7.2024', 20, 30, 21, 30],
     2: ['Тестовая задача 2', '2.17.2024', 10, 30, 11, 30],
     3: ['Тестовая задача 3', '2.9.2024', 20, 30, 21, 30],
-    4: ['Тестовая задача 4', '2.10.2024', 12, 30, 13, 10],
+    4: ['Тестовая задача 4 ghfjg jgfjhg fjhg fghjfhj jghf', '2.10.2024', 12, 30, 13, 10],
 }
 
 let weeksNormal = {
@@ -62,7 +62,7 @@ nextBtn.addEventListener('click', () => {
 const submitBtn = document.querySelector('#submitBtn');
 const inputTask = document.querySelector('#inputTask');
 const inputCalendar = document.querySelector('.adding__calendar');
-let selectedDay;
+let selectedDay = new Date();
 
 inputCalendar.addEventListener('click', () => {
     selectedDay = viewCalendar.getSelectedDate();
@@ -79,8 +79,57 @@ submitBtn.addEventListener('click', (e) => {
     }
 });
 
+const calendarWrapper = document.querySelector('.calendar__wrapper');
+calendarWrapper.addEventListener('click', (e) => {
+    if (e.target.className === "calendar__task" && (document.querySelector(`#descr${e.target.id}`)) === null) {
+        addDescr(e);
+    }
+    else if (e.target.className === "calendar__task" && (document.querySelector(`#descr${e.target.id}`)) != null){
+        calendarWrapper.querySelector(`#descr${e.target.id}`).remove();
+    }
+    else if (e.target.className === 'fa-solid fa-trash') {
+        const idDeleteTask = e.target.parentElement.parentElement.id.split('descr')[1];
+        document.getElementById(idDeleteTask).remove();
+        calendarWrapper.querySelector(`#descr${idDeleteTask}`).remove();
+        let idDeleteTaskInt = parseInt(idDeleteTask);
+        delete tasks[idDeleteTaskInt];
+    }
+});
+
+
+function addDescr(e) {
+    const descr = document.createElement('div');
+
+    const descrTitle = document.createElement('div');
+    descrTitle.classList.add('calendar__item-descr-title');
+    descrTitle.textContent = e.target.textContent;
+    descr.append(descrTitle);
+    
+    const trash = document.createElement('div');
+    trash.classList.add('calendar__item-descr-trash');
+    trash.innerHTML = '<i class="fa-solid fa-trash"></i>';
+    descr.append(trash);
+
+    const descrDate = document.createElement('div');
+    descrDate.classList.add('calendar__item-desc-dates');
+    descrDate.textContent = tasks[e.target.id][1] + ' ' + tasks[e.target.id][2] + 
+                                                    ':' + tasks[e.target.id][3] + 
+                                                    ' - ' + tasks[e.target.id][4] + 
+                                                    ':' + tasks[e.target.id][5];
+    descr.append(descrDate);
+
+    descr.classList.add('calendar__item-descr');
+    descr.id = `descr${e.target.id}`;
+    let top = parseFloat(e.target.style.top.split('px')[0]) + parseInt(e.target.style.height.split('.')[0]) + 5;
+    top = 'top: ' + top + 'px; ';
+    const left = 'left: ' + e.target.style.left;
+    descr.style.cssText = top + left;
+    calendarWrapper.append(descr);
+}
+
 function addNewTask() {
     const taskId = Math.max(...Object.keys(tasks)) + 1;
+    console.log(formatDate(selectedDay));
     tasks[taskId] = [inputTask.value, 
                                                 formatDate(selectedDay), 
                                                 parseInt(startHoursInput.value),
@@ -130,8 +179,12 @@ function findWeekId(date, weeks) {
         const week = weeks[id];
         const startDate = new Date(week.start);
         const endDate = new Date(week.end);
+        endDate.setHours(23);
+        endDate.setMinutes(59);
         
         if (date >= startDate && date <= endDate) {
+            console.log(startDate, endDate);
+            console.log(id);
             return id;
         }
     }
@@ -197,25 +250,27 @@ function displayCurrentWeek(currentWeekId) {
 
     for (const key in weekendsTasks) {
         for (const id of weekendsTasks[key]) {
-            addTask(tasks[id][0], key, tasks[id][2], tasks[id][3], tasks[id][4], tasks[id][5]);
+            addTask(tasks[id][0], key, tasks[id][2], tasks[id][3], tasks[id][4], tasks[id][5], id);
         }
     }
 }
 
-function addTask(text, place, startHours, startMinutes, endHours, endMinutes) {
+function addTask(text, place, startHours, startMinutes, endHours, endMinutes, id) {
     const top = 'top: ' + ((startHours*60 + startMinutes) * 0.7006944444 + 30) + 'px; ';
     const height = 'height: ' + (((endHours*60 + endMinutes)-(startHours*60 + startMinutes))*0.7006944444) + 'px;';
     const left = 'left: ' + (14.2857142857*place) + '%';
 
     const calendarWrapper = document.querySelector('.calendar__wrapper');
     const task = document.createElement('div');
-    task.id = Math.max(...Object.keys(tasks)) + 1;
+    task.id = id;
     task.textContent = text;
     task.classList.add('calendar__task');
     task.style.cssText = top + height + left;
 
     calendarWrapper.append(task);
 }
+
+// function addDescrTask(text, )
 
 function datesDiff(firstDate, secondDate) {
 
