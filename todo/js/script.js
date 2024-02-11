@@ -11,30 +11,6 @@ let tasks = {
     4: ['Тестовая задача 4 ghfjg jgfjhg fjhg fghjfhj jghf', '2.10.2024', 12, 30, 13, 10],
 }
 
-let weeksNormal = {
-    1: { start: '01.01.2024', end: '07.01.2024' },
-    2: { start: '08.01.2024', end: '14.01.2024' },
-    3: { start: '15.01.2024', end: '21.01.2024' },
-    4: { start: '22.01.2024', end: '28.01.2024' },
-    5: { start: '29.01.2024', end: '04.02.2024' },
-    6: { start: '05.02.2024', end: '11.02.2024' },
-    7: { start: '12.02.2024', end: '18.02.2024' },
-    8: { start: '19.02.2024', end: '25.02.2024' },
-    9: { start: '26.02.2024', end: '03.03.2024' },
-}
-
-let weeks = {
-    1: { start: '01.01.2024', end: '01.07.2024' },
-    2: { start: '01.08.2024', end: '01.14.2024' },
-    3: { start: '01.15.2024', end: '01.21.2024' },
-    4: { start: '01.22.2024', end: '01.28.2024' },
-    5: { start: '01.29.2024', end: '02.04.2024' },
-    6: { start: '02.05.2024', end: '02.11.2024' },
-    7: { start: '02.12.2024', end: '02.18.2024' },
-    8: { start: '02.19.2024', end: '02.25.2024' },
-    9: { start: '02.26.2024', end: '03.03.2024' }
-}
-
 calendarBtn = document.querySelector('.fa-calendar-days');
 calendar = document.querySelector('.adding__cal');
 calendarBtn.addEventListener('click', () => {
