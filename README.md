@@ -4,14 +4,14 @@
 
 ## Проекты
 
-### [Магазин кроссовок](https://github.com/nikita-shalamov/nikita-shalamov.github.io/tree/main/shoes)
+### [Магазин кроссовок](https://nikita-shalamov.github.io/shoes)
 
 - **Описание**: Магазин кроссовок.
 - **Состояние проекта**: Еще в разработке.
 - **Особенности**:
   - Адаптивная верстка под все устройства для двух страниц.
 
-### [Лендинг для интернет-магазина пульсометров](https://github.com/nikita-shalamov/nikita-shalamov.github.io/tree/main/pulse)
+### [Лендинг для интернет-магазина пульсометров](https://nikita-shalamov.github.io/pulse)
 
 - **Описание**: Лендинг для интернет-магазина пульсометров.
 - **Состояние проекта**: Завершен.
@@ -20,14 +20,14 @@
   - Настроена отправка заявок на почту.
   - Добавлены анимации с использованием JavaScript.
 
-### [Проект по криптовалюте](https://github.com/nikita-shalamov/nikita-shalamov.github.io/tree/main/crypto)
+### [Проект по криптовалюте](https://nikita-shalamov.github.io/crypto)
 
 - **Описание**: Проект по криптовалюте.
 - **Состояние проекта**: Завершен.
 - **Особенности**:
   - Адаптивная верстка под все устройства.
 
-### [Календарь с возможность добавления и удаления задач](https://github.com/nikita-shalamov/nikita-shalamov.github.io/tree/main/calendar)
+### [Календарь](https://nikita-shalamov.github.io/calendar)
 
 - **Описание**: Календарь с возможность добавления и удаления задач.
 - **Состояние проекта**: Завершен.
