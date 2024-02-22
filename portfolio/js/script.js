@@ -47,8 +47,4 @@ works__item_photos.forEach(item => {
     item.querySelector('.hover-labels').addEventListener('mouseenter', (e) => {
         showLabels(e.currentTarget.parentElement);
     });
-
-    item.querySelector('.hover-labels').addEventListener('mouseleave', (e) => {
-        hideLabels(e.currentTarget.parentElement);
-    });
 });
