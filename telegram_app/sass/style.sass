@@ -1,0 +1,157 @@
+
+*
+    box-sizing: border-box
+    font-family: Inter
+
+body
+    background-color: #000004
+
+    
+.background
+    padding: 0 20px
+    &__fire
+        width: 1200px
+        height: 1200px
+        position: fixed
+        bottom: -25%
+        left: -85%
+        z-index: 6
+        img
+            width: 100%
+    &__weapon
+        width: 520px
+        height: 640px
+        position: fixed
+        z-index: 8
+        top: 60px
+        img
+            width: 100%
+    &__up-block
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 158px
+        background-color: #000
+        z-index: 10
+    &__low-block
+        position: fixed
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 80px
+        background-color: #000
+        z-index: 10
+    &__block
+        position: fixed
+        bottom: 134px
+        left: -100px
+        z-index: 7
+        width: 462px
+        height: 323px
+        img
+            width: 100%
+
+.soldier
+    width: 576px
+    height: 606px
+    position: fixed
+    bottom: -12%
+    left: -10%
+    z-index: 9
+    img
+        width: 100%
+
+.coins
+    height: 324px
+    width: 110%
+    position: fixed
+    z-index: 10
+    margin: 0 auto
+    margin-top: 158px
+    transform: translateX(-50px)
+    img
+        position: absolute
+        width: 50px
+        &:nth-child(1)
+            top: 0
+            left: 0
+        &:nth-child(2)
+            bottom: 0
+            left: 0
+        &:nth-child(3)
+            top: 0
+            right: 0
+        &:nth-child(4)
+            bottom: 0
+            right: 0
+            
+
+.main
+    margin-top: 178px
+    width: 100%
+    position: relative
+    z-index: 20
+
+.logo
+    width: 134px
+    display: block
+    margin: 0 auto
+    margin-top: 20px
+
+.title
+    width: 100%
+    font-size: 32px
+    font-weight: 700
+    text-align: center
+
+.subtitle
+    margin-top: 10px
+    font-size: 20px
+    font-weight: 800
+    letter-spacing: 1px
+    text-align: center
+
+.black-italic
+    text-align: center
+    font-size: 42px
+    font-style: italic
+    font-weight: 800
+
+.places
+    margin-top: 20px
+    width: 220px
+    height: 251px
+    position: relative
+    &__item
+        font-family: Caveat
+        font-weight: 700
+    &__underline
+        position: absolute
+        top: 34px
+        right: 0
+
+.orange
+    color: #FF7A00
+    font-weight: 900
+
+.bold
+    font-weight: 900
+
+.text
+    color: #fff
+
+.button
+    margin: 0 auto
+    margin-top: 133px
+    width: 294px
+    height: 38px
+    background: linear-gradient(180deg, #FFF500 0%, #FF9900 100%)
+    box-shadow: 0px 4px 4px rgba(0, 22.73, 47.81, 0.25)
+    border-radius: 5px
+    text-align: center
+    color: #040404
+    font-size: 14px
+    font-weight: 700
+    padding: 9px 0
+
