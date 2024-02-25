@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Black.woff2") format("woff2"),
+    url("../fonts/Satoshi-BlackItalic.woff2") format("woff2"),
+    url("../fonts/Satoshi-Bold.woff2") format("woff2"),
+    url("../fonts/Satoshi-BoldItalic.woff2") format("woff2"),
+    url("../fonts/Satoshi-Italic.woff2") format("woff2"),
+    url("../fonts/Satoshi-Light.woff2") format("woff2"),
+    url("../fonts/Satoshi-LightItalic.woff2") format("woff2"),
+    url("../fonts/Satoshi-Medium.woff2") format("woff2"),
+    url("../fonts/Satoshi-MediumItalic.woff2") format("woff2"),
+    url("../fonts/Satoshi-Regular.woff2") format("woff2"),
+    url("../fonts/Satoshi-Variable.woff2") format("woff2"),
+    url("../fonts/Satoshi-VariableItalic.woff2") format("woff2");
+}
+
+/* Пример использования шрифта */
+body {
+  font-family: "Satoshi", sans-serif;
+}
