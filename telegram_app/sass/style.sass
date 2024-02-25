@@ -8,6 +8,8 @@ body
     background-color: #000004
 
 $pink-color: #F286D0
+$yellow-color: #FFB800
+$red-color: #C94928
 
     
 .background
@@ -16,14 +18,16 @@ $pink-color: #F286D0
         width: 1200px
         height: 1200px
         position: fixed
-        bottom: -25%
-        left: -85%
+        // bottom: -25%
+        // left: -85%
         z-index: 6
         img
             width: 100%
         &-pink
             width: auto
             height: 1200px
+            bottom: -25%
+            left: -85%
             img
                 width: 1800px
                 height: 900px
@@ -33,6 +37,44 @@ $pink-color: #F286D0
             width: 558px
             height: auto
             transform: rotate(-30deg)
+    &__image-coins
+        width: 316px
+        height: 600px
+        bottom: 170px
+        right: -24px
+        img
+            width: 100%
+    &__image-time
+        width: 105%
+        height: auto
+        bottom: 80px
+        img
+            width: 100%
+    &__image-coins-lie
+        width: 257px
+        height: 257px
+        top: 20%
+        right: -70%
+        transform: translateX(-50%)
+        img
+            width: 100%
+    &__image-knife
+        width: 232px
+        height: 232px
+        top: 45%
+        left: -65%
+        transform: translateX(50%)
+        img
+            width: 100%
+    &__image-wallet
+        width: 174px
+        height: 174px
+        bottom: -30px
+        left: -15%
+        // transform: translateX(50%)
+        img
+            width: 100%
+
     &__weapon
         width: 520px
         height: 640px
@@ -46,9 +88,13 @@ $pink-color: #F286D0
         top: 0
         left: 0
         width: 100%
-        height: 158px
+        height: 40px
         background-color: #000
         z-index: 10
+        &-shadow
+            box-shadow: 30.9000015258789px 30.9000015258789px 30.9000015258789px 
+            filter: blur(70.90px)
+            height: 305px
     &__low-block
         position: fixed
         bottom: 0
@@ -57,6 +103,11 @@ $pink-color: #F286D0
         height: 80px
         background-color: #000
         z-index: 10
+        &-shadow
+            box-shadow: 70.9000015258789px 70.9000015258789px 70.9000015258789px 70.9000015258789px
+            filter: blur(50.90px)
+            height: 277px
+            z-index: 12
     &__low-rectangle
         position: fixed
         bottom: -12%
@@ -194,6 +245,14 @@ $pink-color: #F286D0
         top: 34px
         right: 0
 
+.underline
+    &__promo-text
+        position: relative
+        img
+            position: absolute
+            left: 10px
+
+
 .orange
     color: #FF7A00
     font-weight: 900
@@ -201,13 +260,16 @@ $pink-color: #F286D0
 .pink-color
     color: $pink-color
 
+.yellow-color
+    color: $yellow-color
+
 .bold
     font-weight: 900
 
 .text
     color: #fff
     &__promo
-        margin-top: 20px
+        margin-top: 8px
         width: 100%
 
 .button
@@ -243,6 +305,22 @@ $pink-color: #F286D0
         border: 1px $pink-color solid
         color: #fff
         background-color: #000
+    &__fill-yellow
+        background-color: $yellow-color
+        color: #000
+        border: none
+    &__opacity-yellow
+        border: 1px $yellow-color solid
+        color: #fff
+        background-color: #000
+    &__fill-red
+        background-color: $red-color
+        color: #fff
+        border: none
+    &__opacity-red
+        border: 1px $red-color solid
+        color: #fff
+        background-color: #000
 
 .telegram-icon
     width: 40px
@@ -268,11 +346,14 @@ $pink-color: #F286D0
     justify-content: center
     align-items: center
     gap: 10px
-    position: fixed
-    left: 50%
-    transform: translateX(-50%)
-    bottom: 80px
     z-index: 15
+    flex-wrap: wrap
+    &__install
+        width: 100%
+        position: fixed
+        left: 50%
+        transform: translateX(-50%)
+        bottom: 80px
 
 .iphone
     width: 480px
@@ -320,12 +401,289 @@ $pink-color: #F286D0
         top: 28px
         right: 0
 
+.invite-friends
+    position: relative
+    margin-top: 230px
+    &__text
+        width: 292px
+        font-size: 20px
+        font-weight: 800
+        line-height: 31px
+    &__counter
+        position: absolute
+        width: 53px
+        height: 24px
+        background-color: $yellow-color
+        color: #fff
+        font-size: 15px
+        font-weight: 900
+        text-align: center
+        line-height: 22px
+        left: 90px
+        bottom: 3px
+
+.form-invite
+    position: fixed
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 90px
+    z-index: 15
+    width: 100%
+    &__input
+        position: relative
+        max-width: 330px
+        height: 38px
+        margin: 0 auto
+        margin-bottom: 10px
+        img
+            position: absolute
+            left: 12px
+            top: 11px
+            z-index: 16
+            width: 15px
+    &__link
+        display: block
+        position: relative
+        width: 100%
+        height: 100%
+        border-radius: 5px
+        border: 1px $yellow-color solid
+        background-color: #000
+        z-index: 15
+        padding: 0 34px
+        &-red
+            border: 1px $red-color solid
+    
+.descr
+    margin: 0 auto
+    margin-top: 35px
+    width: 280px
+    // left: 50%
+    // transform: translateX(-50%)
+    text-align: center
+    font-size: 16px
+    font-weight: 600
+
+.results
+    margin-top: 28px
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    gap: 13px
+    &__info 
+        max-width: 200px
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        align-items: flex-end
+    &__text
+        font-size: 16px
+        font-weight: 900
+    &__date 
+        color: #FFFCFB
+        font-size: 12px
+        font-style: italic
+        font-weight: 500
+        text-align: right
+    &__days
+        display: inline-block
+        height: 29px
+        background-color: $red-color
+        color: #FFF
+        font-size: 18px
+        font-weight: 900
+        line-height: 28px
+        padding: 0 9px
+
+.increase-chance
+    margin-top: 28px
+    &__descr
+        font-size: 18px
+        font-weight: 600
+        line-height: 27px
+
+.mini-descr
+    font-size: 13px
+    font-style: italic
+    font-weight: 600
+
+.friends-counter
+    margin-top: 54px
+    width: 250px
+    font-size: 18px
+    font-style: italic
+    font-weight: 700
+    line-height: 21px
+    span
+        font-size: 20px
+        font-weight: 900
+
+.competition-over-subtitle
+    margin-top: 8px
+    text-align: center
+
+.competition-over-title
+    margin-top: 30px
+    font-style: 26px
+    color: #fff
+    font-size: 26px
+    font-weight: 800
+
+.prize
+    position: relative
+    &__text
+        margin-top: 5px
+        font-size: 16px
+        &-unsuccessful
+            font-size: 18px
+            margin-top: 58px
+            text-align: center
+            margin-bottom: 53px
+    img
+        width: 85px
+        height: 6px
+        position: absolute
+        left: 85px
+
+.form-prize
+    margin: 0 auto
+    margin-top: 30px
+    width: 100%
+    z-index: 15
+    &__input
+        max-width: 312px
+        height: 38px
+        margin: 0 auto
+        position: relative
+        input
+            display: block
+            position: relative
+            width: 100%
+            height: 100%
+            border-radius: 5px
+            border: 1px $yellow-color solid
+            background-color: #000
+            z-index: 15
+            padding: 0 100px 0 10px
+            &::placeholder
+                font-size: 10px
+                
+    &__button
+        position: absolute
+        right: 0
+        top: 0
+        width: 90px
+        z-index: 16
+        color: #050508
+        font-size: 10px
+        font-weight: 700
+
+.winners-list
+    &__title
+        font-size: 14px
+        font-weight: 500
+        text-align: center
+        margin-top: 30px
+    &__subtitles
+        max-width: 295px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin: 0 auto
+        margin-top: 20px
+    &__subtitle
+        color: #fff
+        font-size: 10px
+        font-weight: 500
+    &__block
+        margin: 0 auto
+        margin-top: 10px
+        max-width: 314px
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        gap: 16px
+        transform: translateX(12px)
+    &__item
+        position: relative
+        margin-top: 10px
+        margin-bottom: 10px
+        width: 100%
+        &:last-child::after
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: rgba(0, 0, 0, 0.6)
+            z-index: 20
+    &__persons
+        width: 100%
+    &__person
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        &-data
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 15px
+        &-number
+            color: #B8B8B8
+            font-size: 10px
+        &-photo
+            width: 26px
+            height: 26px
+            border-radius: 2px
+            img
+                width: 100%
+                height: 100%
+        &-name
+            color: #FFFFFF
+            font-size: 10px
+        &-result
+            color: #fff
+            font-size: 10px
+            font-weight: 600
+            span
+                color: $yellow-color
+                font-weight: 700
+
+.divider
+    margin-top: 10px
+    width: 100%
+    height: 1px
+    background-color: #3F3F3F
+
+.slider
+    &__block
+        position: relative
+        height: 100%
+    &__position
+        position: absolute
+        width: 2px
+        height: 26px
+        background: $yellow-color
+        border-radius: 10px
+
+    &__long
+        height: 312px
+        width: 2px
+        background-color: #121212
+        border-radius: 10px
+
+.fs18
+    font-size: 18px
 .fs21
     font-size: 21px
 
 .fs24
     font-size: 24px
 
+.fs27
+    font-size: 27px
 
 .fs34
     font-size: 34px
