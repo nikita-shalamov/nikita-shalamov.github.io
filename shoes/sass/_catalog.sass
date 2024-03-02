@@ -1,0 +1,98 @@
+.catalog
+    &__block
+        display: flex
+    &__filters
+        width: 300px
+        height: 100%
+        padding: 20px 0 0 20px
+        &-mobile
+            width: 100%
+            display: none
+            justify-content: space-between
+            align-items: center
+            padding: 0 25px
+    &__filter
+        width: 300px
+        height: 500px
+        &-selector
+            display: flex
+            margin-top: 8px
+            gap: 6px
+            cursor: pointer
+        &-title
+            font-size: 20px
+            font-weight: 500
+            margin-bottom: 5px
+        &-checkbox
+            width: 18px
+            height: 18px
+            border-radius: 4px
+            display: flex
+            justify-content: center
+            align-items: center
+            border: solid 1.5px #000
+            background-color: #fff
+            i
+                font-size: 15px
+                color: #fff
+        &-item
+            margin-top: 20px
+    &__main
+        max-width: 840px
+        padding: 0 20px
+    &__items
+        width: 100%
+        display: grid
+        grid-template-columns: repeat(3, 33.333333333%)
+        gap: 10px
+    &__item
+        min-width: 200px
+        padding: 20px 8px
+        margin-top: 0
+        img
+            cursor: pointer
+            width: 100%
+        &-sex
+            margin-top: 4px
+            color: #707072
+        &-price
+            margin-top: 10px
+        &-title
+            font-weight: 500
+            color: #111111
+            margin-top: 7px
+        &-settings
+            display: none
+            justify-content: flex-start
+            align-items: center
+            gap: 15px
+            margin-top: 15px
+            i
+                font-size: 20px
+        &-info
+            height: auto
+    &__sorting
+        select
+            transform: translateX(-3px)
+            border: none
+            font-size: 16px
+            font-family: Montserrat,sans-serif
+            height: 40px
+            cursor: pointer
+
+
+.new-price
+    color: red
+    span
+        color: #707072
+        text-decoration: line-through
+        margin-right: 10px
+
+.checkbox-active
+    background-color: #000
+
+.item-settings-active
+    display: flex
+
+.hidden
+    display: none

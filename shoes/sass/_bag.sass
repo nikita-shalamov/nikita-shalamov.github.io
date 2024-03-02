@@ -1,0 +1,122 @@
+.bag
+    &__block
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        gap: 40px
+    &__clothes
+        width: 66.66666666%
+    &__summary
+        width: 33.3333333%
+        input
+            width: 100%
+            height: 25px
+            border: 1.5px solid #000
+            border-radius: 15px
+            padding: 10px
+            font-size: 14px
+        button
+            min-width: 100px
+            height: 40px
+            border-radius: 15px
+            background-color: #000
+            color: #fff
+            font-weight: 500
+            border: none
+        &-address
+            margin-top: 20px
+            input
+                margin-top: 8px
+                width: 100%
+        &-сontacts
+            margin-top: 20px
+        &-input
+            margin-top: 5px
+    &__promocode
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        gap: 10px
+        margin-top: 20px
+    &__item
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        width: 100%
+        height: 180px
+        gap: 25px
+        margin-top: 40px
+        &-photo
+            width: 180px
+            img
+                width: 180px
+        &-info
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            width: 100%
+            height: 100%
+        
+        &-settings
+            margin-top: 20px
+            margin-bottom: 7px
+            width: 100%
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            gap: 20px
+            &-like-delete
+                display: flex
+                justify-content: flex-start
+                align-items: center
+                gap: 20px
+            &-counter
+                width: auto
+                height: 25px
+                padding: 1px 4px
+                display: flex
+                justify-content: space-between
+                align-items: center
+                gap: 10px
+        &-main
+            width: 100%
+            display: flex
+            justify-content: space-between
+            align-items: center
+    &__title
+        text-align: left
+        font-size: 30px
+        font-weight: 600
+        margin-bottom: 40px
+    &__items
+        &-total, &-ship, &-full-price
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding: 0 5px
+            margin-bottom: 10px
+    &__links
+        margin-top: 10px
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 30px
+        i
+            transform: rotate(-45deg)
+        a
+            cursor: pointer
+    
+.full-price
+    font-size: 20px
+    margin-top: 10px
+.divider
+    width: 100%
+    margin: 0 auto
+    height: 1px
+    background-color: lightgrey
+.catalog
+    &__item
+        &-type, &-color, &-size
+            margin-top: 5px
+            color: #707072

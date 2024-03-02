@@ -1,0 +1,22 @@
+@media (max-width: 1160px) 
+    .catalog
+        &__main
+            max-width: 840px
+        &__items
+            grid-template-columns: repeat(2, 50%)
+
+@media (max-width: 576px)
+    .catalog
+        &__block
+            flex-wrap: wrap
+            justify-content: center
+        &__main
+            width: 100%
+            margin-top: 25px
+        &__items
+            grid-template-columns: repeat(1, 100%)
+        &__filters
+            display: none
+            &-mobile
+                display: flex
+        
