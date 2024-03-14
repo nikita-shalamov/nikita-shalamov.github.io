@@ -1,0 +1,54 @@
+.ads-winter
+    width: 208px
+    height: 53px
+    background-color: #2655FF
+    border-radius: 13px
+    display: flex
+    justify-content: space-between
+    position: relative
+    overflow: hidden
+    &-block
+        position: relative
+    &__text
+        margin: 0 auto
+    &__title
+        position: relative
+        color: #fff
+        font-size: 26px
+        font-style: italic
+        font-weight: 900
+        z-index: 2
+        text-align: center
+    &__subtitle
+        position: relative
+        color: #fff
+        font-size: 10px
+        font-weight: 800
+        z-index: 2
+        text-align: center
+    img
+        position: absolute
+        z-index: 1
+        height: 95px
+        &:nth-child(1)
+            left: -5px
+            top: -15px
+        &:nth-child(2)
+            right: -23px
+            top: -10px
+    &__close
+        position: absolute
+        width: 13px
+        height: 13px
+        background-color: rgba(185.94, 185.94, 185.94, 0.37)
+        border: 1px #6F6F6F solid
+        border-radius: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        right: -3px
+        top: -6px
+        img
+            width: 7px
+            margin-left: 0.5px
+            margin-top: 1px

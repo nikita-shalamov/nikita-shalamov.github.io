@@ -1,0 +1,116 @@
+body.modal-opened
+    overflow: hidden
+    
+.modal
+    width: 100%
+    height: 100%
+    position: fixed
+    background: rgba(0, 0, 0, 0.80)
+    z-index: 15
+    &__header
+        width: 100%
+        height: 100px
+        background: #0F111F
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 35px 25px 35px 25px
+        border-top-left-radius: 18px
+        border-top-right-radius: 18px
+        &-withdraw
+            height: auto
+            padding: 30px 30px 40px 30px
+    &__close
+        cursor: pointer
+    &__subtitle
+        margin-top: 10px
+        color: #8B95AD
+        font-size: 16px
+        font-weight: 500
+        span
+            font-weight: 700
+    &__title
+        color: #B8BFD1
+        font-size: 24px
+        font-weight: 600
+        text-transform: uppercase
+    &__window
+        position: absolute
+        top: 400px
+        left: 50%
+        transform: translateX(-50%)
+        border-radius: 18px
+        background: #121524
+        &-withdraw
+            width: 998px
+            height: auto
+
+.promo-modal
+    &__window
+        width: 627px
+        height: 365px
+    &__input-block
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 520px
+        height: 88px
+        border-radius: 20px
+        margin: 0 auto
+        margin-top: 45px
+        // background-color: #0B0D19
+    &__input
+        input
+            padding: 33px 5px 33px 20px
+            width: 304px
+            height: 100%
+            background: #0B0D19
+            border: none
+            border-top-left-radius: 20px
+            border-bottom-left-radius: 20px
+            color: #fff
+            font-size: 18px
+            font-weight: 400
+            &::placeholder
+                color: #8B95AD
+                font-size: 18px
+                font-weight: 400
+
+        &-button
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 216px
+            height: 88px
+            background: #2B56E8
+            box-shadow: 0px 0px 13.899999618530273px rgba(43, 86, 232, 0.60)
+            border-top-right-radius: 20px
+            border-bottom-right-radius: 20px
+            border: none
+            gap: 20px
+            cursor: pointer
+            &-text
+                color: #fff
+                font-size: 16px
+                font-weight: 600
+                text-transform: uppercase
+    &__social-media-links
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 10px
+        margin-top: 45px
+    &__social-media-text
+        margin-top: 7px
+        color: #393F4F
+        font-size: 14px
+        font-weight: 500
+        text-transform: uppercase
+        text-align: center
+
+
+
+
+
+                
+                

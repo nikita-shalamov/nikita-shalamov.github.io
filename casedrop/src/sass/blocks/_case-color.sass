@@ -1,0 +1,61 @@
+.case
+    &__block
+        position: relative
+        overflow: hidden
+        &-color
+            width: 100%
+            background-image: url('../img/case/background/background-image.png')
+            background-size: cover
+            &-background-blur
+                width: 100%
+                height: 100%
+                left: 0
+                top: 0
+                position: absolute
+                border-radius: 30px
+                outline: 100px #0D0F19 solid
+                outline-offset: -70px
+                filter: blur(20.30px)
+                z-index: 1
+            &-case-opening
+                height: 570px
+    &-color
+        &__photo
+            width: 257px
+            height: 257px
+            margin: 0 0
+        &__photos
+            margin-top: 80px
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 1px
+        &__cases
+            &-items
+                display: flex
+                justify-content: center
+                align-items: center
+                width: auto
+            &-counter
+                width: 35px
+                height: 35px
+                background: #161722
+                box-shadow: 0px 4px 4px rgba(18.14, 18.93, 27.63, 0.25)
+                border-right: 1px #0D0F19 solid
+                color: #8B95AD
+                font-size: 12px
+                font-weight: 600
+                line-height: 35px
+                text-align: center
+                &-active
+                    background: #2B59FF
+                    color: white
+            &-count
+                margin: 0 auto
+                margin-top: 25px
+                width: 175px
+                height: auto
+                overflow: hidden
+                border-radius: 5px
+                
+

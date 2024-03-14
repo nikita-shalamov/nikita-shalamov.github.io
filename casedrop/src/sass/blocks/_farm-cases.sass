@@ -1,0 +1,102 @@
+.farm-cases
+    margin-top: 45px
+    &__items
+        margin-top: 57px
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        gap: 30px
+    &__item
+        width: 240px
+        height: 284px
+        overflow: hidden
+        background-color: #161217
+        position: relative
+        padding: 30px 0 20px 30px
+        border-radius: 31px
+        img
+            position: absolute
+            width: 250px
+            bottom: -42px
+            right: -54px
+            z-index: 0
+        &-light
+            width: 200px
+            height: 200px
+            filter: blur(220px)
+            border-radius: 100%
+            position: absolute
+            left: -100px
+            top: -100px
+            z-index: 1
+            &_pink
+                background: #EA00A3
+            &_yellow
+                background: #EA8C00
+            &_red
+                background: #EA0000
+            &_blue
+                background: #0096EA
+            &_purple
+                background: #C900EA
+        &-label
+            position: relative
+            font-size: 14px
+            font-weight: 900
+            z-index: 3
+            display: inline-block
+            &_pink
+                background: linear-gradient(85deg, #E021E4, #FF00B8 100%)
+                color: transparent
+                -webkit-background-clip: text
+                background-clip: text
+            &_yellow
+                background: linear-gradient(85deg, #E49621 0%, #FFA800 100%)
+                color: transparent
+                -webkit-background-clip: text
+                background-clip: text
+            &_orange
+                background: linear-gradient(85deg, #E42121, #FF5C00 100%)
+                color: transparent
+                -webkit-background-clip: text
+                background-clip: text
+            &_red
+                background: linear-gradient(85deg, #FF6060 0%, #FF0000 100%)
+                color: transparent
+                -webkit-background-clip: text
+                background-clip: text
+            &_blue
+                background: linear-gradient(85deg, #E021E4, #FF00B8 0%)
+                color: transparent
+                -webkit-background-clip: text
+                background-clip: text
+            &_purple
+                background: linear-gradient(85deg, #E49621 0%, #FFA800 50%)
+                color: transparent
+                -webkit-background-clip: text
+                background-clip: text
+        &-price
+            margin-top: 140px
+            width: 65px
+            height: 33px
+            background-color: #fff
+            border-radius: 7px
+            color: #000
+            font-size: 16px
+            font-weight: 700
+            line-height: 33px
+            text-align: center
+            position: relative
+            z-index: 1
+        &-title
+            color: #fff
+            font-size: 36px
+            font-weight: 900
+
+
+
+
+
+
+

@@ -1,0 +1,99 @@
+.case
+    &__block
+        margin-top: 40px
+        position: relative
+    &__label
+        color: #F24C6A
+        font-size: 16px
+        font-weight: 700
+        background: linear-gradient(89deg, #F24C6A 0%, #FF3239 100%)
+        color: transparent
+        -webkit-background-clip: text
+        background-clip: text
+        text-align: center
+        position: relative
+        z-index: 5
+    &__title
+        color: #fff
+        font-size: 38px
+        font-weight: 700
+        text-align: center
+        transform: translateY(-5px)
+        position: relative
+        z-index: 4
+    &-spinner
+        margin-top: 105px
+        height: 194px
+        &__block
+            position: relative
+            width: 1387px
+            height: 194px
+            background: #0A0C14
+            border-radius: 22px
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 0 auto
+        &__items
+            margin: 0 auto
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 6px
+            flex-direction: row
+        &__pointer
+            position: absolute
+            z-index: 8
+            left: 50%
+            top: 0
+            transform: translateX(-50%) translateY(-50%)
+            &-blue
+                position: absolute
+                z-index: 7
+                left: 50%
+                top: 0
+                transform: translateX(-50%)
+        &__dark
+            width: 176px
+            height: 194px
+            transform: rotate(180deg)
+            position: absolute
+            z-index: 10
+            top: 0
+            border-radius: 22px
+            &-left
+                background: linear-gradient(270deg, #0A0C14 25%, rgba(10, 12, 20, 0) 100%)
+                left: 0
+            &-right
+                background: linear-gradient(90deg, #0A0C14 25%, rgba(10, 12, 20, 0) 100%)
+                right: 0
+    &-inside
+        margin-top: 80px
+        width: 100%
+        &__list
+            margin-top: 45px
+            display: flex
+            justify-content: flex-start
+            align-items: flex-start
+            flex-wrap: wrap
+            gap: 14px
+    &__photo
+        margin: 0 auto
+        width: 366px
+        height: 331px
+        margin-top: 20px
+        img
+            width: 100%
+    &__open-buttons
+        margin-top: 60px
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 20px
+        position: relative
+        z-index: 5
+        &-case-color
+            margin-top: 46px
+        &-case-final
+            margin-top: 64px
+    
