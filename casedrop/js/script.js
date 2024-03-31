@@ -83,3 +83,41 @@ if (authorizationReady === 0) {
         });
     }
 }
+
+// Получаем все элементы .case-item внутри .scroll__items
+const caseItems = document.querySelectorAll('.scroll__items .case-item');
+
+// Перебираем каждую карточку
+caseItems.forEach((caseItem) => {
+
+    let itemPhotoOrig;
+    let itemSkinOrig;
+
+    // Добавляем обработчик события наведения мыши
+    caseItem.addEventListener('mouseover', function() {
+        // Получаем элементы внутри текущей карточки
+        const itemPhoto = caseItem.querySelector('.case-item__photo-wrapper img');
+        const itemSkin = caseItem.querySelector('.case-item__player');
+
+        itemPhotoOrig = itemPhoto.getAttribute('src');
+        itemSkinOrig = itemSkin.textContent;
+
+        // Получаем новый текст и изображение для замены из атрибутов data
+        const newImageSrc = caseItem.getAttribute('data-image');
+        const newPlayerText = caseItem.getAttribute('data-player-text');
+
+        // Меняем изображение и текст
+        itemPhoto.src = newImageSrc;
+        itemSkin.textContent = newPlayerText;
+    });
+
+    // Добавляем обработчик события ухода мыши с карточки
+    caseItem.addEventListener('mouseout', function() {
+        // Получаем элементы внутри текущей карточки
+        const photoWrapper = caseItem.querySelector('.case-item__photo-wrapper img');
+        const player = caseItem.querySelector('.case-item__player');
+        console.log(itemPhotoOrig);
+        photoWrapper.src = itemPhotoOrig;
+        player.textContent = itemSkinOrig;
+    });
+});
