@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #171E26;
+    margin: 0;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../img/bg/bg-page.png'); /* Замените 'your-image-url.jpg' на путь к вашей картинке */
+        background-repeat: repeat-y; /* Повторять по горизонтали */
+        background-size: 100% auto; /* Растянуть картинку по высоте body и повторять по горизонтали */
+        background-position-x: center;
+        opacity: 0.07; /* Наложить прозрачность на фон */
+        z-index: -1; /* Поместить псевдоэлемент под основное содержимое */
+    }
+}
+
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+button {
+    cursor: pointer;
+}
+
+@import 'base/variables';
+@import 'base/mixins';
+@import 'fonts';
+@import 'global';
+@import 'blocks/header';
+@import 'blocks/top-banner';
+@import 'blocks/news';
+@import 'blocks/article-tag';
+@import 'blocks/articles';
+@import 'blocks/banner';
+@import 'blocks/footer';
+@import 'blocks/social-media';
+@import 'blocks/user-degree';
+@import 'blocks/article-page';
+@import 'blocks/sidebar-menu';
+@import 'blocks/article-ads';
+@import 'blocks/quote';
+@import 'blocks/table';
+@import 'blocks/attention';
+@import 'blocks/buttons';
+@import 'blocks/information-block';
+@import 'blocks/note';
+@import 'blocks/share-article';
+@import 'blocks/similar-articles';
+@import 'blocks/articles-sidebar';
+@import 'blocks/author';
+@import 'blocks/pages-slider';
+@import 'blocks/category';
+@import 'media/media';
+@import 'media/header';
+@import 'media/logo';
+@import 'media/top-banner';
+@import 'media/news';
+@import 'media/articles';
+@import 'media/article-tag';
+@import 'media/banner';
+@import 'media/footer';
+@import 'media/social-media';
+@import 'media/note';
+@import 'media/article-page';
+@import 'media/quote';
+@import 'media/table';
+@import 'media/information-block';
+@import 'media/sidebar-menu';
+@import 'media/similar_articles';
+@import 'media/attention';
+@import 'media/article-ads';
+@import 'media/articles-sidebar';
+@import 'media/share-article';
+@import 'media/user-degree';
+@import 'media/author';
+@import 'media/category';
+@import 'media/buttons';

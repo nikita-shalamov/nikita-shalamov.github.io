@@ -1,0 +1,45 @@
+
+
+.text_fz18 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.fz22 {
+    font-size: 22px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 23px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.span {
+    &_blue-text-fw700 {
+        font-weight: 700;
+        color: #0085FF;
+    }
+    &_orange-text-fw600 {
+        font-weight: 600;
+        color: #FF8A00;
+    }
+    &_orange-text {
+        color: #FF8A00;
+    }
+    &_underline {
+        text-decoration: underline;
+    }
+    &_weight {
+        font-weight: 600;
+    }
+    &_italic {
+        font-style: italic;
+    }
+}
