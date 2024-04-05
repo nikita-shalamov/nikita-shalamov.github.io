@@ -1,8 +1,26 @@
+@media (min-width: 1200px) and (max-width: 1439px) {
+    .similar-articles {
+        &__items {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        &__item {
+            &:nth-child(4) {
+                display: none;
+            }
+        }
+    }
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
     .similar-articles {
         &__items {
             margin-top: 50px;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+        }
+        &__item {
+            &:nth-child(4) {
+                display: none;
+            }
         }
         &__title {
             font-size: 16px;

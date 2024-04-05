@@ -6,9 +6,9 @@
         overflow: hidden;
     }
     &__photo {
+        display: block;
         width: auto;
         height: 270px;
-
         img {
             width: auto;
             height: 100%;

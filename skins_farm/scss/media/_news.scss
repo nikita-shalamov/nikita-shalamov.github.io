@@ -4,6 +4,11 @@
             grid-template-columns: repeat(3, 1fr);
             row-gap: 40px;
         }
+        &__item {
+            &:last-child {
+                display: none;
+            }
+        }
     }
 }
 
@@ -12,6 +17,11 @@
         &__wrapper {
             grid-template-columns: repeat(3, 1fr);
             row-gap: 40px;
+        }
+        &__item {
+            &:last-child {
+                display: none;
+            }
         }
     }
 }
@@ -28,6 +38,9 @@
             }
             &-title {
                 font-size: 16px;
+            }
+            &:last-child {
+                display: none;
             }
         }
     }
