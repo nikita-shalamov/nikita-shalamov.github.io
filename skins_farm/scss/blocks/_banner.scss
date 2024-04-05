@@ -1,0 +1,33 @@
+.banner {
+    margin-top: 100px;
+    &_small, &_full {
+        margin-top: 80px;
+    }
+    &__wrapper {
+        border-radius: 5px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &_middle {
+            width: 100%;
+            height: 374px;
+        }
+        &_small {
+            margin: 0 auto; 
+            border-radius: 0px;
+            width: 908px;
+            height: 309px;
+        }
+        &_full {
+            margin: 0 auto; 
+            border-radius: 0px;
+            width: 908px;
+            height: 398px;
+        }
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+}

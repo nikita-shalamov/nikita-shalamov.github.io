@@ -1,0 +1,9 @@
+@media (max-width: 575px) {
+    .share-article {
+        &__wrapper {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            row-gap: 10px;
+        }
+    }
+}

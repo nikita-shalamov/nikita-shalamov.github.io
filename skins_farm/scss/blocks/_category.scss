@@ -1,0 +1,11 @@
+.category {
+    &__wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 33px;
+    }
+    &__content {
+        width: 100%;
+    }
+}

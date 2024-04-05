@@ -1,0 +1,48 @@
+
+.top-banner {
+    margin-top: 50px;
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        gap: 20px;
+    }
+    &__image {
+        width: 50%;
+        height: auto;
+        overflow: hidden;
+        border-radius: 5px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    &__info {
+        width: 50%;
+    }
+    &__title {
+        color: white;
+        font-size: 46px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2.30px;
+        word-wrap: break-word;
+    }
+    &__descr {
+        margin-top: 50px;
+        color: white;
+        font-size: 22px;
+        font-weight: 300;
+        letter-spacing: 1.10px;
+        word-wrap: break-word;
+        p {
+            &:nth-child(2) {
+                margin-top: 35px;
+            }
+        }
+    }
+}
+

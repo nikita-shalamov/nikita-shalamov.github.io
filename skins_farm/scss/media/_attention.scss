@@ -1,0 +1,53 @@
+@media (min-width: 992px) and (max-width: 1199px) {
+    .attention {
+        &__label {
+            font-size: 18px;
+        }
+        &__text {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+}    
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .attention {
+        &__label {
+            font-size: 18px;
+        }
+        &__text {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+}    
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .attention {
+        &__label {
+            font-size: 18px;
+        }
+        &__text {
+            font-size: 14px;
+            line-height: 22px;
+        }
+        &__wrapper {
+            gap: 10px;
+        }
+    }
+}    
+
+@media (max-width: 575px) {
+    .attention {
+        &__label {
+            font-size: 18px;
+        }
+        &__text {
+            font-size: 14px;
+            line-height: 22px;
+        }
+        &__wrapper {
+            gap: 10px;
+        }
+    }
+}    

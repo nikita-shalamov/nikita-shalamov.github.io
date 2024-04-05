@@ -1,0 +1,185 @@
+@media (min-width: 1440px) and (max-width: 1600px) {
+    .quote {
+        &__title {
+            font-size: 24px;
+        }
+        &__divider {
+            margin-top: 20px;
+        }
+        &__text {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        &__col {
+            height: auto;
+            &_left {
+                width: 429px;
+                height: 320px;
+            }
+            &_right {
+                width: 231px;
+                height: 320px;
+                padding: 20px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+    .quote {
+        &__title {
+            font-size: 24px;
+        }
+        &__divider {
+            margin-top: 20px;
+        }
+        &__text {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        &__col {
+            height: auto;
+            &_left {
+                width: 320px;
+                height: 257px;
+            }
+            &_right {
+                width: 270px;
+                height: 257px;
+                padding: 20px;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .quote {
+        &__title {
+            font-size: 20px;
+        }
+        &__divider {
+            margin-top: 20px;
+        }
+        &__text {
+            font-size: 14px;
+            margin-top: 15px;
+            line-height: 20px;
+        }
+        &__author {
+            font-size: 16px;
+        }
+        &__col {
+            height: auto;
+            &_left {
+                width: 330px;
+                height: 229px;
+            }
+            &_right {
+                width: 370px;
+                height: 229px;
+                padding: 20px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .quote {
+        &__title {
+            font-size: 20px;
+        }
+        &__divider {
+            margin-top: 20px;
+        }
+        &__text {
+            font-size: 14px;
+            margin-top: 15px;
+            line-height: 20px;
+        }
+        &__author {
+            font-size: 16px;
+        }
+        &__col {
+            height: auto;
+            &_left {
+                width: 330px;
+                height: 229px;
+            }
+            &_right {
+                width: 370px;
+                height: 229px;
+                padding: 20px;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .quote {
+        &__title {
+            font-size: 20px;
+        }
+        &__divider {
+            margin-top: 20px;
+        }
+        &__text {
+            font-size: 14px;
+            margin-top: 15px;
+            line-height: 20px;
+        }
+        &__author {
+            font-size: 16px;
+        }
+        &__col {
+            height: auto;
+            &_left {
+                width: 330px;
+                height: 229px;
+            }
+            &_right {
+                width: 370px;
+                height: 229px;
+                padding: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .quote {
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+        &__title {
+            font-size: 20px;
+        }
+        &__divider {
+            margin-top: 20px;
+        }
+        &__text {
+            font-size: 14px;
+            margin-top: 15px;
+            line-height: 20px;
+        }
+        &__author {
+            font-size: 16px;
+        }
+        &__col {
+            width: 320px;
+            border-radius: 0px;
+            &_right {
+                width: 320px;
+                height: 239px;
+                border-radius: 0;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+            &_left {
+                height: 229px;
+                border-radius: 0;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+        }
+    }
+}

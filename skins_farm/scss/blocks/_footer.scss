@@ -1,0 +1,17 @@
+.footer {
+    margin-top: 150px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 39px;
+    }
+    &__main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__logo {
+        margin-right: 117px;
+    }
+}

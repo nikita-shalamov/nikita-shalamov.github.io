@@ -1,0 +1,102 @@
+@media (min-width: 1440px) and (max-width: 1600px) {
+    .news {
+        &__wrapper {
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 40px;
+        }
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+    .news {
+        &__wrapper {
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 40px;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .news {
+        &__wrapper {
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 40px;
+        }
+        &__item {
+            &-info {
+                max-width: 200px;
+            }
+            &-title {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .news {
+        margin-top: 40px;
+        &__wrapper {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 40px;
+        }
+        &__item {
+            &-info {
+                max-width: 200px;
+            }
+            &-title {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .news {
+        margin-top: 30px;
+        &__wrapper {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 40px;
+            column-gap: 10px;
+            justify-content: center;
+        }
+        &__item {
+            &-info {
+                max-width: 160px;
+            }
+            &-title {
+                font-size: 14px;
+            }
+            &-photo {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .news {
+        margin-top: 30px;
+        &__wrapper {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 40px;
+            column-gap: 10px;
+            justify-content: center;
+            padding: 0 5px;
+        }
+        &__item {
+            &-info {
+                max-width: 300px;
+            }
+            &-title {
+                font-size: 14px;
+            }
+            &-photo {
+                width: 60px;
+                min-width: 60px;
+                height: 60px;
+            }
+        }
+    }
+}

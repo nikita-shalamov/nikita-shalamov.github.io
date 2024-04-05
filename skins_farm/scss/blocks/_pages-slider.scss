@@ -1,0 +1,31 @@
+.pages-slider {
+    margin-top: 60px;
+    &__wrapper {
+        margin: 0 auto;
+    }
+    &__items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    &__item {
+        width: 30px;
+        height: 30px;
+        border: none;
+        background: #343434;
+        border-radius: 3px;
+        color: #959595;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 0.90px;
+        word-wrap: break-word;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &_active {
+            background: #0085FF;
+            color: #000;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@media (min-width: 768px) and (max-width: 991px) {
+    .articles-sidebar {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .articles-sidebar {
+        margin-top: 0;
+        &__wrapper {
+            width: 223px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .articles-sidebar {
+        margin-top: 0;
+        &__wrapper {
+            width: 223px;
+        }
+    }
+}

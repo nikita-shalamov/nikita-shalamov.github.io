@@ -1,0 +1,84 @@
+.quote {
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    &__col {
+        height: 407px;
+        &_left {
+            overflow: hidden;
+            width: 585px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &_right {
+            width: 308px;
+            height: 407px;
+            background: url('../img/articles/quote/background.png') center/cover;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            padding: 28px 21px 20px 27px;
+        }
+    }
+    &__title {
+        color: #020202;
+        font-size: 37px;
+        font-weight: 900;
+        letter-spacing: 1.85px;
+        word-wrap: break-word;
+    }
+    &__divider {
+        width: 58.99px;
+        height: 1.87px;
+        background: black;
+        margin-top: 60px;
+        &_white {
+            margin: 0 auto;
+            margin-top: 40px;
+            width: 114.91px;
+            height: 1.92px;
+            background: white;
+            border-radius: 14px;
+        }
+    }
+    &__text {
+        font-size: 18px;
+        font-style: italic;
+        letter-spacing: 0.90px;
+        word-wrap: break-word;
+        &_black {
+            color: #020202;
+            margin-top: 18px;
+            line-height: 25px;
+            font-weight: 600;
+        }
+        &_white {
+            margin: 0 auto;
+            margin-top: 34px;
+            width: fit-content;
+            color: white;
+            font-weight: 400;
+            line-height: 30px;
+        }
+    }
+    &__author {
+        // width: fit-content;
+        text-align: right;
+        margin-right: 45px;
+        margin-top: 18px;
+        color: white;
+        font-size: 18px;
+        font-style: italic;
+        font-weight: 500;
+        line-height: 30px;
+        letter-spacing: 0.90px;
+        word-wrap: break-word;
+    }
+}

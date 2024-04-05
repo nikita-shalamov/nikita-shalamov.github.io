@@ -1,0 +1,112 @@
+@media (min-width: 1440px) and (max-width: 1600px) {
+    .banner {
+        &__wrapper {
+            &_middle {
+                height: 311px;
+            }
+            &_full {
+                width: 800px;
+                height: 351px
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+    .banner {
+        margin-top: 80px;
+        &__wrapper {
+            &_middle {
+                height: 296px;
+            }
+            &_small {
+                width: 700px;
+                height: 245px;
+            }
+            &_full {
+                width: 700px;
+                height: 306px;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .banner {
+        margin-top: 80px;
+        &__wrapper {
+            &_middle {
+                height: 249px;
+            }
+            &_small {
+                width: 660px;
+                height: 232px;
+            }
+            &_full {
+                width:620px;
+                height:272px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .banner {
+        margin-top: 60px;
+        &__wrapper {
+            &_middle {
+                height: 186px;
+            }
+            &_small {
+                width: 600px;
+                height: 212px;
+            }
+            &_full {
+                width:500px;
+                height:219px;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .banner {
+        margin-top: 60px;
+        &__wrapper {
+            &_middle {
+                height: 139px;
+            }
+            &_small {
+                width: 480px;
+                height: 169px;
+            }
+            &_full {
+                width:400px;
+                height:176px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .banner {
+        margin-top: 40px;
+        &__wrapper {
+            margin: 0 auto;
+            &_middle {
+                width: 340px;
+                height: 90px;
+            }
+            &_small {
+                width: auto;
+                max-width: 380px;
+                height: 133px;
+            }
+            &_full {
+                width: auto;
+                max-width: 400px;
+                height: 176px;
+            }
+        }
+    }
+}

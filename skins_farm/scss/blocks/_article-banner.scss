@@ -1,0 +1,21 @@
+.article-banner {
+    &__wrapper {
+        width: 223px;
+        height: auto;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    &__photo {
+        width: auto;
+        height: 270px;
+
+        img {
+            width: auto;
+            height: 100%;
+        }
+        &_2 {
+            margin-top: 100px;
+            height: 343px;
+        }
+    }
+}

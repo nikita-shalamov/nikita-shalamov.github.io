@@ -1,0 +1,33 @@
+.news {
+    margin-top: 60px;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-columns: auto;
+        gap: 28px;
+    }
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        &-info {
+            max-width: 239px;
+        }
+        &-title {
+            margin-top: 9px;
+            letter-spacing: 0.90px;
+            word-wrap: break-word;
+        }
+        &-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
