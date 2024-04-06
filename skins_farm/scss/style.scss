@@ -23,6 +23,9 @@ body {
     }
 }
 
+h2, h3 {
+    margin: 0;
+}
 
 .container {
     max-width: 1440px;
@@ -61,6 +64,7 @@ button {
 @import 'blocks/author';
 @import 'blocks/pages-slider';
 @import 'blocks/category';
+@import 'blocks/clickable-elem';
 @import 'media/media';
 @import 'media/header';
 @import 'media/logo';
