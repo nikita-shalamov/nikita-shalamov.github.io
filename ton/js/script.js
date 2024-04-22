@@ -7,3 +7,17 @@ document.addEventListener("DOMContentLoaded", function() {
         element.textContent = newAddress;
     });
 });
+
+function adjustTextWidth() {
+    const screenWidth = window.innerWidth;
+    const textElements = document.querySelectorAll('.partners-catalog__descr');
+
+    textElements.forEach((element) => {
+        const width = screenWidth - 34 - 46 - 15 - 105;
+        element.style.width = `${width}px`;
+    });
+}
+
+// Вызовите функцию при загрузке страницы и при изменении размера окна
+window.addEventListener('load', adjustTextWidth);
+window.addEventListener('resize', adjustTextWidth);
