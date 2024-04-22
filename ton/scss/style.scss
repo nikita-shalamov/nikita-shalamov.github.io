@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #000004;
+}
+
+$blue-color: #007AFF;
+$grey-color: #ADADAD;
+$red-color: #C94928;
+
+@import 'blocks/header';
+@import 'blocks/profile';
+@import 'blocks/buttons';
+@import 'blocks/productInfo';
+@import 'blocks/payments';
+@import 'blocks/subscribes';
+@import 'blocks/connect-wallet';
+@import 'blocks/user-wallet';
+@import 'media/media.scss';
