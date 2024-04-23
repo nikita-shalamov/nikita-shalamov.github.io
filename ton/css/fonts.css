@@ -16,6 +16,32 @@
     url("../fonts/SFProText/SFProText-Semibold.ttf") format("truetype") font-weight(600);
 }
 
+/* @font-face {
+  font-family: 'SFProText';
+  src: url('../fonts/SFProText-2/SF-Pro-Text-Black.otf') format('opentype') font-weight(900),
+       url('../fonts/SFProText-2/SF-Pro-Text-BlackItalic.otf') format('opentype') font-weight(900),
+       url('../fonts/SFProText-2/SF-Pro-Text-Bold.otf') format('opentype') font-weight(700),
+       url('../fonts/SFProText-2/SF-Pro-Text-BoldItalic.otf') format('opentype') font-weight(700),
+       url('../fonts/SFProText-2/SF-Pro-Text-Heavy.otf') format('opentype') font-weight(800),
+       url('../fonts/SFProText-2/SF-Pro-Text-HeavyItalic.otf') format('opentype') font-weight(800),
+       url('../fonts/SFProText-2/SF-Pro-Text-Light.otf') format('opentype') font-weight(300),
+       url('../fonts/SFProText-2/SF-Pro-Text-LightItalic.otf') format('opentype') font-weight(300),
+       url('../fonts/SFProText-2/SF-Pro-Text-Medium.otf') format('opentype') font-weight(500),
+       url('../fonts/SFProText-2/SF-Pro-Text-MediumItalic.otf') format('opentype') font-weight(500),
+       url('../fonts/SFProText-2/SF-Pro-Text-Regular.otf') format('opentype') font-weight(400),
+       url('../fonts/SFProText-2/SF-Pro-Text-RegularItalic.otf') format('opentype') font-weight(400),
+       url('../fonts/SFProText-2/SF-Pro-Text-Semibold.otf') format('opentype') font-weight(600),
+       url('../fonts/SFProText-2/SF-Pro-Text-SemiboldItalic.otf') format('opentype') font-weight(600),
+       url('../fonts/SFProText-2/SF-Pro-Text-Thin.otf') format('opentype') font-weight(200),
+       url('../fonts/SFProText-2/SF-Pro-Text-ThinItalic.otf') format('opentype') font-weight(200),
+       url('../fonts/SFProText-2/SF-Pro-Text-Ultralight.otf') format('opentype') font-weight(200),
+       url('../fonts/SFProText-2/SF-Pro-Text-UltralightItalic.otf') format('opentype') font-weight(200);
+  font-weight: normal;
+  font-style: normal;
+} */
+
+
+
 @font-face {
   font-family: "SFProRounded";
   src: 

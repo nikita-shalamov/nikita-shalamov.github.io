@@ -6,6 +6,14 @@ document.addEventListener("DOMContentLoaded", function() {
         const newAddress = `${address.substring(0, 4)}...${address.substring(address.length - 4)}`;
         element.textContent = newAddress;
     });
+
+    const div = document.querySelector('.sub-options__value');
+    const text = div.textContent;
+
+    if (text.length > 10) {
+      const truncatedText = text.slice(0, 5) + '...' + text.slice(-5);
+      div.textContent = truncatedText;
+    }
 });
 
 function adjustTextWidth() {
@@ -17,7 +25,3 @@ function adjustTextWidth() {
         element.style.width = `${width}px`;
     });
 }
-
-// Вызовите функцию при загрузке страницы и при изменении размера окна
-window.addEventListener('load', adjustTextWidth);
-window.addEventListener('resize', adjustTextWidth);
