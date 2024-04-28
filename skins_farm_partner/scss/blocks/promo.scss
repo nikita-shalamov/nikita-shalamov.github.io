@@ -1,0 +1,40 @@
+.promo {
+    margin-top: 60px;
+    margin-left: 67px;
+    &__wrapper {
+        width: 1044px;
+        height: 380px;
+        position: relative;
+        border-radius: 35px;
+        overflow: hidden;
+        border: 2px #5C2716 solid;
+        padding: 50px 0 0 50px;
+    }
+    &__photo {
+        position: absolute;
+        width: 376px;
+        height: 437px;
+        right: 32px;
+        bottom: -81px;
+        img {
+            width: 100%;
+        }
+    }
+    &__subtitle {
+        color: rgba(255, 255, 255, 0.62);
+        font-size: 20px;
+        font-weight: 500;
+        word-wrap: break-word;
+    }
+    &__title {
+        margin-top: 123px;
+        font-size: 36px;
+        font-weight: 900;
+        letter-spacing: 1.80px;
+        word-wrap: break-word;
+        color: #fff;
+        span {
+            color: $orange-color;
+        }
+    }
+}

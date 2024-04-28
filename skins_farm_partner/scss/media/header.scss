@@ -1,0 +1,56 @@
+@media (min-width: 992px) and (max-width: 1199px) {
+    .header {
+        &__wrapper {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+        &__menu {
+            gap: 70px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .header {
+        &__menu {
+            gap: 50px;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .header {
+        &__wrapper {
+            justify-content: center;
+            flex-wrap: wrap;
+            row-gap: 20px;
+            .logo {
+                margin-right: 60px;
+            }
+        }
+        &__menu {
+            gap: 55px;
+        }
+    }
+}
+
+@media(max-width: 575px) {
+    .header {
+        padding-right: 10px;
+        padding-left: 10px;
+        &__wrapper {
+            justify-content: center;
+            flex-wrap: wrap;
+            row-gap: 20px;
+            .logo {
+                margin-right: 20px;
+            }
+        }
+        &__menu {
+            flex-wrap: wrap;
+            column-gap: 40px;
+            row-gap: 30px;
+        }
+    }
+}
+

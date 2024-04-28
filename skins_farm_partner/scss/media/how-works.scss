@@ -1,0 +1,114 @@
+@media (min-width: 1440px) and (max-width: 1600px) {
+    .how-works {
+        margin-top: 90px;
+        &__background {
+            top: -80px;
+            height: 540px;
+            img {
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+    .how-works {
+        margin-top: 90px;
+        &__background {
+            top: -80px;
+            height: 460px;
+            img {
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .how-works {
+        margin-top: 40px;
+        &__wrapper {
+            padding-bottom: 60px;
+        }
+        &__title {
+            margin-top: 20px;
+        }
+        &__flex {
+            justify-content: space-between;
+            column-gap: 40px;
+        }
+        &__list {
+            margin-right: 0;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .how-works {
+        margin-top: 40px;
+        &__wrapper {
+            padding-bottom: 60px;
+        }
+        &__title {
+            margin-top: 20px;
+        }
+        &__flex {
+            justify-content: space-between;
+            column-gap: 40px;
+            flex-wrap: wrap;
+        }
+        &__list {
+            margin-right: 0;
+        }
+        &__ref {
+            margin-top: 40px;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .how-works {
+        margin-top: 40px;
+        &__wrapper {
+            padding-bottom: 60px;
+        }
+        &__flex {
+            justify-content: space-between;
+            column-gap: 40px;
+            flex-wrap: wrap;
+        }
+        &__title {
+            margin-top: 0px;
+        }
+        &__list {
+            margin-top: 20px;
+            margin-right: 0;
+        }
+        &__ref {
+            margin-top: 40px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .how-works {
+        margin-top: 80px;
+        overflow-x: hidden;
+        &__wrapper {
+            padding-bottom: 60px;
+            padding: 0 10px;
+        }
+        &__flex {
+            justify-content: space-between;
+            column-gap: 40px;
+            flex-wrap: wrap;
+        }
+        &__list {
+            margin-top: 20px;
+            margin-right: 0;
+        }
+        &__ref {
+            margin-top: 40px;
+        }
+    }
+}

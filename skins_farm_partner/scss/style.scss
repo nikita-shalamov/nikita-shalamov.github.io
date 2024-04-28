@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #040404;
+    margin: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.text-fz28 {
+    font-size: 28px;
+}
+
+.text-fz96 {
+    font-size: 96px;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+button {
+    cursor: pointer;
+}
+
+@import 'base/variables';
+@import 'base/mixins';
+@import 'blocks/header';
+@import 'blocks/hello';
+@import 'blocks/referrals';
+@import 'blocks/award';
+@import 'blocks/promo';
+@import 'blocks/footer';
+@import 'blocks/settings';
+@import 'blocks/buttons';
+@import 'blocks/banner';
+@import 'blocks/how-works';
+@import 'blocks/reward';
+@import 'blocks/modal';
+@import 'blocks/modal-withdraw';
+@import 'blocks/modal-promocode';
+@import 'media/header';
+@import 'media/footer';
+@import 'media/hello';
+@import 'media/referrals';
+@import 'media/award';
+@import 'media/promo';
+@import 'media/modal-promocode';
+@import 'media/modal-withdraw';
+@import 'media/modal';
+@import 'media/banner';
+@import 'media/how-works';
+@import 'media/reward';
+@import 'media/settings';
+@import 'media/media';
+@import 'global';

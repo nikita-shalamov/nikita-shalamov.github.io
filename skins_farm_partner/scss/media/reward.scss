@@ -1,0 +1,111 @@
+
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+    .reward {
+        &__title {
+            font-size: 42px;
+        }
+        &__list {
+            margin-top: 80px;
+        }
+        &__item {
+            .text-fz96 {
+                font-size: 80px;
+            }
+            &-title {
+                font-size: 30px;
+            }
+        }
+        &__total {
+            font-size: 56px;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .reward {
+        &__title {
+            font-size: 38px;
+        }
+        &__list {
+            margin-top: 70px;
+        }
+        &__item {
+            .text-fz96 {
+                font-size: 60px;
+            }
+            &-title {
+                font-size: 26px;
+            }
+        }
+        &__total {
+            font-size: 48px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .reward {
+        &__title {
+            font-size: 36px;
+        }
+        &__list {
+            margin-top: 70px;
+        }
+        &__item {
+            .text-fz96 {
+                font-size: 56px;
+            }
+            &-title {
+                font-size: 24px;
+            }
+        }
+        &__total {
+            font-size: 48px;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .reward {
+        &__title {
+            font-size: 34px;
+        }
+        &__list {
+            margin-top: 60px;
+        }
+        &__item {
+            .text-fz96 {
+                font-size: 48px;
+            }
+            &-title {
+                font-size: 22px;
+            }
+        }
+        &__total {
+            font-size: 36px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .reward {
+        &__title {
+            font-size: 30px;
+        }
+        &__list {
+            margin-top: 80px;
+        }
+        &__item {
+            .text-fz96 {
+                font-size: 38px;
+            }
+            &-title {
+                font-size: 20px;
+            }
+        }
+        &__total {
+            font-size: 32px;
+        }
+    }
+}

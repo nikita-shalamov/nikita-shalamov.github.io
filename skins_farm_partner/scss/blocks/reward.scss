@@ -1,0 +1,46 @@
+.reward {
+    margin-top: 100px;
+    &__title {
+        text-align: center;
+        color: white;
+        font-size: 48px;
+        font-weight: 700;
+        word-wrap: break-word;
+    }
+    &__list {
+        margin-top: 109px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 100px;
+        row-gap: 70px;
+        flex-wrap: wrap;
+    }
+    &__item {
+        &:nth-child(1) {
+            width: 100%;
+        }
+        &-wrapper {
+            width: fit-content;
+            margin: 0 auto;
+        }
+        &-title {
+            color: white;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 1.80px;
+            word-wrap: break-word;
+        }
+    }
+    &__total {
+        color: white;
+        font-size: 64px;
+        font-weight: 900;
+        letter-spacing: 4.80px;
+        word-wrap: break-word;
+        span {
+            color: #E75526;
+            font-weight: 700;
+        }
+    }
+}

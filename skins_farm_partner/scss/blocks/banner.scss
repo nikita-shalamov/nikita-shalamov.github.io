@@ -1,0 +1,53 @@
+.banner {
+    margin-top: 150px;
+    &__wrapper {
+        position: relative;
+        width: 1460px;
+    }
+    &__title {
+        position: relative;
+        font-size: 68px;
+        color: white;
+        font-weight: 800;
+        line-height: 83.64px;
+        word-wrap: break-word;
+        .italic {
+            font-style: italic;
+        }
+        .orange-text {
+            color: #E75526;
+        }
+        .big-text {
+            font-size: 79px;
+            font-weight: 900;
+        }
+        img {
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            width: 458px;
+            height: auto;
+        }
+    }
+    &__subtitle {
+        margin-top: 52px;
+        font-size: 24px;
+        color: white;
+        font-weight: 400;
+        word-wrap: break-word;
+        line-height: 42px;
+        span {
+            font-weight: 700;
+        }
+    }
+    &__photo {
+        width: 1280px;
+        height: 720px;
+        position: absolute;
+        right: -246px;
+        bottom: -330px;
+        img {
+            width: 100%;
+        }
+    }
+}

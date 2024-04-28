@@ -1,0 +1,35 @@
+@media (min-width: 992px) and (max-width: 1199px) {
+    .settings {
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .settings {
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .settings {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 575px) {
+    .settings {
+        margin-top: 50px;
+        &__wrapper {
+            width: calc(100% - 40px);
+        }
+        &__form {
+            form {
+                p {
+                    textarea {
+                        width: calc(100% - 20px);
+                    }
+                }
+            }
+        }
+    }
+}

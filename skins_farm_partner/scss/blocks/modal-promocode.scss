@@ -1,0 +1,18 @@
+.promocode {
+    margin-top: 60px;
+    &__question {
+        margin-top: 40px;
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+        word-wrap: break-word;
+    }
+    &__answer {
+        margin-top: 15px;
+        color: rgba(255, 255, 255, 0.70);
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.60px;
+        word-wrap: break-word;
+    }
+}

@@ -1,0 +1,209 @@
+@media (min-width: 1440px) and (max-width: 1600px) {
+    .hello {
+        &__photo {
+            width: 592.8px;
+            height: 384.8px;
+            top: auto;
+            bottom: 0;
+        }
+    }
+}
+
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+    .hello {
+        margin-top: 80px;
+        &__wrapper {
+            padding: 40px;
+        }
+        &__name {
+            font-size: 32px;
+        }
+        &__text {
+            font-size: 22px;
+        }
+        &__photo {
+            width: 592.8px;
+            height: 384.8px;
+            top: auto;
+            bottom: 0;
+            right: 20px;
+        }
+        &__ref {
+            margin-left: 40px;
+        }
+        &__your-promo {
+            font-size: 28px;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .hello {
+        margin-top: 80px;
+        &__wrapper {
+            padding: 40px;
+        }
+        &__name {
+            font-size: 30px;
+        }
+        &__text {
+            font-size: 20px;
+        }
+        &__photo {
+            width: 592.8px;
+            height: 384.8px;
+            top: auto;
+            bottom: 0;
+            right: 20px;
+        }
+        &__balance {
+            top: 30px;
+            right: 30px;
+        }
+        &__welcome {
+            font-size: 14px;
+            right: 30px;
+            bottom: 25px;
+            width: 170px;
+        }
+        &__bonuses {
+            margin-top: 50px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__ref {
+            margin-top: 30px;
+            margin-left: 0px;
+        }
+        &__your-promo {
+            font-size: 24px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .hello {
+        margin-top: 60px;
+        &__wrapper {
+            padding: 30px;
+        }
+        &__name {
+            font-size: 30px;
+        }
+        &__text {
+            font-size: 20px;
+        }
+        &__photo {
+            display: none;
+        }
+        &__balance {
+            top: 30px;
+            right: 30px;
+        }
+        &__welcome {
+            font-size: 14px;
+            right: 30px;
+            bottom: 30px;
+            width: 170px;
+        }
+        &__bonuses {
+            margin-top: 50px;
+            align-items: flex-start;
+        }
+        &__ref {
+            margin-top: 0px;
+            margin-left: 30px;
+        }
+        &__your-promo {
+            font-size: 24px;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .hello {
+        margin-top: 50px;
+        &__wrapper {
+            padding: 30px;
+            padding-bottom: 90px;
+        }
+        &__name {
+            font-size: 30px;
+        }
+        &__text {
+            font-size: 20px;
+        }
+        &__photo {
+            display: none;
+        }
+        &__balance {
+            top: 30px;
+            right: 30px;
+        }
+        &__welcome {
+            font-size: 14px;
+            right: 30px;
+            bottom: 30px;
+            width: 170px;
+        }
+        &__bonuses {
+            margin-top: 50px;
+            align-items: flex-start;
+        }
+        &__ref {
+            margin-top: 0px;
+            margin-left: 30px;
+        }
+        &__your-promo {
+            font-size: 24px;
+        }
+    }
+}
+
+
+@media (max-width: 575px) {
+    .hello {
+        margin-top: 50px;
+        &__wrapper {
+            padding: 30px;
+            padding-bottom: 90px;
+            width: calc(100% - 20px);
+            margin: 0 auto;
+        }
+        &__name {
+            font-size: 26px;
+        }
+        &__text {
+            font-size: 16px;
+        }
+        &__photo {
+            display: none;
+        }
+        &__balance {
+            position: relative;
+            top: auto;
+            right: auto;
+            margin-top: 30px;
+        }
+        &__welcome {
+            font-size: 14px;
+            right: 30px;
+            bottom: 30px;
+            width: 170px;
+        }
+        &__bonuses {
+            margin-top: 30px;
+            flex-wrap: wrap;
+            column-gap: 20px;
+            row-gap: 30px;
+            align-items: flex-start;
+        }
+        &__ref {
+            margin-left: 0px;
+        }
+        &__your-promo {
+            font-size: 24px;
+        }
+    }
+}

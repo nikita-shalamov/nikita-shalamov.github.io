@@ -1,0 +1,39 @@
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .withdraw {
+        &__form-col {
+            p {
+                margin-top: 30px;
+            }
+        }
+        &__button {
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .withdraw {
+        &__form {
+            flex-wrap: wrap;
+            padding: 0 20px;
+            column-gap: 38px;
+            &_skins-farm {
+                margin-top: 25px;
+            }
+        }
+        &__subtitles {
+            flex-wrap: wrap;
+            column-gap: 50px;
+            padding: 0 20px;
+        }
+        &__form-col {
+            p {
+                margin-top: 30px;
+            }
+        }
+        &__button {
+            margin-top: 20px;
+        }
+    }
+}

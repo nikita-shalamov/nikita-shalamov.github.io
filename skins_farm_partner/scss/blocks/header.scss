@@ -1,0 +1,25 @@
+.header {
+    padding: 25px 0;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 108px;
+    }
+    &__item {
+        letter-spacing: 0.80px;
+        word-wrap: break-word;
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        &_active {
+            font-weight: 600;
+            color: $orange-color;
+        }
+    }
+}

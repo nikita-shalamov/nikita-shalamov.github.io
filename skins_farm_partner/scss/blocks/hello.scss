@@ -1,0 +1,163 @@
+.hello {
+    margin-top: 92px;
+    &__wrapper {
+        position: relative;
+        padding: 60px;
+        width: 100%;
+        height: auto;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 18px;
+    }
+    &__name {
+        color: white;
+        font-size: 36px;
+        font-weight: 700;
+        word-wrap: break-word;    
+    }
+    &__text {
+        margin-top: 20px;
+        color: white;
+        font-size: 24px;
+        font-weight: 400;
+        word-wrap: break-word;    
+    }
+    &__subtitle {
+        color: rgba(255, 255, 255, 0.60);
+        font-size: 18px;
+        font-weight: 500;
+        word-wrap: break-word;    
+    }
+    &__bonuses {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        margin-top: 85px;
+    }
+    &__change {
+        &-promo {
+            margin-top: 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 15px;
+            &-button {
+                width: 178px;
+                height: 33px;
+                border-radius: 5px;
+                border: 1px rgba(255, 255, 255, 0.30) solid;  
+                background: none;
+                color: rgba(255, 255, 255, 0.58);
+                font-size: 14px;
+                font-family: Lato;
+                font-weight: 600;
+                letter-spacing: 0.70px;
+                word-wrap: break-word;            
+            }
+            &-info {
+                cursor: pointer;
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+    &__ref {
+        margin-left: 110px;
+        margin-bottom: 2px;
+        &-link {
+            cursor: pointer;
+            margin-top: 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 6px;
+            color: rgba(255, 255, 255, 0.90);
+            font-size: 18px;
+            font-weight: 700;
+            word-wrap: break-word;
+            width: fit-content;
+        }
+    }
+    &__your-promo {
+        cursor: pointer;
+        margin-top: 12px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 6px;
+        color: white;
+        font-size: 36px;
+        font-weight: 800;
+        word-wrap: break-word;
+    }
+    &__welcome {
+        width: 195px;
+        position: absolute;
+        bottom: 28px;
+        right: 54px;
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+        word-wrap: break-word;
+        span {
+            font-size: 18px;
+            font-weight: 800;
+        }
+    }
+    &__photo {
+        width: 741px;
+        height: 481px;
+        top: -52px;
+        right: -31px;
+        img {
+            width: 100%;
+        }
+    }
+    &__balance {
+        position: absolute;
+        top: 60px;
+        right: 60px;
+        &-title {
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+            word-wrap: break-word;  
+        }
+        &-total {
+            margin-top: 10px;
+            color: white;
+            font-size: 24px;
+            font-weight: 800;
+            word-wrap: break-word;        
+        }
+        &-output{
+            display: block;
+            margin-top: 5px;
+            font-size: 16px;
+            font-weight: 700;
+            word-wrap: break-word;
+            color: rgba(255, 255, 255, 0.60);
+            font-weight: 500;
+            svg {
+                margin-left: 8px;
+                path {
+                    fill: rgba(255, 255, 255, 0.60);
+                }
+            }
+            &_active {
+                cursor: pointer;
+                text-decoration: underline;
+                font-weight: 700;
+                color: #E75526;
+                svg {
+                    margin-left: 8px;
+                    path {
+                        fill: #E75526;
+                    }
+                }
+            }
+        }
+    }
+    &__photo {
+        position: absolute;
+    }
+}
