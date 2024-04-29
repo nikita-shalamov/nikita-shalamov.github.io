@@ -145,9 +145,9 @@
         }
         &__counter {
             font-size: 48px;
-            -webkit-text-stroke: 2px #E75526;
+            text-shadow: -2px -2px 0 #e75526, 2px -2px 0 #e75526, -2px 2px 0 #e75526, 2px 2px 0 #e75526;
             &_partners {
-                -webkit-text-stroke: 2px #fff;
+                text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
             }
         }
         &__item {
