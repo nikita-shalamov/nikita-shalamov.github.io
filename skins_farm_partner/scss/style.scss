@@ -10,6 +10,33 @@ body {
     overflow-x: hidden;
 }
 
+.background {
+    height: 105%;
+    transform: translate(-30%, -5%);
+    &_settings {
+        transform: translate(-10%, -5%);
+    }
+    &__wrapper {
+        width: 100%;
+        height: calc(100% + 100px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        overflow: hidden;
+    }
+}
+
+.empty-block {
+    height: 100vh;
+    width: 100%;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
+
 .text-fz28 {
     font-size: 28px;
 }
@@ -22,6 +49,10 @@ body {
     overflow: hidden;
 }
 
+h2, h3 {
+    margin: 0;
+}
+
 .container {
     max-width: 1440px;
     margin: 0 auto;
@@ -29,6 +60,11 @@ body {
 
 button {
     cursor: pointer;
+}
+
+@font-face {
+    font-family: 'newFont';
+    src: url('fonts/font.otf') format('opentype');
 }
 
 @import 'base/variables';
