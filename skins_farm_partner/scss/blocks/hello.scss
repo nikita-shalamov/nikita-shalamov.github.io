@@ -41,8 +41,9 @@
             align-items: center;
             gap: 15px;
             &-button {
-                width: 178px;
-                height: 33px;
+                width: auto;
+                height: auto;
+                padding: 7px 17px 9px 17px;
                 border-radius: 5px;
                 border: 1px rgba(255, 255, 255, 0.30) solid;  
                 background: none;
@@ -147,11 +148,11 @@
                 cursor: pointer;
                 text-decoration: underline;
                 font-weight: 700;
-                color: #E75526;
+                color: $orange-color;
                 svg {
                     margin-left: 8px;
                     path {
-                        fill: #E75526;
+                        fill: $orange-color;
                     }
                 }
             }

@@ -5,7 +5,7 @@
     }
     &__wrapper {
         &_partners {
-            background-color: #E75526;
+            background-color: $orange-color;
             padding: 42px 0 95px 0;
             position: relative;
             .container {
@@ -47,15 +47,16 @@
     }
     &__counter {
         margin-top: 2px;
-        font-size: 128px;
+        font-size: 146px;
         font-weight: 900;
+        font-family: 'outlinedFont', sans-serif;
         letter-spacing: 6.40px;
         word-wrap: break-word;
-        color: rgba($color: #000000, $alpha: 0);
-        -webkit-text-stroke: 3px #E75526;
+        color: rgba(20, 18, 16, 0);
+        -webkit-text-stroke: 4px $orange-color;
         &_partners {
-            color: rgba(231, 85, 38, 0);
-            -webkit-text-stroke: 3px #fff;
+            color: rgba(255, 255, 255, 0);
+            -webkit-text-stroke: 4px #fff;
         }
     }
     &__list {
