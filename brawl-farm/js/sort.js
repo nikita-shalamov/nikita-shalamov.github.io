@@ -2,9 +2,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const sortButton = document.querySelector(".header__sort-button");
     const sortList = document.querySelector(".header__sort-list");
     const sortItems = document.querySelectorAll(".header__sort-item");
+    const arrowIcon = sortButton.querySelector("img");
 
     sortButton.addEventListener("click", function() {
         sortList.classList.toggle("active");
+        arrowIcon.classList.toggle("rotate-180");
     });
 
     sortItems.forEach(function(item) {
@@ -18,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
             this.classList.add("selected");
 
             sortList.classList.remove("active");
+            arrowIcon.classList.remove("rotate-180");
         });
     });
 });
