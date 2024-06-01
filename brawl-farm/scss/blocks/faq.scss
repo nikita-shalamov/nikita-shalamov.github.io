@@ -1,0 +1,35 @@
+.faq {
+    margin-top: 20px;
+    &__wrapper {
+        padding: 0 19px;
+    }
+    &__answer {
+        margin-top: 10px;
+        width: 100%;
+        font-size: 11px;
+        font-weight: 500;
+        word-wrap: break-word;
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    &__question {
+        margin-top: 15px;
+        text-align: left;
+        color: white;
+        font-size: 12px;
+        font-weight: 700;
+        word-wrap: break-word;
+        cursor: pointer;
+    }
+    &__title {
+        color: white;
+        font-size: 16px;
+        font-weight: 900;
+        word-wrap: break-word;
+    }
+    &__list {
+        margin-top: 20px;
+    }
+}

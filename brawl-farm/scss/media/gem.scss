@@ -1,0 +1,29 @@
+@media (min-width: 481px) and (max-width: 576px) {
+    .gem {
+        &__total-sum {
+            font-size: 56px;
+        }
+    }
+}
+
+@media (min-width: 400px) and (max-width: 480px) {
+    .gem {
+        &__total-sum {
+            font-size: 48px;
+            &_item-page {
+                font-size: 56px;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 359px) {
+    .gem {
+        &__total-sum {
+            &_item-page {
+                font-size: 36px;
+            }
+        }
+    }
+}
+
