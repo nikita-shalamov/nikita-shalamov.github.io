@@ -20,8 +20,25 @@ body {
     &__wrapper {
         display: flex;
         flex-direction: column;
-        min-height: 100%;
+        height: 100%;
     }
+}
+
+.page-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bold-text {
+    font-weight: 900;
+}
+.purple-text {
+    color: #FF98F5;
+}
+.display-none {
+    display: none;
 }
 
 @import 'blocks/header.scss';
@@ -33,3 +50,8 @@ body {
 @import 'blocks/reviews.scss';
 @import 'blocks/buy.scss';
 @import 'blocks/buyForm.scss';
+@import 'blocks/waitingPay.scss';
+@import 'blocks/pagePicture.scss';
+@import 'blocks/successful.scss';
+@import 'blocks/faq.scss';
+@import 'blocks/service.scss';
