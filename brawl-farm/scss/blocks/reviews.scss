@@ -1,0 +1,79 @@
+.reviews {
+    margin-top: 13px;
+    &__wrapper {
+        padding: 0 19px;
+    }
+    &__title {
+        color: white;
+        font-size: 14px;
+        font-weight: 900;
+        line-height: 22px;
+        word-wrap: break-word;
+    }
+    &__list {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    &__item {
+        margin-top: 18px;
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        &-author {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        &-photo {
+            margin-right: 8px;
+            width: 30px;
+            height: 30px;
+            background: #0E002E;
+            border-radius: 71px;
+            border: 1px #CC00FF solid;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 12px;
+            font-weight: 900;
+            line-height: 22px;
+            word-wrap: break-word
+        }
+        &-name {
+            color: white;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: auto;
+            line-height: 22px;
+            word-wrap: break-word;
+        }
+        &-date {
+            color: white;
+            font-size: 11px;
+            font-weight: 500;
+            line-height: 22px;
+            word-wrap: break-word;
+        }
+        &-stars {
+            margin-top: -1px;
+            height: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2px;
+        }
+    }
+    &__text {
+        margin-top: 13px;
+        color: white;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 15px;
+        word-wrap: break-word;
+    }
+
+}

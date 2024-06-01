@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
             const selectedSort = this.textContent;
             sortButton.innerHTML = selectedSort + '<img src="img/icons/arrow-sort.svg" alt="">';
 
-            // Убираем подсветку у всех элементов и подсвечиваем выбранный
             sortItems.forEach(function(item) {
                 item.classList.remove("selected");
             });

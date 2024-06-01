@@ -1,0 +1,50 @@
+.button {
+    &_item-buy {
+        height: auto;
+        padding: 8px 48px 11px 48px;
+        border-radius: 5px;
+        border: 2px #CC00FF solid;
+        background-color: rgba(0,0,0,0);
+        color: white;
+        font-size: 14px;
+        font-weight: 800;
+        text-transform: capitalize;
+        word-wrap: break-word;
+        &-fill {
+            background: linear-gradient(3deg, #CC00FF 0%, #D940FF 100%);
+            border: 1px #D52DFF solid;
+            text-transform: none;
+            padding: 8px 77px 11px 77px;
+        }
+    }
+    &_waiting-pay {
+        width: 50%;
+        height: 35px;
+        border: 2px #CC00FF solid;
+        border-radius: 7px;
+        padding: 0 12px;
+        background-color: rgba(0,0,0,0);
+        color: white;
+        font-size: 10px;
+        font-weight: 700;
+        word-wrap: break-word;
+        &-fill {
+            background: #B500D2;
+        }
+    }
+    &_successful {
+        width: 50%;
+        height: 35px;
+        text-align: center;
+        color: white;
+        font-size: 12px;
+        font-weight: 900;
+        word-wrap: break-word;
+        border-radius: 7px;
+        border: 1.5px #B500D2 solid;
+        background-color: rgba(0,0,0,0);
+        &-fill {
+            background: #B500D2;
+        }
+    }
+}

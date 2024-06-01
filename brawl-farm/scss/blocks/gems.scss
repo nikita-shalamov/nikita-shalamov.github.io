@@ -1,0 +1,10 @@
+.gems {
+    margin-top: 27px;
+    &__wrapper {
+        padding: 0 19px;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+}

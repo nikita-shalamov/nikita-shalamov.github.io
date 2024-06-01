@@ -10,8 +10,15 @@ body {
     margin: 0;
     overflow: hidden;
     font-family: Inter;
-    background-color: #1D005A;
+    background: linear-gradient(180deg, #0B002B 0%, #1D005A 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     height: 100%;
+}
+
+button {
+    cursor: pointer;
 }
 
 .background {
@@ -55,3 +62,5 @@ body {
 @import 'blocks/successful.scss';
 @import 'blocks/faq.scss';
 @import 'blocks/service.scss';
+
+@import 'media/gem.scss';
