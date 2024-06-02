@@ -1,0 +1,103 @@
+.header {
+    padding-top: 30px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 16px;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        column-gap: 10px;
+    }
+    &__back-button {
+        border: none;
+        background-color: rgba(0,0,0,0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        color: white;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 22px;
+        word-wrap: break-word;
+    }
+    &__menu {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        gap: 10px;
+    }
+    &__item {
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 22px;
+        word-wrap: break-word;
+        color: rgba(255, 255, 255, 0.45);
+        text-decoration: none;
+        &_active {
+            font-size: 18px;
+            color: white;
+            font-weight: 900;
+            margin-bottom: 1px;
+        }
+    }
+    &__sort {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        &-title {
+            margin-right: 7px;
+            color: white;
+            font-size: 10px;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+        &-button {
+            color: #9900E1;
+            font-size: 11px;
+            font-weight: 700;
+            text-decoration: underline;
+            word-wrap: break-word;
+            background-color: rgba(0,0,0,0);
+            border: none;
+            margin-bottom: 4px;
+            img {
+                margin-left: 4px;
+                transition: transform 0.3s ease;
+            }
+        }
+        &-item {
+            color: #fff;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        &-list {
+            display: none;
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+            background-color: rgba(13, 0, 42, 0.8);
+            border-radius: 10px;
+            padding: 10px;
+            width: 120px;
+            z-index: 100;
+            &.active {
+                display: block;
+            }
+        }
+        &-flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 12px;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        &-choice {
+            position: relative;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.waiting-pay {
+    &__wrapper {
+        padding: 0 19px 20px 19px;
+    }
+    &__title {
+        margin-top: 35px;
+        text-align: center;
+        color: white;
+        font-size: 16px;
+        font-weight: 900;
+        word-wrap: break-word;
+    }
+    &__buttons {
+        margin-top: 62px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        position: relative;
+        z-index: 5;
+    }
+    &__page-picture {
+        margin: 0 auto;
+        margin-top: 49px;
+    }
+}
