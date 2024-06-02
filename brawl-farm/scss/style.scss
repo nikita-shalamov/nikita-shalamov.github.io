@@ -24,6 +24,11 @@ button {
 .background {
     height: calc(100% - 62px);
     overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -46,6 +51,10 @@ button {
 }
 .display-none {
     display: none;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
 }
 
 @import 'blocks/header.scss';
