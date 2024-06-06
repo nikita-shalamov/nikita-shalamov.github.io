@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+.background {
+    height: 100%;
+    overflow: auto;
+    position: relative;
+    &_min {
+        height: calc(100% - 86px);
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+    }
+}
+
+$blue-color: #007AFF;
+$grey-color: #ADADAD;
+$red-color: #C94928;
+
+@import 'blocks/header';
+@import 'blocks/profile';
+@import 'blocks/buttons';
+@import 'blocks/productInfo';
+@import 'blocks/payments';
+@import 'blocks/subscribes';
+@import 'blocks/connectWallet';
+@import 'blocks/userWallet';
+@import 'blocks/partnersCatalog';
+@import 'blocks/mainButton';
+@import 'blocks/partner';
+@import 'blocks/partnerCover';
+@import 'blocks/subDescr';
+@import 'blocks/subOptions';
+@import 'blocks/subConfirm';
+@import 'blocks/subManage';
+@import 'blocks/contactSupport';
