@@ -1,133 +1,114 @@
-
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lilita+One&display=swap" rel="stylesheet">
-    <title>Main</title>
     <link rel="stylesheet" href="css/style.css">
+    <title>main</title>
 </head>
-<body>
+<body style="background-color: #202020">
     <div class="background">
         <div class="background__wrapper">
-            <header class="header">
+            <header class="header header_dark">
+            </header>
+            <div class="top-content top-content_secondary-background">
                 <div class="container">
-                    <div class="header__wrapper">
-                        <div class="header__menu">
-                            <a href="#" class="header__item header__item_active">
-                                Гемы
-                            </a>
-                            <a href="#" class="header__item">
-                                Пассы
-                            </a>
+                    <div class="top-content__wrapper">
+                        <div class="page-header page-header_shop">
+                            <div class="page-header__title">Магазин</div>
+                            <img src="img/icons/person.svg" alt="" class="page-header__icon">
                         </div>
-                        <div class="header__sort">
-                            <div class="header__sort-title">Сортировка:</div>
-                            <div class="header__sort-choice">
-                                <button class="header__sort-button">
-                                    По популярности<img src="img/icons/arrow-sort.svg" alt="">
-                                </button>
-                                <div class="header__sort-list">
-                                    <ul class="header__sort-flex">
-                                        <li class="header__sort-item">По популярности</li>
-                                        <li class="header__sort-item">По новизне</li>
-                                        <li class="header__sort-item">По возрастанию цены</li>
-                                        <li class="header__sort-item">По убыванию цены</li>
-                                    </ul>
+                        <div class="special-offer">
+                            <div class="special-offer__wrapper">
+                                <div class="special-offer__title">&nbsp&nbspСпециальное Предложение</div>
+                                <div class="special-offer__slider">
+                                    <div class="special-offer__cards">
+                                        <div class="card-special-offer">
+                                            <div class="card-special-offer__descr">Успей купить гемы по выгодной цене!</div>
+                                            <button class="card-special-offer__button">
+                                                Перейти
+                                                <img src="img/icons/right-arrow.svg" alt="">
+                                            </button>
+                                            <div class="card-special-offer__image-wrapper">
+                                                <img src="img/characters/girl.png" alt="" class="card-special-offer__image">
+                                            </div>
+                                        </div>
+                                        <div class="card-special-offer">
+                                            <div class="card-special-offer__descr">Успей купить гемы по выгодной цене!</div>
+                                            <button class="card-special-offer__button">
+                                                Перейти
+                                                <img src="img/icons/right-arrow.svg" alt="">
+                                            </button>
+                                            <div class="card-special-offer__image-wrapper">
+                                                <img src="img/characters/girl.png" alt="" class="card-special-offer__image">
+                                            </div>
+                                        </div>
+                                        <div class="card-special-offer">
+                                            <div class="card-special-offer__descr">Успей купить гемы по выгодной цене!</div>
+                                            <button class="card-special-offer__button">
+                                                Перейти
+                                                <img src="img/icons/right-arrow.svg" alt="">
+                                            </button>
+                                            <div class="card-special-offer__image-wrapper">
+                                                <img src="img/characters/girl.png" alt="" class="card-special-offer__image">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </header>
-            <div class="gems">
-                <div class="gems__wrapper">
-                    <div class="gems__list">
-                        <div class="gem">
-                            <div class="gem__wrapper">
-                                <div class="gem__clickable-elem"></div>
-                                <div class="gem__cover">
-                                    <div class="gem__background-image">
-                                        <div class="gem__background">
-                                            <div class="gem__image gem__image_girl"><img src="img/gem/characters/girl.png" alt=""></div>
-                                            <div class="gem__total-sum">1500 <br>GEMS</div>
-                                        </div>
-                                        <img src="img/gem/gem-backgound.png" alt="">
-                                    </div>
+            </div>
+            <div class="main-block main-block_white">
+                <div class="container">
+                    <div class="main-block__wrapper">
+                        <div class="catalog">
+                            <div class="catalog__wrapper">
+                                <div class="catalog__title">Каталог</div>
+                                <div class="catalog__tabs">
+                                    <div class="catalog__tab catalog__tab_active">Все</div>
+                                    <div class="catalog__tab">Гемы</div>
+                                    <div class="catalog__tab">Пассы</div>
                                 </div>
-                                <div class="gem__info">
-                                    <div class="gem__info-col">
-                                        <div class="gem__title">1500 GEMS Brawl Stars</div>
-                                    </div>
-                                    <div class="gem__info-col">
-                                        <div class="gem__price">12000 <span>₽</span></div>
-                                        <div class="gem__stars">
-                                            <img src="img/gem/star.svg" alt="">
-                                            <img src="img/gem/star.svg" alt="">
-                                            <img src="img/gem/star.svg" alt="">
-                                            <img src="img/gem/star.svg" alt="">
-                                            <img src="img/gem/star.svg" alt="">
+                                <div class="catalog__list">
+                                    <div class="catalog__item">
+                                        <div class="catalog__item-photo">
+                                            <img src="" alt="">
+                                        </div>
+                                        <div class="catalog__item-info">
+                                            <div class="catalog__item-price">
+                                                <img src="img/icons/crystal.svg" alt="" class="catalog__item-price-icon">
+                                                <div class="catalog__item-price-gems">1500 Gems</div>
+                                                <div class="catalog__item-price-dollars">~$153.48</div>
+                                            </div>
+                                            <div class="catalog__item-descr">1500 гемов за копейки!</div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gem">
-                            <div class="gem__wrapper">
-                                <div class="gem__clickable-elem"></div>
-                                <div class="gem__cover">
-                                    <div class="gem__background-image">
-                                        <div class="gem__background">
-                                            <div class="gem__image gem__image_poco"><img src="img/gem/characters/poco.png" alt=""></div>
-                                            <div class="gem__total-sum">2500 <br>GEMS</div>
+                                    <div class="catalog__item">
+                                        <div class="catalog__item-photo">
+                                            <img src="" alt="">
                                         </div>
-                                        <img src="img/gem/gem-backgound.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="gem__info">
-                                    <div class="gem__info-col">
-                                        <div class="gem__title">2500 GEMS Brawl Stars</div>
-                                    </div>
-                                    <div class="gem__info-col">
-                                        <div class="gem__price">22000 <span>₽</span></div>
-                                        <div class="gem__stars">
-                                            <img src="img/gem/star.svg" alt="">
-                                            <img src="img/gem/star.svg" alt="">
-                                            <img src="img/gem/star.svg" alt="">
-                                            <img src="img/gem/star.svg" alt="">
-                                            <img src="img/gem/star.svg" alt="">
+                                        <div class="catalog__item-info">
+                                            <div class="catalog__item-price">
+                                                <img src="img/icons/crystal.svg" alt="" class="catalog__item-price-icon">
+                                                <div class="catalog__item-price-gems">2500 Gems</div>
+                                                <div class="catalog__item-price-dollars">~$243.54</div>
+                                            </div>
+                                            <div class="catalog__item-descr">2500 гемов за копейки!</div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gem">
-                            <div class="gem__wrapper">
-                                <div class="gem__clickable-elem"></div>
-                                <div class="gem__cover">
-                                    <div class="gem__background-image">
-                                        <div class="gem__background">
-                                            <div class="gem__image gem__image_girl"><img src="img/gem/characters/girl.png" alt=""></div>
-                                            <div class="gem__total-sum">1500 <br>GEMS</div>
+                                    <div class="catalog__item">
+                                        <div class="catalog__item-photo">
+                                            <img src="" alt="">
                                         </div>
-                                        <img src="img/gem/gem-backgound.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="gem__info">
-                                    <div class="gem__info-col">
-                                        <div class="gem__title">1500 GEMS Brawl Stars</div>
-                                    </div>
-                                    <div class="gem__info-col">
-                                        <div class="gem__price">12000 <span>₽</span></div>
-                                        <div class="gem__stars">
-                                            <img src="img/gem/star.svg" alt="">
-                                            <img src="img/gem/star.svg" alt="">
-                                            <img src="img/gem/star.svg" alt="">
-                                            <img src="img/gem/star.svg" alt="">
-                                            <img src="img/gem/star.svg" alt="">
+                                        <div class="catalog__item-info">
+                                            <div class="catalog__item-price">
+                                                <img src="img/icons/crystal.svg" alt="" class="catalog__item-price-icon">
+                                                <div class="catalog__item-price-gems">3500 Gems</div>
+                                                <div class="catalog__item-price-dollars">~$153.48</div>
+                                            </div>
+                                            <div class="catalog__item-descr">3500 гемов за копейки!</div>
                                         </div>
                                     </div>
                                 </div>
@@ -137,32 +118,6 @@
                 </div>
             </div>
         </div>
-        <nav class="navbar">
-            <div class="navbar__wrapper">
-                <div class="navbar__menu">
-                    <a href="#" class="navbar__item">
-                        <img src="img/navbar/pseudo.svg" alt="" class="navbar__item-pseudo-elem">
-                        <div class="navbar__icon navbar__icon_active">
-                            <img src="img/navbar/home.svg" alt="">
-                        </div>
-                        <div class="navbar__name navbar__name_active">Главная</div>
-                    </a>
-                    <a href="#" class="navbar__item">
-                        <div class="navbar__icon">
-                            <img src="img/navbar/faq.svg" alt="">
-                        </div>
-                        <div class="navbar__name">FAQ</div>
-                    </a>
-                    <a href="#" class="navbar__item">
-                        <div class="navbar__icon">
-                            <img src="img/navbar/gear.svg" alt="">
-                        </div>
-                        <div class="navbar__name">Поддержка</div>
-                    </a>
-                </div>
-            </div>
-        </nav>
     </div>
-
 </body>
 </html>

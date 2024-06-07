@@ -10,12 +10,18 @@ body {
     margin: 0;
     overflow: hidden;
     height: 100%;
+    font-family: 'SF Pro Display', sans-serif;
 }
 
 .background {
     height: 100%;
     overflow: auto;
     position: relative;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+        }
     &_min {
         height: calc(100% - 86px);
     }
@@ -29,8 +35,31 @@ body {
 $blue-color: #007AFF;
 $grey-color: #ADADAD;
 $red-color: #C94928;
+$secondary-background: #EFEFF4;
 
+// Применение дополнительных шрифтов
+.brawl-stars-text {
+    font-family: 'Brawl Stars RU';
+}
+
+.lilita-one-text {
+    font-family: 'Lilita One';
+}
+
+.nougat-extra-black-text {
+    font-family: 'Nougat ExtraBlack';
+}
+
+@import 'fonts';
 @import 'blocks/header';
+@import 'blocks/topContent.scss';
+@import 'blocks/pageHeader.scss';
+@import 'blocks/specialOffer.scss';
+@import 'blocks/cardSpecialOffer.scss';
+@import 'blocks/mainBlock.scss';
+@import 'blocks/catalog.scss';
+
+
 @import 'blocks/profile';
 @import 'blocks/buttons';
 @import 'blocks/productInfo';
