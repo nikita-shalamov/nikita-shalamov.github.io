@@ -1,0 +1,32 @@
+.faq {
+    &__wrapper {
+        padding: 5px 26px 0 26px;
+    }
+    &__answer {
+        margin-top: 10px;
+        width: 100%;
+        color: #202020;
+        font-size: 14px;
+        font-weight: 500;
+        word-wrap: break-word;
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    &__question {
+        margin-top: 15px;
+        text-align: left;
+        color: #202020;
+        font-size: 14px;
+        font-weight: 700;
+        word-wrap: break-word;
+        cursor: pointer;
+    }
+    &__title {
+        color: white;
+        font-size: 16px;
+        font-weight: 900;
+        word-wrap: break-word;
+    }
+}

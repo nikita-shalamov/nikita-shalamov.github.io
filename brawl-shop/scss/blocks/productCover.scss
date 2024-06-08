@@ -1,0 +1,25 @@
+.product-cover {
+    &__price {
+        margin-top: 48px;
+        text-align: center;
+        color: #202020;
+		font-size: 36px;
+		font-family: BrawlStarsRU;
+		font-weight: 400;
+		word-wrap: break-word;
+    }
+    &__img {
+        margin: 0 auto;
+        margin-top: 28px;
+        margin-bottom: 44px;
+        padding: 0 70px;
+        max-width: 410px;
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}

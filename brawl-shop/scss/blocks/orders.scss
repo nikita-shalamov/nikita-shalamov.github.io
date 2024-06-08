@@ -1,0 +1,96 @@
+.orders {
+    &__wrapper {
+        padding: 20px 14px 14px 14px;
+    }
+    &__empty {
+        &-descr {
+            margin-top: 84px;
+            text-align: center;
+            color: black;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 28px;
+            word-wrap: break-word;
+        }
+        &-img {
+            display: block;
+            margin: 0 auto;
+            margin-top: 44px;
+            margin-bottom: 67px;
+            width: 129px;
+            height: 118px;
+        }
+    }
+    &__title {
+        color: #202020;
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 18px;
+		word-wrap: break-word;
+    }
+    &__list {
+        margin-top: 27px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 25px;
+        row-gap: 22px;
+    }
+    &__item {
+        width: 100%;
+        height: 154px;
+        background: white;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.13);
+		border-radius: 7px;
+		border: 1px #F3F3F3 solid;
+        position: relative;
+        &_active {
+            cursor: pointer;
+        }
+        &-gems {
+            margin-top: 7px;
+            text-align: center;
+            color: #202020;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 22px;
+            word-wrap: break-word;    
+        }
+        &-dollars {
+            text-align: center;
+            color: #202020;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 13px;
+            word-wrap: break-word;    
+        }
+        &-status {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: #007AFF;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 13px;
+            word-wrap: break-word;  
+            width: 95%;  
+        }
+        &-photo {
+            width: 100%;
+            max-width: 114px;
+            aspect-ratio: 1 / 0.7;
+            padding: 0 20px;
+            overflow: hidden;
+            margin: 0 auto;
+            &_small {
+                padding: 0 28px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}

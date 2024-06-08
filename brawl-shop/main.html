@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>main</title>
 </head>
-<body style="background-color: #202020">
+<body>
     <div class="background">
         <div class="background__wrapper">
             <header class="header header_dark">
@@ -16,7 +16,7 @@
                     <div class="top-content__wrapper">
                         <div class="page-header page-header_shop">
                             <div class="page-header__title">Магазин</div>
-                            <img src="img/icons/person.svg" alt="" class="page-header__icon">
+                            <a href="#" class="page-header__icon"><img src="img/icons/person.svg" alt=""></a>
                         </div>
                         <div class="special-offer">
                             <div class="special-offer__wrapper">
@@ -67,14 +67,15 @@
                             <div class="catalog__wrapper">
                                 <div class="catalog__title">Каталог</div>
                                 <div class="catalog__tabs">
-                                    <div class="catalog__tab catalog__tab_active">Все</div>
-                                    <div class="catalog__tab">Гемы</div>
-                                    <div class="catalog__tab">Пассы</div>
+                                    <button class="catalog__tab catalog__tab_active">Все</button>
+                                    <button class="catalog__tab">Гемы</button>
+                                    <button class="catalog__tab">Пассы</button>
                                 </div>
                                 <div class="catalog__list">
                                     <div class="catalog__item">
+                                        <div class="catalog__item-click-elem"></div>
                                         <div class="catalog__item-photo">
-                                            <img src="" alt="">
+                                            <img src="img/crystals-photos/crystal-1.png" alt="">
                                         </div>
                                         <div class="catalog__item-info">
                                             <div class="catalog__item-price">
@@ -86,8 +87,9 @@
                                         </div>
                                     </div>
                                     <div class="catalog__item">
+                                        <div class="catalog__item-click-elem"></div>
                                         <div class="catalog__item-photo">
-                                            <img src="" alt="">
+                                            <img src="img/crystals-photos/crystal-2.png" alt="">
                                         </div>
                                         <div class="catalog__item-info">
                                             <div class="catalog__item-price">
@@ -99,16 +101,59 @@
                                         </div>
                                     </div>
                                     <div class="catalog__item">
-                                        <div class="catalog__item-photo">
-                                            <img src="" alt="">
+                                        <div class="catalog__item-click-elem"></div>
+                                        <div class="catalog__item-photo catalog__item-photo_small">
+                                            <img src="img/crystals-photos/crystal-3.png" alt="">
                                         </div>
                                         <div class="catalog__item-info">
                                             <div class="catalog__item-price">
                                                 <img src="img/icons/crystal.svg" alt="" class="catalog__item-price-icon">
                                                 <div class="catalog__item-price-gems">3500 Gems</div>
-                                                <div class="catalog__item-price-dollars">~$153.48</div>
+                                                <div class="catalog__item-price-dollars">~$453.48</div>
                                             </div>
                                             <div class="catalog__item-descr">3500 гемов за копейки!</div>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__item">
+                                        <div class="catalog__item-click-elem"></div>
+                                        <div class="catalog__item-photo catalog__item-photo_small">
+                                            <img src="img/crystals-photos/crystal-4.png" alt="">
+                                        </div>
+                                        <div class="catalog__item-info">
+                                            <div class="catalog__item-price">
+                                                <img src="img/icons/crystal.svg" alt="" class="catalog__item-price-icon">
+                                                <div class="catalog__item-price-gems">5500 Gems</div>
+                                                <div class="catalog__item-price-dollars">~$102.24</div>
+                                            </div>
+                                            <div class="catalog__item-descr">3500 гемов за копейки!</div>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__item">
+                                        <div class="catalog__item-click-elem"></div>
+                                        <div class="catalog__item-photo catalog__item-photo_big">
+                                            <img src="img/crystals-photos/crystal-6.png" alt="">
+                                        </div>
+                                        <div class="catalog__item-info">
+                                            <div class="catalog__item-price">
+                                                <img src="img/icons/ton.svg" alt="" class="catalog__item-price-icon catalog__item-price-icon_ton">
+                                                <div class="catalog__item-price-gems catalog__item-price-gems_ton">70.5</div>
+                                                <div class="catalog__item-price-dollars catalog__item-price-dollars_ton">~$102.24</div>
+                                            </div>
+                                            <div class="catalog__item-descr">Grey shopper bag with 3 unique patches.</div>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__item">
+                                        <div class="catalog__item-click-elem"></div>
+                                        <div class="catalog__item-photo catalog__item-photo_big">
+                                            <img src="img/crystals-photos/crystal-5.png" alt="">
+                                        </div>
+                                        <div class="catalog__item-info">
+                                            <div class="catalog__item-price">
+                                                <img src="img/icons/ton.svg" alt="" class="catalog__item-price-icon catalog__item-price-icon_ton">
+                                                <div class="catalog__item-price-gems catalog__item-price-gems_ton">70.5</div>
+                                                <div class="catalog__item-price-dollars catalog__item-price-dollars_ton">~$102.24</div>
+                                            </div>
+                                            <div class="catalog__item-descr">Grey shopper bag with 3 unique patches.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -119,5 +164,6 @@
             </div>
         </div>
     </div>
+    <script src="js/specialOffer.js"></script>
 </body>
 </html>

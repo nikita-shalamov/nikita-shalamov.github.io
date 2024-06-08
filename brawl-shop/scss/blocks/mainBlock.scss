@@ -1,0 +1,26 @@
+.main-block {
+    width: 100%;
+    min-height: 100%;
+    background: #EFEFF4;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    overflow: hidden;
+    flex-grow: 1;
+    transform: translateY(-20px);
+    position: relative;
+    &__wrapper {
+        height: 100%;
+    }
+    &__flex {
+        min-height: calc(100vh - 145px - 56px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &_white {
+        background: #fff;
+    }
+    &_border {
+        border-top: 1.5px #A4A4A4 solid;
+    }
+}

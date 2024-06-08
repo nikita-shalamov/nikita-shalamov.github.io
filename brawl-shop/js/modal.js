@@ -1,21 +1,22 @@
-// Получаем элементы кнопки открытия и закрытия модального окна
-var openModalBtn = document.getElementById("open-modal");
-var closeModalBtn = document.getElementById("close-modal");
-var modal = document.getElementById("modal");
+const modal = document.getElementById("modal");
+const buyButton = document.querySelector("#buy-button");
+const activeOrder = document.querySelector('.orders__item_active')
 
-// Обработчик события для открытия модального окна
-openModalBtn.onclick = function() {
-  modal.style.display = "block";
+if (buyButton) {
+    buyButton.onclick = function() {
+        modal.style.display = "block";
+      }
 }
 
-// Обработчик события для закрытия модального окна
-closeModalBtn.onclick = function() {
-  modal.style.display = "none";
+if (activeOrder) {
+    activeOrder.addEventListener('click' , () => {
+        modal.style.display = "block";
+    })
 }
 
-// Закрыть модальное окно при клике вне него
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+
+modal.addEventListener('click', (e) => {
+    if (e.target.classList.contains("modal")) {
+        modal.style.display = "none";
+    }
+})

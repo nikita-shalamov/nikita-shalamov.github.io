@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>modal-pay</title>
 </head>
-<body style="background-color: #202020">
-    <button id="open-modal">Открыть модальное окно</button>
-
+<body>
     <div id="modal" class="modal">
         <div class="modal__content">
             <div class="modal-pay">
@@ -20,7 +18,7 @@
                     <div class="modal-pay__descr">Товар - 5500 гемов Brawl Stars</div>
                     <div class="modal-pay__selector">
                         <div class="modal-pay__item">
-                          <span class="modal-pay__circle"></span>
+                          <span class="modal-pay__circle modal-pay__circle_active"></span>
                           Карта МИР
                         </div>
                         <div class="modal-pay__item">
@@ -42,26 +40,17 @@
             </div>
         </div>
     </div>
-
     <div class="background background_min">
         <div class="background__wrapper">
             <header class="header header_dark">
             </header>
-            <div class="top-content top-content_dark">
+            <div class="top-content">
                 <div class="container">
                     <div class="top-content__wrapper">
-                        <div class="profile">
-                            <div class="profile__wrapper">
-                                <div class="profile__name">Ivan Puzov</div>
-                                <div class="profile__username">@tlir22</div>
-                                <div class="profile__photo"><img src="img/profile/profile-photo.png" alt=""></div>
-                                <div class="profile__promocode">
-                                    <div class="profile__promocode-title">Промокод</div>
-                                    <div class="profile__promocode-input">
-                                        <input id="promo" type="text" class="profile__promocode-input-field" placeholder="PROMOCODE">
-                                        <button class="profile__promocode-input-button">Активировать</button>
-                                    </div>
-                                </div>
+                        <div class="product-cover">
+                            <div class="product-cover__wrapper">
+                                <div class="product-cover__price">5500 Gems</div>
+                                <div class="product-cover__img"><img src="img/crystals-photos/crystal-4.png" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -70,58 +59,85 @@
             <div class="main-block main-block_white main-block_border">
                 <div class="container">
                     <div class="main-block__wrapper">
-                        <div class="orders">
-                            <div class="orders__wrapper">
-                                <div class="orders__title">Заказы</div>
-                                <div class="orders__list">
-                                    <div class="orders__item">
-                                        <div class="orders__item-gems">5500 Gems</div>
-                                        <div class="orders__item-dollars">540$</div>
-                                        <div class="orders__item-photo"><img src="" alt=""></div>
-                                        <div class="orders__item-status">Доставлен</div>
-                                    </div>
-                                    <div class="orders__item">
-                                        <div class="orders__item-gems">5500 Gems</div>
-                                        <div class="orders__item-dollars">540$</div>
-                                        <div class="orders__item-photo"><img src="" alt=""></div>
-                                        <div class="orders__item-status">Доставлен</div>
-                                    </div>
-                                    <div class="orders__item">
-                                        <div class="orders__item-gems">5500 Gems</div>
-                                        <div class="orders__item-dollars">540$</div>
-                                        <div class="orders__item-photo"><img src="" alt=""></div>
-                                        <div class="orders__item-status">Доставлен</div>
-                                    </div>
-                                    <div class="orders__item">
-                                        <div class="orders__item-gems">5500 Gems</div>
-                                        <div class="orders__item-dollars">540$</div>
-                                        <div class="orders__item-photo"><img src="" alt=""></div>
-                                        <div class="orders__item-status">Доставлен</div>
-                                    </div>
+                        <div class="product-info">
+                            <div class="product-info__wrapper">
+                                <div class="product-info__price">
+                                    <img src="img/icons/crystal.svg" class="product-info__price-crystal-icon" alt="">
+                                    <div class="product-info__price-gems">5500 Gems</div>
+                                    <div class="product-info__price-dollars">~$243.54</div>
                                 </div>
+                                <div class="product-info__descr">Вы получите 5500 Гемов в Бравл Старс за 243.54$.</div>
                             </div>
                         </div>
-                        <div class="help">
-                            <div class="help__wrapper">
-                                <div class="help__title">Помощь</div>
-                                <div class="help__list">
-                                    <div class="help__item">
-                                        <div class="help__col">
-                                            <img class="help__item-icon" src="img/icons/support.svg" alt="">
-                                            <div class="help__item-name">Техподдержка</div>
+                        <div class="reviews">
+                            <div class="reviews__wrapper">
+                                <div class="reviews__header">
+                                    <div class="reviews__title">Отзывы</div>
+                                    <a href="#" class="reviews__more">Смотреть всё</a>
+                                </div>
+                                <div class="reviews__list">
+                                    <div class="reviews__item">
+                                        <div class="reviews__item-header">
+                                            <div class="reviews__item-author">
+                                                <div class="reviews__item-photo">И</div>
+                                                <div class="reviews__item-col">
+                                                    <div class="reviews__item-name">Иван</div>
+                                                    <div class="reviews__item-stars">
+                                                        <img src="img/icons/reviews-star.svg" alt="">
+                                                        <img src="img/icons/reviews-star.svg" alt="">
+                                                        <img src="img/icons/reviews-star.svg" alt="">
+                                                        <img src="img/icons/reviews-star.svg" alt="">
+                                                        <img src="img/icons/reviews-star.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="reviews__item-date">
+                                                11.05.2024
+                                            </div>
                                         </div>
-                                        <div class="help__col">
-                                            <div class="help__item-arrow"><img src="img/icons/right-arrow-bold.svg" alt=""></div>
-                                        </div>
+                                        <div class="reviews__text">Сделка прошла успешно. Спасибо больше продавцу!</div>
                                     </div>
-                                    <div class="help__item">
-                                        <div class="help__col">
-                                            <img class="help__item-icon" src="img/icons/faq.svg" alt="">
-                                            <div class="help__item-name">FAQ</div>
+                                    <div class="reviews__item">
+                                        <div class="reviews__item-header">
+                                            <div class="reviews__item-author">
+                                                <div class="reviews__item-photo">A</div>
+                                                <div class="reviews__item-col">
+                                                    <div class="reviews__item-name">Afgan</div>
+                                                    <div class="reviews__item-stars">
+                                                        <img src="img/icons/reviews-star.svg" alt="">
+                                                        <img src="img/icons/reviews-star.svg" alt="">
+                                                        <img src="img/icons/reviews-star.svg" alt="">
+                                                        <img src="img/icons/reviews-star.svg" alt="">
+                                                        <img src="img/icons/reviews-star.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="reviews__item-date">
+                                                21.04.2024
+                                            </div>
                                         </div>
-                                        <div class="help__col">
-                                            <div class="help__item-arrow"><img src="img/icons/right-arrow-bold.svg" alt=""></div>
+                                        <div class="reviews__text">Сделка прошла успешно. Спасибо больше продавцу! Сделка прошла успешно.</div>
+                                    </div>
+                                    <div class="reviews__item">
+                                        <div class="reviews__item-header">
+                                            <div class="reviews__item-author">
+                                                <div class="reviews__item-photo">И</div>
+                                                <div class="reviews__item-col">
+                                                    <div class="reviews__item-name">Иван</div>
+                                                    <div class="reviews__item-stars">
+                                                        <img src="img/icons/reviews-star.svg" alt="">
+                                                        <img src="img/icons/reviews-star.svg" alt="">
+                                                        <img src="img/icons/reviews-star.svg" alt="">
+                                                        <img src="img/icons/reviews-star.svg" alt="">
+                                                        <img src="img/icons/reviews-star.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="reviews__item-date">
+                                                11.05.2024
+                                            </div>
                                         </div>
+                                        <div class="reviews__text">Сделка прошла успешно. Спасибо больше продавцу!</div>
                                     </div>
                                 </div>
                             </div>
@@ -132,7 +148,7 @@
         </div>
         <div class="main-button">
             <div class="main-button__wrapper">
-                <button class="button button_blue button_main-button">
+                <button id="buy-button" class="button button_blue button_main-button">
                     Купить
                 </button>
             </div>

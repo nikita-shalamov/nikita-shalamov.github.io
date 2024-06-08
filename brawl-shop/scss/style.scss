@@ -13,8 +13,12 @@ body {
     font-family: 'SF Pro Display', sans-serif;
 }
 
+button {
+    cursor: pointer;
+}
+
 .background {
-    height: 100%;
+    height: calc(100% + 20px);
     overflow: auto;
     position: relative;
     -ms-overflow-style: none;
@@ -23,7 +27,7 @@ body {
         display: none;
         }
     &_min {
-        height: calc(100% - 86px);
+        height: calc(100% - 66px);
     }
     &__wrapper {
         display: flex;
@@ -32,23 +36,11 @@ body {
     }
 }
 
-$blue-color: #007AFF;
-$grey-color: #ADADAD;
-$red-color: #C94928;
+.grey-text {
+    color: #7D7D7D;
+}
+
 $secondary-background: #EFEFF4;
-
-// Применение дополнительных шрифтов
-.brawl-stars-text {
-    font-family: 'Brawl Stars RU';
-}
-
-.lilita-one-text {
-    font-family: 'Lilita One';
-}
-
-.nougat-extra-black-text {
-    font-family: 'Nougat ExtraBlack';
-}
 
 @import 'fonts';
 @import 'blocks/header';
@@ -58,21 +50,20 @@ $secondary-background: #EFEFF4;
 @import 'blocks/cardSpecialOffer.scss';
 @import 'blocks/mainBlock.scss';
 @import 'blocks/catalog.scss';
-
-
-@import 'blocks/profile';
 @import 'blocks/buttons';
 @import 'blocks/productInfo';
-@import 'blocks/payments';
-@import 'blocks/subscribes';
-@import 'blocks/connectWallet';
-@import 'blocks/userWallet';
-@import 'blocks/partnersCatalog';
+@import 'blocks/productCover';
+@import 'blocks/reviews';
+@import 'blocks/orders';
+@import 'blocks/help';
+@import 'blocks/faqCover';
+@import 'blocks/faq';
+@import 'blocks/service';
+@import 'blocks/waitingPay';
+@import 'blocks/modal';
+@import 'blocks/modalId';
+@import 'blocks/modalPay';
+@import 'media/orders';
+@import 'media/buttons';
+@import 'blocks/profile';
 @import 'blocks/mainButton';
-@import 'blocks/partner';
-@import 'blocks/partnerCover';
-@import 'blocks/subDescr';
-@import 'blocks/subOptions';
-@import 'blocks/subConfirm';
-@import 'blocks/subManage';
-@import 'blocks/contactSupport';

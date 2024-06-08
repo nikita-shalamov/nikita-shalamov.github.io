@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,25 @@
     <link rel="stylesheet" href="css/style.css">
     <title>first</title>
 </head>
-<body style="background-color: #202020">
+<body>
+    <div id="modal" class="modal">
+        <div class="modal__content">
+            <div class="modal-id">
+                <div class="modal-id__wrapper">
+                    <div class="modal-id__title">Введите ваш ID аккаунта Supercell</div>
+                    <div class="modal-id__descr">Гемы оплачены! Введите ID вашего аккаунта для отправки гемов на ваш аккаунт</div>
+                    <form class="modal-id__form">
+                        <input type="text" placeholder="213h23" class="modal-id__input">
+                        <div class="modal-id__buttons">
+                            <button type="button" class="button button_modal-id button_modal-id-know" id="get-id">Где узнать ID</button>
+                            <button type="submit" class="button button_modal-id button_modal-id-submit" id="submit-id">Подтвердить</button>
+                        </div>
+                    </form>
+                    <div class="modal-id__attention">Внимание! Аккаунты созданные в России без VPN и DNS пополнить через ID не получится!</div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="background">
         <div class="background__wrapper">
             <header class="header header_dark">
@@ -26,7 +44,7 @@
                                     <div class="profile__promocode-title">Промокод</div>
                                     <div class="profile__promocode-input">
                                         <input id="promo" type="text" class="profile__promocode-input-field" placeholder="PROMOCODE">
-                                        <button class="profile__promocode-input-button">Активировать</button>
+                                        <button type="submit" class="profile__promocode-input-button">Активировать</button>
                                     </div>
                                 </div>
                             </div>
@@ -44,25 +62,37 @@
                                     <div class="orders__item">
                                         <div class="orders__item-gems">5500 Gems</div>
                                         <div class="orders__item-dollars">540$</div>
-                                        <div class="orders__item-photo"><img src="" alt=""></div>
+                                        <div class="orders__item-photo"><img src="img/crystals-photos/crystal-4.png" alt=""></div>
+                                        <div class="orders__item-status">Доставлен</div>
+                                    </div>
+                                    <div class="orders__item orders__item_active">
+                                        <div class="orders__item-gems">2500 Gems</div>
+                                        <div class="orders__item-dollars">240$</div>
+                                        <div class="orders__item-photo"><img src="img/crystals-photos/crystal-2.png" alt=""></div>
+                                        <div class="orders__item-status">Введите ID аккаунта</div>
+                                    </div>
+                                    <div class="orders__item">
+                                        <div class="orders__item-gems">3500 Gems</div>
+                                        <div class="orders__item-dollars">340$</div>
+                                        <div class="orders__item-photo"><img src="img/crystals-photos/crystal-1.png" alt=""></div>
+                                        <div class="orders__item-status">В ожидании</div>
+                                    </div>
+                                    <div class="orders__item">
+                                        <div class="orders__item-gems">4500 Gems</div>
+                                        <div class="orders__item-dollars">440$</div>
+                                        <div class="orders__item-photo"><img src="img/crystals-photos/crystal-3.png" alt=""></div>
+                                        <div class="orders__item-status">Отменен</div>
+                                    </div>
+                                    <div class="orders__item">
+                                        <div class="orders__item-gems">500 Gems</div>
+                                        <div class="orders__item-dollars">40$</div>
+                                        <div class="orders__item-photo orders__item-photo_small"><img src="img/crystals-photos/crystal-6.png" alt=""></div>
                                         <div class="orders__item-status">Доставлен</div>
                                     </div>
                                     <div class="orders__item">
                                         <div class="orders__item-gems">5500 Gems</div>
                                         <div class="orders__item-dollars">540$</div>
-                                        <div class="orders__item-photo"><img src="" alt=""></div>
-                                        <div class="orders__item-status">Доставлен</div>
-                                    </div>
-                                    <div class="orders__item">
-                                        <div class="orders__item-gems">5500 Gems</div>
-                                        <div class="orders__item-dollars">540$</div>
-                                        <div class="orders__item-photo"><img src="" alt=""></div>
-                                        <div class="orders__item-status">Доставлен</div>
-                                    </div>
-                                    <div class="orders__item">
-                                        <div class="orders__item-gems">5500 Gems</div>
-                                        <div class="orders__item-dollars">540$</div>
-                                        <div class="orders__item-photo"><img src="" alt=""></div>
+                                        <div class="orders__item-photo"><img src="img/crystals-photos/crystal-4.png" alt=""></div>
                                         <div class="orders__item-status">Доставлен</div>
                                     </div>
                                 </div>
@@ -72,7 +102,7 @@
                             <div class="help__wrapper">
                                 <div class="help__title">Помощь</div>
                                 <div class="help__list">
-                                    <div class="help__item">
+                                    <a href="#" class="help__item">
                                         <div class="help__col">
                                             <img class="help__item-icon" src="img/icons/support.svg" alt="">
                                             <div class="help__item-name">Техподдержка</div>
@@ -80,8 +110,8 @@
                                         <div class="help__col">
                                             <div class="help__item-arrow"><img src="img/icons/right-arrow-bold.svg" alt=""></div>
                                         </div>
-                                    </div>
-                                    <div class="help__item">
+                                    </a>
+                                    <a href="#" class="help__item">
                                         <div class="help__col">
                                             <img class="help__item-icon" src="img/icons/faq.svg" alt="">
                                             <div class="help__item-name">FAQ</div>
@@ -89,7 +119,7 @@
                                         <div class="help__col">
                                             <div class="help__item-arrow"><img src="img/icons/right-arrow-bold.svg" alt=""></div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -99,5 +129,6 @@
         </div>
     </div>
     <script src="js/formPromo.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,37 @@
     <link rel="stylesheet" href="css/style.css">
     <title>product</title>
 </head>
-<body style="background-color: #202020">
+<body>
+    <div id="modal" class="modal">
+        <div class="modal__content">
+            <div class="modal-pay">
+                <div class="modal-pay__wrapper">
+                    <div class="modal-pay__title">Выберите способ оплаты</div>
+                    <div class="modal-pay__descr">Товар - 5500 гемов Brawl Stars</div>
+                    <div class="modal-pay__selector">
+                        <div class="modal-pay__item">
+                          <span class="modal-pay__circle modal-pay__circle_active"></span>
+                          Карта МИР
+                        </div>
+                        <div class="modal-pay__item">
+                          <span class="modal-pay__circle"></span>
+                          СБП
+                        </div>
+                        <div class="modal-pay__item">
+                          <span class="modal-pay__circle"></span>
+                          Карта РФ
+                        </div>
+                    </div>
+                    <div class="modal-pay__total-sum">
+                        <div class="modal-pay__divider"></div>
+                        <div class="modal-pay__sum">Сумма к оплате - <span>5 000 рублей</span></div>
+                        <div class="modal-pay__divider"></div>
+                    </div>
+                    <button class="button button_modal-pay modal-pay__button">Оплатить</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="background background_min">
         <div class="background__wrapper">
             <header class="header header_dark">
@@ -20,7 +50,7 @@
                         <div class="product-cover">
                             <div class="product-cover__wrapper">
                                 <div class="product-cover__price">5500 Gems</div>
-                                <div class="product-cover__img"><img src="img/crystals-photos/crystal-5.png" alt=""></div>
+                                <div class="product-cover__img"><img src="img/crystals-photos/crystal-4.png" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -70,9 +100,9 @@
                                     <div class="reviews__item">
                                         <div class="reviews__item-header">
                                             <div class="reviews__item-author">
-                                                <div class="reviews__item-photo">И</div>
+                                                <div class="reviews__item-photo">A</div>
                                                 <div class="reviews__item-col">
-                                                    <div class="reviews__item-name">Иван</div>
+                                                    <div class="reviews__item-name">Afgan</div>
                                                     <div class="reviews__item-stars">
                                                         <img src="img/icons/reviews-star.svg" alt="">
                                                         <img src="img/icons/reviews-star.svg" alt="">
@@ -83,7 +113,7 @@
                                                 </div>
                                             </div>
                                             <div class="reviews__item-date">
-                                                11.05.2024
+                                                21.04.2024
                                             </div>
                                         </div>
                                         <div class="reviews__text">Сделка прошла успешно. Спасибо больше продавцу! Сделка прошла успешно.</div>
@@ -118,11 +148,13 @@
         </div>
         <div class="main-button">
             <div class="main-button__wrapper">
-                <button class="button button_blue button_main-button">
+                <button id="buy-button" class="button button_blue button_main-button">
                     Купить
                 </button>
             </div>
         </div>
     </div>
+    <script src="js/payment.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +9,8 @@
     <link rel="stylesheet" href="css/style.css">
     <title>modal-id</title>
 </head>
-<body style="background-color: #202020">
-    <button id="open-modal">Открыть модальное окно</button>
-
-    <div id="modal" class="modal">
+<body>
+    <div id="modal" class="modal" style="display: block;">
         <div class="modal__content">
             <div class="modal-id">
                 <div class="modal-id__wrapper">
@@ -31,7 +29,7 @@
         </div>
     </div>
 
-    <div class="background background_min">
+    <div class="background">
         <div class="background__wrapper">
             <header class="header header_dark">
             </header>
@@ -65,25 +63,37 @@
                                     <div class="orders__item">
                                         <div class="orders__item-gems">5500 Gems</div>
                                         <div class="orders__item-dollars">540$</div>
-                                        <div class="orders__item-photo"><img src="" alt=""></div>
+                                        <div class="orders__item-photo"><img src="img/crystals-photos/crystal-4.png" alt=""></div>
+                                        <div class="orders__item-status">Доставлен</div>
+                                    </div>
+                                    <div class="orders__item orders__item_active">
+                                        <div class="orders__item-gems">2500 Gems</div>
+                                        <div class="orders__item-dollars">240$</div>
+                                        <div class="orders__item-photo"><img src="img/crystals-photos/crystal-2.png" alt=""></div>
+                                        <div class="orders__item-status">Введите ID аккаунта</div>
+                                    </div>
+                                    <div class="orders__item">
+                                        <div class="orders__item-gems">3500 Gems</div>
+                                        <div class="orders__item-dollars">340$</div>
+                                        <div class="orders__item-photo"><img src="img/crystals-photos/crystal-1.png" alt=""></div>
+                                        <div class="orders__item-status">В ожидании</div>
+                                    </div>
+                                    <div class="orders__item">
+                                        <div class="orders__item-gems">4500 Gems</div>
+                                        <div class="orders__item-dollars">440$</div>
+                                        <div class="orders__item-photo"><img src="img/crystals-photos/crystal-3.png" alt=""></div>
+                                        <div class="orders__item-status">Отменен</div>
+                                    </div>
+                                    <div class="orders__item">
+                                        <div class="orders__item-gems">500 Gems</div>
+                                        <div class="orders__item-dollars">40$</div>
+                                        <div class="orders__item-photo orders__item-photo_small"><img src="img/crystals-photos/crystal-6.png" alt=""></div>
                                         <div class="orders__item-status">Доставлен</div>
                                     </div>
                                     <div class="orders__item">
                                         <div class="orders__item-gems">5500 Gems</div>
                                         <div class="orders__item-dollars">540$</div>
-                                        <div class="orders__item-photo"><img src="" alt=""></div>
-                                        <div class="orders__item-status">Доставлен</div>
-                                    </div>
-                                    <div class="orders__item">
-                                        <div class="orders__item-gems">5500 Gems</div>
-                                        <div class="orders__item-dollars">540$</div>
-                                        <div class="orders__item-photo"><img src="" alt=""></div>
-                                        <div class="orders__item-status">Доставлен</div>
-                                    </div>
-                                    <div class="orders__item">
-                                        <div class="orders__item-gems">5500 Gems</div>
-                                        <div class="orders__item-dollars">540$</div>
-                                        <div class="orders__item-photo"><img src="" alt=""></div>
+                                        <div class="orders__item-photo"><img src="img/crystals-photos/crystal-4.png" alt=""></div>
                                         <div class="orders__item-status">Доставлен</div>
                                     </div>
                                 </div>
@@ -93,7 +103,7 @@
                             <div class="help__wrapper">
                                 <div class="help__title">Помощь</div>
                                 <div class="help__list">
-                                    <div class="help__item">
+                                    <a href="#" class="help__item">
                                         <div class="help__col">
                                             <img class="help__item-icon" src="img/icons/support.svg" alt="">
                                             <div class="help__item-name">Техподдержка</div>
@@ -101,8 +111,8 @@
                                         <div class="help__col">
                                             <div class="help__item-arrow"><img src="img/icons/right-arrow-bold.svg" alt=""></div>
                                         </div>
-                                    </div>
-                                    <div class="help__item">
+                                    </a>
+                                    <a href="#" class="help__item">
                                         <div class="help__col">
                                             <img class="help__item-icon" src="img/icons/faq.svg" alt="">
                                             <div class="help__item-name">FAQ</div>
@@ -110,19 +120,12 @@
                                         <div class="help__col">
                                             <div class="help__item-arrow"><img src="img/icons/right-arrow-bold.svg" alt=""></div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="main-button">
-            <div class="main-button__wrapper">
-                <button class="button button_blue button_main-button">
-                    Купить
-                </button>
             </div>
         </div>
     </div>
