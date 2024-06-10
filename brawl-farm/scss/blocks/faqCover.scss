@@ -1,0 +1,22 @@
+.faq-cover {
+    &__wrapper {
+        position: relative;
+        padding: 12px 16px 89px 16px;
+    }
+    &__title {
+        color: #373737;
+        font-size: 21px;
+        font-family: BrawlStarsRU;
+        font-weight: 400;
+        line-height: 24px;
+        word-wrap: break-word;
+    }
+    &__img {
+        position: absolute;
+        top: 33px;
+        right: 21px;
+        z-index: 10;
+        width: 104px;
+        height: 104px;
+    }
+}

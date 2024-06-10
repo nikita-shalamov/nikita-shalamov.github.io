@@ -1,21 +1,34 @@
 .reviews {
-    margin-top: 13px;
+    margin-top: 17px;
     &__wrapper {
-        padding: 0 19px;
+        padding: 0 16px;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     &__title {
-        color: white;
-        font-size: 14px;
-        font-weight: 900;
-        line-height: 22px;
-        word-wrap: break-word;
+		color: #626262;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 18px;
+		word-wrap: break-word;
+    }
+    &__more {
+		color: #007AFF;
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 18px;
+		word-wrap: break-word;
+        text-decoration: none;
     }
     &__list {
-        margin-top: 20px;
+        margin-top: 12px;
         margin-bottom: 30px;
     }
     &__item {
-        margin-top: 18px;
+        margin-bottom: 18px;
         &-header {
             display: flex;
             justify-content: space-between;
@@ -30,33 +43,34 @@
             margin-right: 8px;
             width: 30px;
             height: 30px;
-            background: #0E002E;
             border-radius: 71px;
-            border: 1px #CC00FF solid;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
+            border: 1px #E4E4E4 solid;
+            background-color: none;  
+            color: #8E8E8E;
             font-size: 12px;
+            font-family: Inter;
             font-weight: 900;
             line-height: 22px;
-            word-wrap: break-word
+            word-wrap: break-word;    
+            display: flex;
+            justify-content: center;
+            align-items: center;  
         }
         &-name {
-            color: white;
+            color: #434343;
             font-size: 12px;
+            font-family: Inter;
             font-weight: 500;
-            line-height: auto;
             line-height: 22px;
-            word-wrap: break-word;
+            word-wrap: break-word;    
         }
         &-date {
-            color: white;
+            color: #6D6D72;
             font-size: 11px;
             font-weight: 500;
             line-height: 22px;
-            word-wrap: break-word;
+            word-wrap: break-word;    
+
         }
         &-stars {
             margin-top: -1px;
@@ -68,12 +82,12 @@
         }
     }
     &__text {
-        margin-top: 13px;
-        color: white;
-        font-size: 11px;
-        font-weight: 500;
-        line-height: 15px;
-        word-wrap: break-word;
+        margin-top: 10px;
+        color: #434343;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 18px;
+		word-wrap: break-word;
     }
 
 }

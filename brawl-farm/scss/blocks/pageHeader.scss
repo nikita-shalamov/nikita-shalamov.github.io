@@ -1,0 +1,18 @@
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5px 16px;
+    &__icon {
+        width: 29px;
+        height: 29px;
+    }
+    &__title {
+        color: #373737;
+		font-size: 21px;
+		font-family: BrawlStarsRU;
+		font-weight: 400;
+		line-height: 24px;
+		word-wrap: break-word;
+    }
+}

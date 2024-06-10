@@ -1,13 +1,19 @@
 .waiting-pay {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
     &__wrapper {
-        padding: 0 19px 20px 19px;
+        padding: 0px 34px 20px 34px;
     }
     &__title {
         margin-top: 35px;
         text-align: center;
-        color: white;
-        font-size: 16px;
-        font-weight: 900;
+        color: #373737;
+        font-size: 21px;
+        font-family: BrawlStarsRU;
+        font-weight: 400;
+        line-height: 24px;
         word-wrap: break-word;
     }
     &__buttons {
@@ -22,5 +28,34 @@
     &__page-picture {
         margin: 0 auto;
         margin-top: 49px;
+    }
+    &__picture {
+        position: relative;
+        width: fit-content;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 89px;
+    }
+    &__image {
+        position: relative;
+        z-index: 5;
+        width: 156px;
+        height: 214px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__light {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        margin: 0 auto;
+        width: 120px;
+        height: 210px;
+        background: #007AFF;
+        border-radius: 62px;
+        filter: blur(70.8px);
+        z-index: 1;
     }
 }

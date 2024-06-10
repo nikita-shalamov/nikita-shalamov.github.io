@@ -1,0 +1,40 @@
+.product-info {
+    &__wrapper {
+        padding: 24px 16px 0 16px;
+    }
+    &__price {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        &-crystal-icon {
+            width: 31px;
+            margin-right: 10px;
+        }
+        &-gems {
+            margin-right: 8px;
+            color: #202020;
+            font-size: 28px;
+            font-family: BrawlStarsRU;
+            font-weight: 400;
+            line-height: 22px;
+            word-wrap: break-word;    
+        }
+        &-dollars {
+            margin-top: 8px;
+            color: #8E8E93;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 18px;
+            word-wrap: break-word;    
+        }
+    }
+    &__descr {
+        margin-top: 12px;
+		color: black;
+		font-size: 17px;
+		font-weight: 400;
+		line-height: 22px;
+		word-wrap: break-word;
+    }
+}

@@ -1,0 +1,47 @@
+.help {
+    &__wrapper {
+        padding: 17px 14px 5px 14px;
+    }
+    &__title {
+		color: #202020;
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 18px;
+		word-wrap: break-word;
+    }
+    &__list {
+        margin-top: 3px;
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 17px 0;
+        position: relative;
+        text-decoration: none;
+        &:not(:last-child)::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -16px;
+            width: calc(100% + 32px);
+            border-bottom: 0.33px #C8C7CB solid;
+        }
+        &-name {
+            text-align: center;
+            color: #202020;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22px;
+            word-wrap: break-word;
+        }
+        &-icon {
+            margin-right: 10px;
+        }
+    }
+    &__col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

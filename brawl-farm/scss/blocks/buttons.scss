@@ -1,50 +1,74 @@
 .button {
-    &_item-buy {
-        height: auto;
-        padding: 8px 48px 11px 48px;
-        border-radius: 5px;
-        border: 2px #CC00FF solid;
-        background-color: rgba(0,0,0,0);
-        color: white;
-        font-size: 14px;
-        font-weight: 800;
-        text-transform: capitalize;
-        word-wrap: break-word;
-        &-fill {
-            background: linear-gradient(3deg, #CC00FF 0%, #D940FF 100%);
-            border: 1px #D52DFF solid;
-            text-transform: none;
-            padding: 8px 77px 11px 77px;
-        }
-    }
+    width: auto;
+    height: auto;
     &_waiting-pay {
         width: 50%;
         height: 35px;
-        border: 2px #CC00FF solid;
+        border: 2px #007AFF solid;
         border-radius: 7px;
-        padding: 0 12px;
+        padding: 0 11px;
         background-color: rgba(0,0,0,0);
-        color: white;
-        font-size: 10px;
-        font-weight: 700;
+        color: #007AFF;
+        font-size: 12px;
+        font-weight: 600;
         word-wrap: break-word;
         &-fill {
-            background: #B500D2;
+            color: #fff;
+            background: #007AFF;
         }
     }
-    &_successful {
-        width: 50%;
-        height: 35px;
+    &_modal-id {
+        padding: 11px 19px;
         text-align: center;
-        color: white;
-        font-size: 12px;
-        font-weight: 900;
-        word-wrap: break-word;
-        border-radius: 7px;
-        border: 1.5px #B500D2 solid;
+        color: #B1B1B1;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 22px;
+        white-space: nowrap;
+        border: none;
         background-color: rgba(0,0,0,0);
-        &-fill {
-            background: #B500D2;
+        position: relative;
+        &-know {
+            border-right: 0.33px solid #C8C7CB;
         }
+        &-submit {
+            color: #007AFF;
+        }
+    }
+    &_modal-pay {
+        color: #007AFF;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 22px;
+        word-wrap: break-word;    
+        background-color: rgba(0,0,0,0);
+        border: none;
+        &-v2 {
+            background-color: #007AFF;
+            border-radius: 12px;
+            color: white;
+            font-weight: 500;
+            width: 100%;
+            padding: 11px 0;
+        }
+    }
+    &_blue {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        border-radius: 26px;
+        background-color: #007AFF;
+    }
+    &_main-button {
+        width: 100%;
+        height: 50px;
+        border-radius: 10px;
+        gap: 15px;
+        font-weight: 600;
     }
 }

@@ -1,12 +1,12 @@
 .faq {
-    margin-top: 20px;
     &__wrapper {
-        padding: 0 19px;
+        padding: 5px 26px 0 26px;
     }
     &__answer {
         margin-top: 10px;
         width: 100%;
-        font-size: 11px;
+        color: #202020;
+        font-size: 14px;
         font-weight: 500;
         word-wrap: break-word;
         display: none;
@@ -17,8 +17,8 @@
     &__question {
         margin-top: 15px;
         text-align: left;
-        color: white;
-        font-size: 12px;
+        color: #202020;
+        font-size: 14px;
         font-weight: 700;
         word-wrap: break-word;
         cursor: pointer;
@@ -28,8 +28,5 @@
         font-size: 16px;
         font-weight: 900;
         word-wrap: break-word;
-    }
-    &__list {
-        margin-top: 20px;
     }
 }
