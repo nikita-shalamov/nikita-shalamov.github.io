@@ -18,7 +18,7 @@ button {
 }
 
 .background {
-    height: calc(100% + 20px);
+    height: 100%;
     overflow: auto;
     position: relative;
     -ms-overflow-style: none;
@@ -27,7 +27,7 @@ button {
         display: none;
         }
     &_min {
-        height: calc(100% - 66px);
+        height: 100%;
     }
     &__wrapper {
         display: flex;
