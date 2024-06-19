@@ -8,7 +8,7 @@
 @charset "utf-8";
 @font-face {
 		font-family: 'BrawlStarsRu';
-		src: url('../../fonts/BrawlStarsRu.ttf') format('truetype');
+		src: url('../fonts/BrawlStarsRu.ttf') format('truetype');
 		font-style: normal;
 		font-display: swap;
 }
@@ -125,7 +125,7 @@ h2, .h2 {
 		    -ms-flex-direction: column;
 		        flex-direction: column;
 		background-color: var(--black);
-		background-image: url("../../img/bg/gems.png"), url("../../img/bg/gem.png"), url("../../img/bg/book.png"), url("../../img/bg/card.png"), url("../../img/bg/gem-2.png"), url("../../img/bg/box.png"), url("../../img/bg/mainbg.png");
+		background-image: url("../img/bg/gems.png"), url("../img/bg/gem.png"), url("../img/bg/book.png"), url("../img/bg/card.png"), url("../img/bg/gem-2.png"), url("../img/bg/box.png"), url("../img/bg/mainbg.png");
 		background-repeat: no-repeat;
 		background-size: 14rem auto, 10rem auto, 24.375rem auto, 28.5rem auto, 14rem auto, 20.125rem auto, cover;
 		background-position: calc(100% + 5.35rem) -0.5rem, calc(50% - 50rem) 60%, calc(-4.875rem) -7.3125rem, calc(100% + 5.8375rem) 73%, calc(100% - 7.375rem) calc(100% - 10.5rem), calc(50% - 45.25rem) calc(100% - 140px), 50% 0%;
@@ -213,7 +213,7 @@ h2, .h2 {
 		width: 0.526em;
 		height: 0.526em;
 		font: inherit;
-		background: url("../../img/icons/copy.svg") no-repeat 50% 50%;
+		background: url("../img/icons/copy.svg") no-repeat 50% 50%;
 		background-size: contain;
 }
 .hero .h1 .copy:before {
@@ -350,7 +350,7 @@ h2, .h2 {
 }
 .stat {
 		position: relative;
-		background: url("../../img/bg/stat.png") no-repeat 50% 50%;
+		background: url("../img/bg/stat.png") no-repeat 50% 50%;
 		background-size: cover;
 		font-weight: bold;
 		font-size: 1.25rem;
@@ -485,8 +485,8 @@ h2, .h2 {
 		letter-spacing: 0.05em;
 		height: 3.555em;
 		min-width: 17.722em;
-		background-image: url("../../img/btn.png"), -o-linear-gradient(188.71deg, #5CB1FF 10.14%, #1470C4 108.62%);
-		background-image: url("../../img/btn.png"), linear-gradient(261.29deg, #5CB1FF 10.14%, #1470C4 108.62%);
+		background-image: url("../img/btn.png"), -o-linear-gradient(188.71deg, #5CB1FF 10.14%, #1470C4 108.62%);
+		background-image: url("../img/btn.png"), linear-gradient(261.29deg, #5CB1FF 10.14%, #1470C4 108.62%);
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
 		background-size: cover;
