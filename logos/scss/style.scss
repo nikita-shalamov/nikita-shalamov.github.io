@@ -7,6 +7,7 @@ body {
     margin: 0;
     position: relative;
     overflow-x: hidden;
+    max-width: 100%;
 }
 
 .grid-container { 
@@ -14,7 +15,7 @@ body {
     width: 100vw;
     display: grid;
     grid-template-columns: repeat(12, 60px); /* 12 колонок по 60px */
-    gap: 30px; /* промежуток между колонками */
+    gap: 50px; /* промежуток между колонками */
     padding: 20px; /* отступ от края контейнера */
     position: fixed;
     top: 0;
@@ -31,8 +32,14 @@ body {
     height: 100%; /* высота для визуализации */
 }
 
+.row-div {
+    width: 100%;
+    height: 50px;
+    background-color: red;
+}
+
 @font-face {
-    font-family: 'FarrahBold';
+    font-family: 'Farrah';
     src: url('fonts/Farrah-Bold.otf') format('opentype');
 }
 
@@ -42,3 +49,38 @@ body {
 @import 'blocks/logo';
 @import 'blocks/header';
 @import 'blocks/buttons';
+@import 'blocks/mainBanner';
+@import 'blocks/advantages';
+@import 'blocks/discountBanner';
+@import 'blocks/services';
+@import 'blocks/beTop';
+@import 'blocks/howWork';
+@import 'blocks/containerFullBanner';
+@import 'blocks/listPoint';
+@import 'blocks/usualList';
+@import 'blocks/application';
+@import 'blocks/paymentDelivery';
+@import 'blocks/darkBanner';
+@import 'blocks/works';
+@import 'blocks/blockTitle';
+@import 'blocks/details';
+@import 'blocks/areas';
+@import 'blocks/blockDescr';
+@import 'blocks/reviews';
+@import 'blocks/rewards';
+@import 'blocks/footer';
+@import 'blocks/map';
+@import 'blocks/triangle';
+@import 'media/blocks/headerTop';
+@import 'media/blocks/header';
+@import 'media/blocks/mainBlock';
+@import 'media/blocks/advantages';
+@import 'media/blocks/discountBanner';
+@import 'media/blocks/darkBanner';
+@import 'media/blocks/services';
+@import 'media/blocks/beTop';
+@import 'media/blocks/blockTitle';
+@import 'media/blocks/howWork';
+@import 'media/blocks/containerFullBanner';
+@import 'media/blocks/usualList';
+@import 'media/blocks/application';
