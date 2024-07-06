@@ -6,11 +6,11 @@ $(document).ready(function(){
         items: 1
     });
 
-    $('.buttons-slider__arrow_left').click(function() {
+    $('#services-button-prev').click(function() {
         owl.trigger('prev.owl.carousel');
     });
 
-    $('.buttons-slider__arrow_right').click(function() {
+    $('#services-button-next').click(function() {
         owl.trigger('next.owl.carousel');
     });
 });
@@ -44,11 +44,11 @@ $(document).ready(function(){
     });
 
 
-    $('.buttons-slider__arrow_left').click(function() {
+    $('#works-button-prev').click(function() {
         owl.trigger('prev.owl.carousel');
     });
 
-    $('.buttons-slider__arrow_right').click(function() {
+    $('#works-button-next').click(function() {
         owl.trigger('next.owl.carousel');
     });
 });
@@ -61,11 +61,11 @@ $(document).ready(function(){
         items: 1
     });
 
-    $('.buttons-slider__arrow_left').click(function() {
+    $('#reviews-button-prev').click(function() {
         owl.trigger('prev.owl.carousel');
     });
 
-    $('.buttons-slider__arrow_right').click(function() {
+    $('#reviews-button-next').click(function() {
         owl.trigger('next.owl.carousel');
     });
 });
