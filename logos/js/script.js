@@ -68,6 +68,14 @@ $(document).ready(function(){
     $('#reviews-button-next').click(function() {
         owl.trigger('next.owl.carousel');
     });
+
+    $('#reviews-button-prev-pc').click(function() {
+        owl.trigger('prev.owl.carousel');
+    });
+
+    $('#reviews-button-next-pc').click(function() {
+        owl.trigger('next.owl.carousel');
+    });
 });
 
 
