@@ -1,0 +1,24 @@
+.advantages {
+    margin-top: 139px;
+    position: relative;
+    &__container {
+        position: relative;
+    }
+    &__title {
+        color: #292933;
+        font-size: 50px;
+        font-weight: 600;
+        line-height: 62px;
+        word-wrap: break-word;
+    }
+    &__list {
+        padding: 0;
+    }
+    &__list-point {
+        margin-right: 41px;
+    }
+    &__descr {
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+}

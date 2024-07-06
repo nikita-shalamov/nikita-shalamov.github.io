@@ -1,0 +1,76 @@
+@media (min-width: 1440px) and (max-width: 1600px) {
+    .advantages {
+        &__dark-banner__left-side {
+            transform: translateX(calc(-100% - 30px));
+        }
+        &__list-wrapper {
+            margin-left: 0;
+        }
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+    .advantages {
+        &__title {
+            font-size: 42px;
+        }
+        &__dark-banner__left-side {
+            transform: translateX(calc(-100% - 30px));
+        }
+        &__list-wrapper {
+            margin-left: 0;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .advantages {
+        &__title {
+            font-size: 38px;
+            line-height: 48px;
+        }
+        &__dark-banner__left-side {
+            transform: translateX(calc(-100% - 30px));
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .advantages {
+        &__title {
+            font-size: 38px;
+            line-height: 48px;
+            white-space: nowrap;
+        }
+        &__dark-banner__left-side {
+            transform: translateX(calc(-100% - 30px));
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .advantages {
+        &__title {
+            font-size: 38px;
+            line-height: 48px;
+            white-space: nowrap;
+        }
+        &__dark-banner__left-side {
+            transform: translateX(calc(-100% - 30px));
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .advantages {
+        margin-top: 50px;
+        &__title {
+            font-size: 38px;
+            line-height: 48px;
+            white-space: nowrap;
+            &-2 {
+                white-space: wrap;
+            }
+        }
+    }
+}

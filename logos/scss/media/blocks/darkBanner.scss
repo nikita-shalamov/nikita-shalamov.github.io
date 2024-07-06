@@ -1,0 +1,23 @@
+@media (min-width: 768px) and (max-width: 991px) {
+    .dark-banner {
+        &_advantages-2 {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .dark-banner {
+        &_advantages-2 {
+            transform: translateX(calc(-100% - 10px));
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .dark-banner {
+        &__left-side {
+            display: none;
+        }
+    }
+}

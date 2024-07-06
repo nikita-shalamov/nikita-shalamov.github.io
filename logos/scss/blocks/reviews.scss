@@ -1,0 +1,78 @@
+.reviews {
+    margin-top: 134px;
+    position: relative;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        position: relative;
+        z-index: 5;
+    }
+    &__slider {
+        position: relative;
+    }
+    &__background {
+        max-width: 729px;
+    }
+    &__avatar {
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+    }
+    &__item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 40px;
+    }
+    &__info {
+        margin-top: 6px;
+    }
+    &__name {
+        color: #292933;
+        font-size: 24px;
+        font-weight: 700;
+        word-wrap: break-word;
+    }
+    &__date {
+        margin-top: 4px;
+        color: rgba(41, 41, 51, 0.50);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        word-wrap: break-word;
+    }
+    &__stars {
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
+    &__star {
+        width: 20px;
+        height: 20px;
+    }
+    &__text {
+        margin-top: 10px;
+        max-width: 629px;
+        color: rgba(41, 41, 51, 0.50);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        word-wrap: break-word;
+    }
+    &__buttons-slider {
+        width: fit-content;
+        margin-left: 108px;
+        margin-top: 50px;
+        &_mobile {
+            display: none;
+        }
+    }
+    &__girl-image {
+        position: absolute;
+        bottom: -30px;
+        right: -13%;
+    }
+}

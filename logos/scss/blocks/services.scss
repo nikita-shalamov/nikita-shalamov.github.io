@@ -1,0 +1,48 @@
+.services {
+    margin-top: 120px;
+    &__wrapper {
+        position: relative;
+    }
+    &__block-title {
+        margin-top: 63px;
+    }
+    &__slider {
+        margin-top: 92px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 60px;
+        row-gap: 90px;
+        padding-bottom: 30px;
+    }
+    &__slider-item {
+        width: 330px;
+        height: 200px;
+        position: relative;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__label {
+        position: absolute;
+        bottom: -28px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 20px;
+        background: #292933;
+        border-radius: 100px;
+        color: white;
+        font-size: 24px;
+        font-weight: 700;
+        word-wrap: break-word;
+        white-space: nowrap;
+    }
+    &__buttons-slider {
+        position: absolute;
+        left: -145px;
+        bottom: 60px;
+        z-index: 15;
+    }
+}

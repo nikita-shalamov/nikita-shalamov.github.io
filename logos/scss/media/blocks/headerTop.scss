@@ -1,0 +1,116 @@
+@media (min-width: 1200px) and (max-width: 1440px) {
+    .header-top {
+        &__wrapper {
+            padding: 16px 30px;
+        }
+        &__settings {
+            margin-right: 30px;
+        }
+        &__call {
+            margin-right: 40px;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .header-top {
+        &__wrapper {
+            padding: 16px 30px;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__settings {
+            margin-right: 30px;
+        }
+        &__call {
+            margin-right: 40px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .header-top {
+        &__wrapper {
+            padding: 16px 30px;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__settings {
+            margin-right: 30px;
+        }
+        &__call {
+            margin-right: 40px;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .header-top {
+        &__wrapper {
+            padding: 16px 30px;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__settings {
+            margin-right: 30px;
+        }
+        &__call {
+            margin-right: 20px;
+        }
+        &__col {
+            &:nth-child(2) {
+                row-gap: 20px;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .header-top {
+        &__wrapper {
+            padding: 8px 15px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        &__settings {
+            margin-right: 20px;
+            &-text {
+                display: none;
+            }
+            
+        }
+        &__call {
+            display: none;
+            &-text {
+                display: none;
+            }
+            &-elem {
+                &-button {
+                    display: block;
+                    margin-right: 20px;
+                }
+            }
+        }
+        &__location {
+            &-pc {
+                display: none;
+            }
+            &-mobile {
+                display: block;
+            }
+        }
+        &__divider {
+            display: block;
+        }
+        &__col {
+            &:nth-child(2) {
+                row-gap: 20px;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}

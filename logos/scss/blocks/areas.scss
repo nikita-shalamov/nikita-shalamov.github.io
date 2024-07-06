@@ -1,0 +1,44 @@
+.areas {
+    margin-top: 80px;
+    &__wrapper {
+        height: 550px;
+        width: 100%;
+        position: relative;
+    }
+    &__col {
+        padding-right: 25px;
+    }
+    &__wrapper-photo {
+        width: 450px;
+        height: 500px;
+        top: 0;
+        right: 0;
+        position: absolute;
+        z-index: 2;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__points {
+        margin-top: 63px;
+        padding: 0 15px;
+    }
+    &__lines {
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        z-index: 1;
+    }
+    &__descr {
+        margin-top: 62px;
+        margin-bottom: 40px;
+    }
+    &__list-point {
+        margin-right: 41px;
+    }
+    &__list {
+        padding: 0 10px;
+    }
+}

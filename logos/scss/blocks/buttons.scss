@@ -1,0 +1,30 @@
+.button {
+    &__contacts {
+        padding: 18px 30px;
+        background: linear-gradient(90deg, #FF7E17 0%, #FF5B17 100%);
+        border-radius: 100px;
+        color: white;
+        font-family: 'CeraRoundPro', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        word-wrap: break-word;
+        border: none;
+        &_call {
+            margin-top: 16px;
+            padding: 8px 14px;
+            font-size: 10px;
+        }
+    }
+}
+
+.buttons-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    &__arrow {
+        cursor: pointer;
+        border: none;
+        background: none;
+    }
+}

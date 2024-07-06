@@ -1,0 +1,16 @@
+.list-point {
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    background: #FF5B17;
+    border-radius: 100%;
+    &__number {
+        color: #292933;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 50px;
+        word-wrap: break-word;    
+        text-align: center;  
+        transform: translateX(14px);
+    }
+}

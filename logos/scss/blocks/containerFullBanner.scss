@@ -1,0 +1,32 @@
+.container-full-banner {
+    margin-top: 148px;
+    &__wrapper {
+        width: 100%;
+        position: relative;
+        height: 130px;
+        background-image: url('../../img/banner/container-dark-block.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &__orange {
+        position: absolute;
+        right: 0;
+        bottom: -64px;
+        width: fit-content;
+        height: 129px;
+        padding: 0 69px;
+        background: #FF5B17;
+        color: white;
+        font-size: 50px;
+        font-weight: 700;
+        word-wrap: break-word;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &_left {
+            left: 0;
+        }
+    }
+}

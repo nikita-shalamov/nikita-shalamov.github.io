@@ -1,0 +1,12 @@
+@media (min-width: 576px) and (max-width: 767px) {
+    .discount-banner {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 575px) {
+    .discount-banner {
+        margin-top: 0px;
+        padding: 0 20px;
+    }
+}

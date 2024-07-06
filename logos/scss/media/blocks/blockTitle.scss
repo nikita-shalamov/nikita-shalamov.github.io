@@ -1,0 +1,29 @@
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .block-title {
+        font-size: 40px;
+        line-height: 52px;
+        &_advantages {
+            font-size: 38px;
+        }
+        &_application {
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .block-title {
+        font-size: 40px;
+        line-height: 52px;
+        &_services, &_works, &_areas, &_application, &_footer {
+            &::after {
+                width: 100%;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,27 @@
+@media (min-width: 576px) and (max-width: 767px) {
+    .main-banner {
+        &__wrapper {
+            padding: 100px 0 0 50px;
+        }
+        &__name {
+            font-size: 50px;
+        }
+        &__descr {
+            font-size: 28px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .main-banner {
+        &__wrapper {
+            padding: 100px 0 0 10px;
+        }
+        &__name {
+            font-size: 50px;
+        }
+        &__descr {
+            font-size: 28px;
+        }
+    }
+}

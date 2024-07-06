@@ -1,0 +1,37 @@
+@media (min-width: 992px) and (max-width: 1199px) {
+    .how-work {
+        &__list {
+            margin-top: 60px;
+            column-gap: 40px; 
+            justify-content: space-around;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .how-work {
+        &__list {
+            margin-top: 60px;
+            column-gap: 20px; 
+            justify-content: space-around;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .how-work {
+        &__list {
+            margin-top: 60px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .how-work {
+        &__list {
+            margin-top: 60px;
+            justify-content: space-around;
+            margin-left: 20px;
+        }
+    }
+}

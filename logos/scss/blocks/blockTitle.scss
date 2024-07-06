@@ -1,0 +1,44 @@
+.block-title {
+    color: #292933;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 72px;
+    word-wrap: break-word;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        height: 12px;
+        background: #FF5B17;
+    }
+    &_application {
+        max-width: 519px;
+        &::after {
+            width: 519px;
+        }
+    }
+    &_works, &_services {
+        max-width: 364px;
+        &::after {
+            width: 364px;
+        }
+    }
+    &_areas {
+        max-width: 520px;
+        &::after {
+            width: 520px;
+        }
+    }
+    &_footer {
+        font-size: 30px;
+        max-width: 304px;
+        line-height: 46px;
+        white-space: nowrap;
+        &::after {
+            height: 5px;
+            width: 100%;
+        }
+    }
+}
