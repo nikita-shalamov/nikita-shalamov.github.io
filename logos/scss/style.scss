@@ -20,6 +20,17 @@ button {
     cursor: pointer;
 }
 
+.popup {
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
 .grid-container { 
     height: 100vh;
     width: 100vw;
@@ -48,11 +59,26 @@ button {
     background-color: red;
 }
 
-@font-face {
-    font-family: 'Farrah';
-    src: url('fonts/Farrah-Bold.otf') format('opentype');
+span {
+    height: 1.54px;
+    width: 9.75px;
+    background: white;
+    border-radius: 15px;
 }
 
+.span_long {
+    width: 18px;
+}
+
+@font-face {
+    font-family: 'Farrah';
+    src: url('../fonts/Farrah-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'CeraRoundPro';
+    src: url('../fonts/CeraRoundPro.ttf') format('truetype');
+}
 
 @import 'fonts';
 @import 'bootstrap';
@@ -103,4 +129,6 @@ button {
 @import 'media/blocks/rewards';
 @import 'media/blocks/footer';
 @import 'media/blocks/triangle';
+@import 'media/blocks/logo';
+@import 'media/blocks/buttons';
 @import 'media/media';

@@ -78,7 +78,6 @@ $(document).ready(function(){
     });
 });
 
-
 document.addEventListener("DOMContentLoaded", function() {
     const callButton = document.querySelector(".header-top__call-elem-button");
     const callPopup = document.querySelector(".header-top__call-elem-popup");
@@ -132,3 +131,57 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    var menus = document.querySelectorAll('.header__item-menu');
+    
+    menus.forEach(function(menu) {
+        var toggleLink = menu.querySelector('.header__item');
+        var toggleList = menu.querySelector('.header__item-under');
+        var arrowIcon = toggleLink.querySelector('img');
+
+        toggleLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            toggleList.classList.toggle('active');
+            arrowIcon.classList.toggle('rotate');
+
+            menus.forEach(function(otherMenu) {
+                if (otherMenu !== menu) {
+                    var otherList = otherMenu.querySelector('.header__item-under');
+                    var otherArrowIcon = otherMenu.querySelector('.header__item img');
+                    otherList.classList.remove('active');
+                    otherArrowIcon.classList.remove('rotate');
+                }
+            });
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!menu.contains(event.target)) {
+                toggleList.classList.remove('active');
+                arrowIcon.classList.remove('rotate');
+            }
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var deliveryTab = document.getElementById('delivery-tab');
+    var paymentTab = document.getElementById('payment-tab');
+    var deliveryContent = document.getElementById('delivery-content');
+    var paymentContent = document.getElementById('payment-content');
+
+    deliveryTab.addEventListener('click', function() {
+        deliveryTab.classList.add('active');
+        paymentTab.classList.remove('active');
+
+        deliveryContent.classList.add('active');
+        paymentContent.classList.remove('active');
+    });
+
+    paymentTab.addEventListener('click', function() {
+        paymentTab.classList.add('active');
+        deliveryTab.classList.remove('active');
+
+        paymentContent.classList.add('active');
+        deliveryContent.classList.remove('active');
+    });
+});
