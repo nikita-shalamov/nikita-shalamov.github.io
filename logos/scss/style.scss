@@ -80,6 +80,24 @@ span {
     src: url('../fonts/CeraRoundPro.ttf') format('truetype');
 }
 
+.container-columns {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 50px;
+    padding: 10px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.col-columns {
+    background-color: rgba(255, 193, 154, 0.5);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    height: 100vh;
+}
+
 @import 'fonts';
 @import 'bootstrap';
 @import 'blocks/headerTop';
@@ -110,6 +128,18 @@ span {
 @import 'blocks/servicesCard';
 @import 'blocks/triangle';
 @import 'blocks/servicesList';
+@import 'blocks/pageName';
+@import 'blocks/serviceOne';
+@import 'blocks/photoCard';
+@import 'blocks/prices';
+@import 'blocks/pointsBlock';
+@import 'blocks/pricesTable';
+@import 'blocks/contacts';
+@import 'blocks/aboutUs';
+@import 'blocks/usAdvantages';
+@import 'blocks/weOffer';
+@import 'blocks/qualityPrint';
+@import 'blocks/deliveryInfo';
 @import 'media/blocks/headerTop';
 @import 'media/blocks/header';
 @import 'media/blocks/mainBlock';
@@ -135,4 +165,9 @@ span {
 @import 'media/blocks/buttons';
 @import 'media/blocks/map';
 @import 'media/blocks/servicesCard';
+@import 'media/blocks/servicesList';
+@import 'media/blocks/serviceOne';
+@import 'media/blocks/photoCard';
+@import 'media/blocks/pricesTable';
+@import 'media/blocks/pointsBlock';
 @import 'media/media';
