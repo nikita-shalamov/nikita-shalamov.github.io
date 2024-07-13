@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    position: relative;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1760px;
+    margin: 0 auto;
+}
+
+.option-text {
+    color: #808080;
+    font-size: 16px;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+
+@import 'fonts';
+@import 'base/mixins';
+@import 'blocks/header';
+@import 'blocks/headerTop';
+@import 'blocks/contacts';
+@import 'blocks/logo';
+@import 'blocks/mainBanner';
+@import 'blocks/buttons';
+@import 'blocks/howUse';
+@import 'blocks/blockTitle';
+@import 'blocks/sales';
+@import 'blocks/clickElem';
+@import 'blocks/recommend';
+@import 'blocks/advantages';
+@import 'blocks/reviews';
+@import 'blocks/answers';
+@import 'blocks/partners';
+@import 'blocks/footer';
+@import 'blocks/productInfo';
+@import 'blocks/productCard';
+@import 'blocks/productTabs';
+@import 'blocks/questionButton';
+@import 'blocks/productPreview';
+@import 'blocks/windowsBanner';
+@import 'blocks/functions';
+@import 'blocks/productPoints';
+@import 'blocks/productBlockHeader';
+@import 'blocks/productOptions';
+@import 'blocks/recommendBlock';
+@import 'blocks/recommendPrice';
+@import 'blocks/productProperties';
+@import 'blocks/cart';
+@import 'blocks/modal';
+@import 'media/media';
