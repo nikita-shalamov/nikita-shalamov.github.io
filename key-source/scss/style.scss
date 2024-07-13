@@ -31,6 +31,10 @@ button {
     word-wrap: break-word;
 }
 
+.list-mt { 
+    margin-top: 80px;
+}
+
 
 @import 'fonts';
 @import 'base/mixins';
@@ -66,3 +70,17 @@ button {
 @import 'blocks/cart';
 @import 'blocks/modal';
 @import 'media/media';
+@import 'media/blocks/header';
+@import 'media/blocks/headerTop';
+@import 'media/blocks/contacts';
+@import 'media/blocks/mainBanner';
+@import 'media/blocks/buttons';
+@import 'media/blocks/howUse';
+@import 'media/blocks/blockTitle';
+@import 'media/blocks/modal';
+@import 'media/blocks/sales';
+@import 'media/blocks/recommend';
+@import 'media/blocks/advantages';
+@import 'media/blocks/reviews';
+@import 'media/blocks/answers';
+@import 'media/blocks/partners';
