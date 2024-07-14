@@ -1,0 +1,9 @@
+@media (max-width: 575px) {
+    .functions {
+        &__item {
+            width: 300px;
+            height: 300px;
+            padding: 25px;
+        }
+    }
+}

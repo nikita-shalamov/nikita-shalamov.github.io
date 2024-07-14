@@ -1,0 +1,17 @@
+@media (min-width: 576px) and (max-width: 767px) {
+    .header-top {
+        margin-top: 40px;
+    }
+    
+}
+
+@media (max-width: 575px) {
+    .header-top {
+        margin-top: 40px;
+        &__pluses {
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 20px;
+        }
+    }
+}

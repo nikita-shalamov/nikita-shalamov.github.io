@@ -1,0 +1,16 @@
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    color: black;
+    font-size: 40px;
+    font-weight: 500;
+    word-wrap: break-word;
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    &_footer {
+        color: #fff;
+        justify-content: flex-start;
+    }
+}

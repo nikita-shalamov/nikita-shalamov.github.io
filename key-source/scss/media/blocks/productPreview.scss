@@ -1,0 +1,25 @@
+@media (min-width: 992px) and (max-width: 1199px) {
+    .product-preview {
+        &__image {
+            transform: scale(0.9);
+            width: auto;
+            margin-top: 20px;
+        }
+        &__descr {
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .product-preview {
+        &__image {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+        &__descr {
+            margin-top: 20px;
+        }
+    }
+}

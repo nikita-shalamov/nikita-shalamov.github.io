@@ -1,0 +1,28 @@
+.recommend-price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    &__old {
+        color: #B9B9B9;
+        font-size: 20px;
+        font-weight: 400;
+        word-wrap: break-word;
+        position: relative;
+        &::after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: #808080;
+            position: absolute;
+            top: 50%;
+            left: 0;
+        }
+    }
+    &__actual {
+        color: #41A9E0;
+        font-size: 20px;
+        font-weight: 400;
+        word-wrap: break-word;
+    }
+}

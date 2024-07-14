@@ -1,0 +1,52 @@
+@media (min-width: 768px) and (max-width: 991px) {
+    .footer {
+        &__flex {
+            gap: 100px;
+        }
+        &__payments {
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        &__contacts {
+            margin-top: 0;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .footer {
+        &__flex {
+            flex-wrap: wrap;
+            row-gap: 50px;
+        }
+        &__payments {
+            gap: 10px;
+        }
+        &__contacts {
+            margin-top: 0;
+        }
+        &__service {
+            text-align: left;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .footer {
+        &__flex {
+            flex-wrap: wrap;
+            row-gap: 50px;
+        }
+        &__payments {
+            gap: 20px;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        &__contacts {
+            margin-top: 0;
+        }
+        &__service {
+            text-align: left;
+        }
+    }
+}

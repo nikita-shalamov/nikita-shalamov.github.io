@@ -1,0 +1,20 @@
+.header-top {
+    margin-top: 80px;
+    &__pluses {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 40px;
+    }
+    &__plus {
+        display: flex;
+        align-items: center;
+        color: #808080;
+		font-size: 16px;
+		font-weight: 400;
+		word-wrap: break-word;
+        img {
+            margin-right: 12px;
+        }
+    }
+}

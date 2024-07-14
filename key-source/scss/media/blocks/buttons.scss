@@ -1,0 +1,30 @@
+@media (min-width: 1600px) and (max-width: 1919px) {
+    .button {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1599px) {
+    .button {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 767px) {
+    .button {
+        font-size: 20px;
+        &__buy, &__more {
+            padding: 10px 60px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .button {
+        &_delivery {
+            padding: 16px 10px;
+            white-space: wrap;
+        }
+    }
+}
+

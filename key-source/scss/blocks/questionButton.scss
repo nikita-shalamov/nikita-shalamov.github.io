@@ -1,0 +1,33 @@
+.question-button {
+    border: none;
+    background: none;
+    &__wrapper {
+        width: fit-content;
+        height: auto;
+        padding: 12px 24px;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 12px;
+        border-radius: 20px;
+        border: 1px #41A9E0 solid
+    }
+    &__descr {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__title {
+        color: #41A9E0;
+        font-size: 20px;
+        font-weight: 400;
+        word-wrap: break-word;    
+    }
+    &__text {
+        margin-top: 10px;
+        color: #808080;
+        font-size: 16px;
+        font-weight: 400;
+        word-wrap: break-word;    
+    }
+}

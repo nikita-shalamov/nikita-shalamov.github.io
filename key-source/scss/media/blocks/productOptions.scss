@@ -1,0 +1,16 @@
+@media (max-width: 991px) {
+    .product-options {
+        &__list {
+            grid-template-columns: repeat(1, 100%);
+            row-gap: 50px;
+        }
+        &__item {
+            &-descr {
+                font-size: 20px;
+            }
+            &-title {
+                font-size: 26px;
+            }
+        }
+    }
+}

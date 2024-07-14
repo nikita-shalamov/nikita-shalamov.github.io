@@ -1,0 +1,28 @@
+.functions {
+    margin-top: 120px;
+    &__list {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 340px);
+        gap: 40px; 
+        justify-content: center;
+        justify-items: center;
+    }
+    &__block-title {
+        text-align: center;
+    }
+    &__item {
+        width: 340px;
+        height: 340px;
+        padding: 40px;
+        border-radius: 20px;
+        border: 1px #808080 solid;
+
+    }
+    &__descr {
+        margin-top: 20px;
+        color: #808080;
+        font-size: 20px;
+        font-weight: 400;
+    }
+}

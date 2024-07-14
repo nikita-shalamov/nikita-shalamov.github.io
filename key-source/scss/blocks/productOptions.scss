@@ -1,0 +1,33 @@
+.product-options {
+    margin-top: 200px;
+    &__list {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 120px;
+        justify-content: center;
+    }
+    &__item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 32px;
+        &-info {
+            max-width: 645px;
+        }
+        &-title {
+            color: black;
+            font-size: 32px;
+            font-weight: 400;
+            word-wrap: break-word;        
+        }
+        &-descr {
+            max-width: 645px;
+            margin-top: 32px;
+            color: #808080;
+            font-size: 24px;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+    }
+}

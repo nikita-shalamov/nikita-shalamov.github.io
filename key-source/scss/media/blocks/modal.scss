@@ -1,0 +1,12 @@
+
+@media (max-width: 575px) {
+    .modal {
+        width: 95%;
+        &__header {
+            gap: 10px;
+        }
+        &__title {
+            font-size: 28px;
+        }
+    }
+}

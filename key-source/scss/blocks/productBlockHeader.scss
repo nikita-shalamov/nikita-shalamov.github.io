@@ -1,0 +1,19 @@
+.product-block-header {
+    &__block-title {
+        max-width: 966px;
+        margin: 0 auto;
+        margin-top: 40px;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 400;   
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+    &__block-descr {
+        margin-top: 40px;
+        text-align: center;
+    }
+    
+}

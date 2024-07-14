@@ -1,0 +1,50 @@
+.recommend-block {
+    margin-top: 200px;
+    width: 100%;
+    background-color: #F6F7F7;
+    &__wrapper {
+        padding: 40px;
+    }
+    &__list {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item {
+        width: 232px;
+        height: 370px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    &__image {
+        height: 200px;
+        width: auto;
+        img {
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__company {
+        margin-top: 12px;
+        color: #808080;
+        font-size: 20px;
+        font-weight: 400;
+        word-wrap: break-word;    
+    }
+    &__name {
+        color: black;
+        font-size: 24px;
+        font-weight: 400;
+        word-wrap: break-word;    
+    }
+    &__bottom {
+        margin-top: 16px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+}

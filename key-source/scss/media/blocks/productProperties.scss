@@ -1,0 +1,27 @@
+@media (min-width: 992px) and (max-width: 1199px) {
+    .product-properties {
+        &__item {
+            padding: 16px 150px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .product-properties {
+        &__item {
+            padding: 16px 60px;
+            gap: 40px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .product-properties {
+        &__item {
+            padding: 16px 30px;
+            gap: 40px;
+            row-gap: 20px;
+            flex-wrap: wrap;
+        }
+    }
+}

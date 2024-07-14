@@ -1,0 +1,27 @@
+.footer {
+    margin-top: 150px;
+    background-color: #242B34;
+    &__wrapper {
+        padding: 60px 0;
+    }
+    &__flex {
+        margin-top: 51px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__payments {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 40px;
+    }
+    &__service {
+        margin-top: 40px;
+        text-align: right;
+        color: #B9B9B9;
+        font-size: 20px;
+        font-weight: 400;
+        word-wrap: break-word;    
+    }
+}

@@ -1,0 +1,11 @@
+@media (min-width: 992px) and (max-width: 1199px) {
+    .windows-banner {
+        min-width: 425px;
+    }
+}
+
+@media (max-width: 991px) {
+    .windows-banner {
+        display: none;
+    }
+}

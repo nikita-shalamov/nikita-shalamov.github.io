@@ -1,0 +1,36 @@
+.how-use {
+    margin-top: 100px;
+    &__wrapper {
+        width: 100%;
+        height: auto;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &-title {
+            margin-top: 24px;
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            font-weight: 400;
+            word-wrap: break-word;    
+        }
+        &-descr {
+            margin-top: 12px;
+            max-width: 280px;
+            text-align: center;
+            color: #808080;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 25.60px;
+            word-wrap: break-word;    
+        }
+    }
+}

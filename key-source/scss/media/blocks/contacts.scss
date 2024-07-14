@@ -1,0 +1,7 @@
+@media (max-width: 575px) {
+    .contacts {
+        flex-wrap: wrap;
+        row-gap: 20px;
+        justify-content: flex-start;
+    }
+}

@@ -1,0 +1,28 @@
+.answers {
+    margin-top: 120px;
+    &__list {
+        margin-top: 40px;
+    }
+    &__item {
+        display: grid;
+        grid-template-columns: minmax(0, 445px) minmax(0, 1180px);
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 40px 0;
+        border-bottom: 1px #808080 solid;
+    }
+    &__question {
+        max-width: 250px;
+        color: black;
+        font-size: 24px;
+        font-weight: 400;
+        word-wrap: break-word;
+    }
+    &__text {
+        color: black;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        word-wrap: break-word;
+    }
+}

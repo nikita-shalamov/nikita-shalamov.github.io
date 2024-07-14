@@ -1,0 +1,38 @@
+@media (min-width: 768px) and (max-width: 991px) {
+    .product-info {
+        width: 100%;
+        &__price {
+            justify-content: flex-start;
+            gap: 20px;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .product-info {
+        width: 100%;
+        &__price {
+            justify-content: flex-start;
+            gap: 20px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .product-info {
+        min-width: 100%;
+        width: 100%;
+        &__wrapper {
+            padding: 20px;
+        }
+        &__price {
+            justify-content: flex-start;
+            gap: 20px;
+            row-gap: 0px;
+            flex-wrap: wrap-reverse;
+        }
+        &__buttons-row {
+            flex-wrap: wrap;
+        }
+    }
+}
