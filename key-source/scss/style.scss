@@ -24,6 +24,10 @@ button {
     margin: 0 auto;
 }
 
+.tab-button {
+    cursor: pointer;
+}
+
 .option-text {
     color: #808080;
     font-size: 16px;
@@ -35,8 +39,11 @@ button {
     margin-top: 80px;
 }
 
+.block-mt {
+    margin-top: 120px;
+}
 
-@import 'fonts';
+
 @import 'base/mixins';
 @import 'blocks/header';
 @import 'blocks/headerTop';
@@ -84,3 +91,16 @@ button {
 @import 'media/blocks/reviews';
 @import 'media/blocks/answers';
 @import 'media/blocks/partners';
+@import 'media/blocks/footer';
+@import 'media/blocks/productCard';
+@import 'media/blocks/productInfo';
+@import 'media/blocks/productTabs';
+@import 'media/blocks/questionButton';
+@import 'media/blocks/productPreview';
+@import 'media/blocks/windowsBanner';
+@import 'media/blocks/functions';
+@import 'media/blocks/productPoints';
+@import 'media/blocks/productOptions';
+@import 'media/blocks/recommendBlock';
+@import 'media/blocks/productProperties';
+@import 'media/blocks/cart';
