@@ -27,7 +27,7 @@ button {
         display: none;
         }
     &_min {
-        height: 100%;
+        height: calc(100% - 86px);
     }
     &__wrapper {
         display: flex;
