@@ -1,6 +1,6 @@
 # Проекты
 
-##### [KeySource](https://nikita-shalamov.github.io/key-source/index.html)
+#### [KeySource](https://nikita-shalamov.github.io/key-source/index.html) - верстка магазина
 - **Описание**: Магазин кроссовок.
 
 ##### [Лендинг для интернет-магазина пульсометров](https://nikita-shalamov.github.io/pulse)
