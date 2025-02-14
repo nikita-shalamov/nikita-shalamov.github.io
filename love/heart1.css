@@ -1,0 +1,587 @@
+/* Global styles */
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: #ffeef8; /* легкий розовый оттенок */
+  cursor: url('paw.png'), default;
+  cursor: url('paw.png'), pointer;
+  font-family: "Geneva", "Chicago", "Lucida Grande", sans-serif;
+}
+
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Intro Overlay & Container */
+#intro-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+#intro-container {
+  position: relative;
+  pointer-events: auto;
+  cursor: pointer;
+  background: linear-gradient(to bottom, #f7f7f7, #eaeaea);
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+#intro-container img {
+  display: block;
+  width: 300px;
+  height: auto;
+  border: 5px solid #fff;
+  box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+/* Добавляем сердце в центр intro картинки */
+#intro-container .heart-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+  background: #FF69B4;
+}
+
+#intro-container .heart-overlay::before,
+#intro-container .heart-overlay::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 80px;
+  background: inherit;
+  border-radius: 50px 50px 0 0;
+}
+
+#intro-container .heart-overlay::before {
+  left: 50px;
+  transform: rotate(45deg);
+  transform-origin: 0 100%;
+}
+
+#intro-container .heart-overlay::after {
+  left: 0;
+  transform: rotate(-45deg);
+  transform-origin: 100% 100%;
+}
+
+#intro-container .glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 70%);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+#info {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  background: rgba(240,240,240,0.85);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  pointer-events: none;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Collage Container */
+#collage {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 250px 20px 20px;
+  box-sizing: border-box;
+  background: none;
+  display: none; /* по-прежнему скрыт до генерации */
+}
+
+/* Псевдоэлемент для размытого фона */
+#collage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  filter: blur(5px); /* Блюр на 50% можно скорректировать значением blur */
+  z-index: -1;
+}
+
+/* Photo Card (Item) */
+.photo-item {
+  position: relative;
+  width: 250px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #f7f7f7, #eaeaea);
+  border: 4px solid #bbb; /* обновлённая рамка */
+  border-radius: 10px;
+  box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+  margin: 10px;
+  transition: left 1s ease, top 1s ease, opacity 1s ease;
+}
+
+/* Photo Image */
+.photo-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 5px solid #fff; /* рамка как в интро-контейнере */
+  box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+/* Description */
+.photo-item .description {
+  padding: 10px;
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+}
+
+/* Heart Overlay on Card */
+.heart-overlay {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  z-index: 3;
+}
+
+/* Формирование сердца через псевдоэлементы */
+.heart-overlay::before,
+.heart-overlay::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 32px;
+  background: inherit;
+  border-radius: 10px 10px 0 0;
+}
+
+.heart-overlay::before {
+  left: 10px;
+  transform: rotate(45deg);
+  transform-origin: 0 100%;
+}
+
+.heart-overlay::after {
+  left: 0;
+  transform: rotate(-45deg);
+  transform-origin: 100% 100%;
+}
+
+/* Текстуры для сердечных наложений */
+// Здесь вы можете заменить URL-ы на фактические текстуры для каждого типа сердца
+.photo-item.heart-green .heart-overlay { 
+  background-image: url('heart-green-texture.png'); 
+  background-size: cover;
+}
+.photo-item.heart-pink .heart-overlay { 
+  background-image: url('heart-pink-texture.png'); 
+  background-size: cover;
+}
+.photo-item.heart-yellow .heart-overlay { 
+  background-image: url('heart-yellow-texture.png'); 
+  background-size: cover;
+}
+.photo-item.heart-white .heart-overlay { 
+  background-image: url('heart-white-texture.png'); 
+  background-size: cover;
+}
+
+/* Radiating Hearts for Click Effect */
+.radiating-heart {
+  background: #ea80b0; /* розовый цвет */
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  transform: rotate(-45deg) scale(0);
+  animation: radiate 800ms forwards;
+  pointer-events: none;
+  z-index: 1000;
+  filter: drop-shadow(0 0 5px rgba(255,255,255,0.8));
+}
+
+@keyframes radiate {
+  0% { transform: rotate(-45deg) scale(0); opacity: 1; }
+  100% { transform: rotate(-45deg) scale(1.5); opacity: 0; }
+}
+
+/* Enlarged Card Modal Styles */
+#card-modal {
+  /* Стили задаются динамически через скрипты */
+}
+
+@keyframes pulseHeart {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Добавляем стили для группированных фото */
+.photo-group {
+  position: absolute;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  border: 4px solid #bbb;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #f7f7f7, #eaeaea);
+  box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+  padding: 5px;
+  width: 250px;
+  height: 350px;
+  cursor: pointer;
+}
+
+.photo-group .photo-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 350px;
+  transition: left 0.5s ease, top 0.5s ease;
+}
+
+/* Удаляем правило для класса .paperclip */
+
+/* Glitch footer for the green image */
+#footer-section {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    clear: both;
+    margin-top: 100vh;
+}
+
+#footer-glitch {
+    width: 100%;
+    height: 200px; /* Reduced height for header */
+    position: fixed; /* Fixed position at top */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Lower z-index so it doesn't overlap collage */
+    display: none;
+}
+
+#footer-glitch-img {
+    width: 100%;
+    height: 200px; /* Match container height */
+    object-fit: cover;
+    display: block;
+}
+
+/* Позиционируем сердце в центре зеленой картинки */
+#footer-glitch .heart-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px; /* Размер сердца */
+    height: 150px;
+    z-index: 2;
+    background: #FF69B4; /* Розовый цвет для сердца */
+}
+
+/* Формируем сердце через псевдоэлементы */
+#footer-glitch .heart-overlay::before,
+#footer-glitch .heart-overlay::after {
+    content: '';
+    position: absolute;
+    width: 75px;
+    height: 120px;
+    background: inherit;
+    border-radius: 75px 75px 0 0;
+}
+
+#footer-glitch .heart-overlay::before {
+    left: 75px;
+    transform: rotate(45deg);
+    transform-origin: 0 100%;
+}
+
+#footer-glitch .heart-overlay::after {
+    left: 0;
+    transform: rotate(-45deg);
+    transform-origin: 100% 100%;
+}
+
+#footer-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FF69B4;
+    font-family: 'Comic Sans MS', bold;
+    font-size: 1.5em; /* Slightly smaller font for header */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 
+        3px 3px 0 #fff,
+        -3px -3px 0 #fff,
+        3px -3px 0 #fff,
+        -3px 3px 0 #fff;
+    letter-spacing: 3px;
+    z-index: 3;
+    text-align: center;
+    padding: 20px;
+    animation: bounceText 2s infinite;
+}
+
+@keyframes bounceText {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+/* Новые правила для групового слайдшоу */
+#group-modal {
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+#group-modal img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Стили для сердца-маски */
+.heart-mask {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' width='512' height='512' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z'/%3E%3C/svg%3E");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' width='512' height='512' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z'/%3E%3C/svg%3E");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background: #FF69B4;
+    overflow: hidden;
+}
+
+/* Стили для изображения внутри сердца */
+.heart-mask img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Обновленные стили для видео и end секции */
+.video-section {
+    width: 100%;
+    margin: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-wrapper {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.end-section {
+    width: 100%;
+    margin: 150px 0;  /* Увеличенный отступ сверху и снизу */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;  /* Дополнительный внутренний отступ */
+}
+
+.sparkle-wrapper {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    padding: 20px;
+    margin-top: 50px;  /* Дополнительный отступ сверху */
+}
+
+.sparkle-wrapper:hover {
+    transform: scale(1.05);
+}
+
+.end-image {
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255, 192, 203, 0.7);
+}
+
+/* Обновленные стили для презентации */
+.presentation-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.presentation-slide {
+    position: relative;
+    max-width: 80%;
+    max-height: 80vh;
+    background: transparent;
+}
+
+.presentation-slide img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255, 192, 203, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.end-caption {
+    font-family: 'Playfair Display', cursive;
+    font-size: 24px;
+    color: #ff69b4;
+    text-align: center;
+    margin-top: 15px;
+    text-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+    position: relative;
+    z-index: 3;
+}
+
+/* Улучшенные эффекты Swarovski */
+.swarovski-effect,
+.swarovski-sparkles,
+.magic-stars {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    pointer-events: none;
+}
+
+.swarovski-effect {
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,0.9) 0%, transparent 5%),
+        radial-gradient(circle at 70% 70%, rgba(255,255,255,0.9) 0%, transparent 5%),
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.9) 0%, transparent 5%),
+        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.9) 0%, transparent 5%);
+    animation: sparkleRotate 3s infinite linear;
+    z-index: 1;
+}
+
+.swarovski-sparkles {
+    background: 
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.8) 0%, transparent 10%),
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.8) 0%, transparent 10%),
+        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.8) 0%, transparent 10%);
+    animation: sparkleMove 2s infinite ease-in-out;
+    z-index: 1;
+}
+
+.magic-stars {
+    background-image: 
+        radial-gradient(white 1px, transparent 2px),
+        radial-gradient(white 1px, transparent 2px);
+    background-size: 30px 30px;
+    animation: starsFloat 4s infinite linear;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+/* Анимации */
+@keyframes sparkleRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes sparkleMove {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 1; }
+}
+
+@keyframes starsFloat {
+    0% { background-position: 0 0; }
+    100% { background-position: 30px 30px; }
+}
+
+.final-message {
+    color: white;
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 105, 180, 0.1);
+    border-radius: 15px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.close-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background: #ff69b4;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+    background: #ff1493;
+} 

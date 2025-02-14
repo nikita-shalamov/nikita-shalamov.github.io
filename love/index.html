@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Heart Page</title>
+    <!-- Глобальные стили из внешнего ресурса -->
+    <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
+    <style>
+      /* Фоновое изображение на весь сайт */
+      body {
+        margin: 0;
+        padding: 0;
+        background: url('background.jpg') no-repeat center center fixed;
+        background-size: cover;
+      }
+      /* Flex-контейнер для всей страницы: гарантирует, что футер будет внизу, даже если контента мало */
+      #page-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      /* Основной контент растягивается */
+      #content-wrap {
+        flex: 1;
+      }
+      /* Стили для футера */
+      #footer-glitch {
+        text-align: center;
+        padding: 20px 0;
+      }
+      #footer-glitch-img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Оборачиваем всё содержимое страницы -->
+    <div id="page-container">
+      <div id="content-wrap">
+        <canvas id="pinkboard"></canvas>
+        <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
+        <!-- Новая часть: интро-оверлей -->
+        <div id="intro-overlay">
+          <div id="intro-container">
+            <img src="intro.jpg" alt="Интро">
+            <div class="glow"></div>
+          </div>
+          <div id="info">
+            <p>От: Коти</p>
+            <p>Кому: Кисе</p>
+            <p>Дата: 14.02.2025</p>
+          </div>
+        </div>
+        <audio id="bg-music" src="1.mp3" preload="auto" autoplay loop></audio>
+        <audio id="click-sound" src="mouse.mp3" preload="auto"></audio>
+        <audio id="mouse-sound" src="mouse.mp3" preload="auto"></audio>
+        <audio id="meow-sound" src="meow.mp3" preload="auto"></audio>
+        <audio id="collage-music" src="2.mp3" preload="auto"></audio>
+        <div id="collage"></div>
+        <link rel="stylesheet" href="heart1.css">
+        <div id="footer-glitch" style="position: relative; text-align: center; margin-top: 20px;">
+          <img src="green.jpg" alt="Green Glitch Header" id="footer-glitch-img" style="max-width:100%; display: block; margin: 0 auto;">
+          <div id="footer-caption">ВСЕГДА БЫТЬ В ПОЛЕТЕ С ТОБОЙ <3</div>
+        </div>
+      </div>
+      <!-- Футер, который прокручивается вместе со страницей -->
+      <div id="footer-glitch">
+        <img src="green.jpg" alt="Green Glitch Header" id="footer-glitch-img">
+        <div id="footer-caption">ВСЕГДА БЫТЬ В ПОЛЕТЕ С ТОБОЙ <3</div>
+      </div>
+    </div>
+    <script>
+    var settings = {
+      particles: {
+        length:   500, // maximum amount of particles
+        duration:   2, // particle duration in sec
+        velocity: 100, // particle velocity in pixels/sec
+        effect: -0.75, // play with this for a nice effect
+        size:      30, // particle size in pixels
+      },
+    };
+
+    /*
+     * RequestAnimationFrame polyfill by Erik Möller
+     */
+    (function(){var b=0;var c=["ms","moz","webkit","o"];for(var a=0;a<c.length&&!window.requestAnimationFrame;++a){window.requestAnimationFrame=window[c[a]+"RequestAnimationFrame"];window.cancelAnimationFrame=window[c[a]+"CancelAnimationFrame"]||window[c[a]+"CancelRequestAnimationFrame"]}if(!window.requestAnimationFrame){window.requestAnimationFrame=function(h,e){var d=new Date().getTime();var f=Math.max(0,16-(d-b));var g=window.setTimeout(function(){h(d+f)},f);b=d+f;return g}}if(!window.cancelAnimationFrame){window.cancelAnimationFrame=function(d){clearTimeout(d)}}}());
+
+    /*
+     * Point class
+     */
+    var Point = (function() {
+      function Point(x, y) {
+        this.x = (typeof x !== 'undefined') ? x : 0;
+        this.y = (typeof y !== 'undefined') ? y : 0;
+      }
+      Point.prototype.clone = function() {
+        return new Point(this.x, this.y);
+      };
+      Point.prototype.length = function(length) {
+        if (typeof length == 'undefined')
+          return Math.sqrt(this.x * this.x + this.y * this.y);
+        this.normalize();
+        this.x *= length;
+        this.y *= length;
+        return this;
+      };
+      Point.prototype.normalize = function() {
+        var length = this.length();
+        this.x /= length;
+        this.y /= length;
+        return this;
+      };
+      return Point;
+    })();
+
+    /*
+     * Particle class
+     */
+    var Particle = (function() {
+      function Particle() {
+        this.position = new Point();
+        this.velocity = new Point();
+        this.acceleration = new Point();
+        this.age = 0;
+      }
+      Particle.prototype.initialize = function(x, y, dx, dy) {
+        this.position.x = x;
+        this.position.y = y;
+        this.velocity.x = dx;
+        this.velocity.y = dy;
+        this.acceleration.x = dx * settings.particles.effect;
+        this.acceleration.y = dy * settings.particles.effect;
+        this.age = 0;
+      };
+      Particle.prototype.update = function(deltaTime) {
+        this.position.x += this.velocity.x * deltaTime;
+        this.position.y += this.velocity.y * deltaTime;
+        this.velocity.x += this.acceleration.x * deltaTime;
+        this.velocity.y += this.acceleration.y * deltaTime;
+        this.age += deltaTime;
+      };
+      Particle.prototype.draw = function(context, image) {
+        function ease(t) {
+          return (--t) * t * t + 1;
+        }
+        var size = 2 * image.width * ease(this.age / settings.particles.duration);
+        context.globalAlpha = 1 - this.age / settings.particles.duration;
+        context.drawImage(image, this.position.x - size / 2, this.position.y - size / 2, size, size);
+      };
+      return Particle;
+    })();
+
+    /*
+     * ParticlePool class
+     */
+    var ParticlePool = (function() {
+      var particles,
+          firstActive = 0,
+          firstFree   = 0,
+          duration    = settings.particles.duration;
+      
+      function ParticlePool(length) {
+        // create and populate particle pool
+        particles = new Array(length);
+        for (var i = 0; i < particles.length; i++)
+          particles[i] = new Particle();
+      }
+      ParticlePool.prototype.add = function(x, y, dx, dy) {
+        particles[firstFree].initialize(x, y, dx, dy);
+        
+        // handle circular queue
+        firstFree++;
+        if (firstFree   == particles.length) firstFree   = 0;
+        if (firstActive == firstFree       ) firstActive++;
+        if (firstActive == particles.length) firstActive = 0;
+      };
+      ParticlePool.prototype.update = function(deltaTime) {
+        var i;
+        
+        // update active particles
+        if (firstActive < firstFree) {
+          for (i = firstActive; i < firstFree; i++)
+            particles[i].update(deltaTime);
+        }
+        if (firstFree < firstActive) {
+          for (i = firstActive; i < particles.length; i++)
+            particles[i].update(deltaTime);
+          for (i = 0; i < firstFree; i++)
+            particles[i].update(deltaTime);
+        }
+        
+        // remove inactive particles
+        while (particles[firstActive].age >= duration && firstActive != firstFree) {
+          firstActive++;
+          if (firstActive == particles.length) firstActive = 0;
+        }
+        
+        
+      };
+      ParticlePool.prototype.draw = function(context, image) {
+        // draw active particles
+        if (firstActive < firstFree) {
+          for (i = firstActive; i < firstFree; i++)
+            particles[i].draw(context, image);
+        }
+        if (firstFree < firstActive) {
+          for (i = firstActive; i < particles.length; i++)
+            particles[i].draw(context, image);
+          for (i = 0; i < firstFree; i++)
+            particles[i].draw(context, image);
+        }
+      };
+      return ParticlePool;
+    })();
+
+    /*
+     * Putting it all together
+     */
+    (function(canvas) {
+      var context = canvas.getContext('2d'),
+          particles = new ParticlePool(settings.particles.length),
+          particleRate = settings.particles.length / settings.particles.duration, // particles/sec
+          time;
+      
+      // get point on heart with -PI <= t <= PI
+      function pointOnHeart(t) {
+        var scale = 1.1; // новый коэффициент масштабирования для увеличения сердца
+        return new Point(
+          scale * 160 * Math.pow(Math.sin(t), 3),
+          scale * (130 * Math.cos(t) - 50 * Math.cos(2 * t) - 20 * Math.cos(3 * t) - 10 * Math.cos(4 * t) + 25)
+        );
+      }
+      
+      // creating the particle image using a dummy canvas
+      var image = (function() {
+        var canvas  = document.createElement('canvas'),
+            context = canvas.getContext('2d');
+        canvas.width  = settings.particles.size;
+        canvas.height = settings.particles.size;
+        // helper function to create the path
+        function to(t) {
+          var point = pointOnHeart(t);
+          point.x = settings.particles.size / 2 + point.x * settings.particles.size / 350;
+          point.y = settings.particles.size / 2 - point.y * settings.particles.size / 350;
+          return point;
+        }
+        // create the path
+        context.beginPath();
+        var t = -Math.PI;
+        var point = to(t);
+        context.moveTo(point.x, point.y);
+        while (t < Math.PI) {
+          t += 0.01; // baby steps!
+          point = to(t);
+          context.lineTo(point.x, point.y);
+        }
+        context.closePath();
+        // create the fill
+        context.fillStyle = '#ea80b0';
+        context.fill();
+        // create the image
+        var image = new Image();
+        image.src = canvas.toDataURL();
+        return image;
+      })();
+      
+      // render that thing!
+      function render() {
+        // next animation frame
+        requestAnimationFrame(render);
+        
+        // update time
+        var newTime   = new Date().getTime() / 1000,
+            deltaTime = newTime - (time || newTime);
+        time = newTime;
+        
+        // clear canvas
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // create new particles
+        var amount = particleRate * deltaTime;
+        for (var i = 0; i < amount; i++) {
+          var pos = pointOnHeart(Math.PI - 2 * Math.PI * Math.random());
+          var dir = pos.clone().length(settings.particles.velocity);
+          particles.add(canvas.width / 2 + pos.x, canvas.height / 2 - pos.y, dir.x, -dir.y);
+        }
+        
+        // update and draw particles
+        particles.update(deltaTime);
+        particles.draw(context, image);
+      }
+      
+      // handle (re-)sizing of the canvas
+      function onResize() {
+        canvas.width  = canvas.clientWidth;
+        canvas.height = canvas.clientHeight;
+      }
+      window.onresize = onResize;
+      
+      // delay rendering bootstrap
+      setTimeout(function() {
+        onResize();
+        render();
+      }, 10);
+
+      // Экспорт функций для глобального доступа (для корректной работы при вызове из других функций)
+      window.render = render;
+      window.onResize = onResize;
+    })(document.getElementById('pinkboard'));
+
+    function generateCollage() {
+      console.log("Generating collage with grouping...");
+      var photos = [
+        { filename: "photos/1.jpg", description: "японское кафе и твоя улыбка", group: false },
+        { filename: "photos/2.jpg", description: "счастье.jpg", group: false },
+        { filename: "photos/3.jpg", description: "первые дни", group: false },
+        { filename: "photos/любовь1.jpg", description: "romantic day", group: false },
+        { filename: "photos/любовь2.jpg", description: "Весна фото 1", group: true },
+
+        { filename: "photos/зима.jpg", description: "наши первые моменты", group: false },
+        { filename: "photos/зима2.jpg", description: "Описание 4", group: true },
+        { filename: "photos/зима3.jpg", description: "наши первые моменты", group: true },
+
+        { filename: "photos/цветы.jpg", description: "наши первые моменты", group: false },
+        { filename: "photos/спим.jpg", description: "спим <3", group: false },
+        { filename: "photos/милашки.jpg", description: "милашки", group: false },
+        { filename: "photos/казань.jpg", description: "радость", group: false },
+        { filename: "photos/казань2.jpg", description: "Весна фото 1", group: true },
+        { filename: "photos/гик.jpg", description: "I'm too geek", group: false },
+        // Группа – первые фото группы (будут сгруппированы, если у последующих group: true)
+        { filename: "photos/14фв.jpg", description: "Year ago..", group: false },
+        { filename: "photos/14фв2.jpg", description: "Описание 4", group: true },
+        { filename: "photos/14фвцветы.jpg", description: "Описание 1", group: true },
+        { filename: "photos/14февсвечи.jpg", description: "Весна фото 1", group: true },
+        // Новая группа
+        { filename: "photos/др.jpg", description: "my brithday", group: false },
+        { filename: "photos/др2.jpg", description: "Описание 3", group: true },
+
+      ];
+         // Группировка фотографий по параметру group
+         var groups = [];
+        var currentGroup = [];
+        photos.forEach(function(photo) {
+          if (photo.group === true) {
+            currentGroup.push(photo);
+          } else {
+            if (currentGroup.length > 0) {
+              groups.push(currentGroup);
+            }
+            currentGroup = [];
+            currentGroup.push(photo);
+          }
+        });
+        if (currentGroup.length > 0) groups.push(currentGroup);
+        
+        var collage = document.getElementById("collage");
+        collage.innerHTML = "";
+        
+        var cols = 3;
+        // Вычисляем горизонтальный отступ для центровки сетки
+        var totalGridWidth = cols * cardWidth + (cols - 1) * gap;
+        var leftMargin = Math.max(10, (window.innerWidth - totalGridWidth) / 2);
+        var topMargin = 200;
+        
+        groups.forEach(function(groupPhotos, i) {
+            var row = Math.floor(i / cols);
+            var col = i % cols;
+            var posX = leftMargin + col * (cardWidth + gap);
+            var posY = topMargin + row * (cardHeight + gap);
+            if (groupPhotos.length === 1) {
+              createPhotoCard(groupPhotos[0], posX, posY);
+            } else {
+              createPhotoGroup(groupPhotos, posX, posY);
+            }
+        });
+        
+        // Добавляем видео после коллажа с увеличенными размерами
+        var videoSection = document.createElement('div');
+        videoSection.className = 'video-section';
+        videoSection.style.textAlign = 'center';
+        videoSection.innerHTML = `
+          <div class="video-wrapper" style="display: inline-block;">
+              <video class="centered-video" autoplay loop muted playsinline style="width: 150vw; height: 100vh; object-fit: contain; margin-left: -150px;">
+                  <source src="photos/frames.mp4" type="video/mp4">
+              </video>
+          </div>
+        `;
+        collage.appendChild(videoSection);
+        
+
+            // Добавляем видео после коллажа с увеличенными размерами
+            var videoSection = document.createElement('div');
+        videoSection.className = 'video-section';
+        videoSection.style.textAlign = 'left';
+        videoSection.innerHTML = `
+          <div class="video-wrapper" style="display: inline-block;">
+              <video class="centered-video" autoplay loop muted playsinline style="width: 100vw; height: 150vh; object-fit: contain;">
+                  <source src="photos/яснимаю.mp4" type="video/mp4">
+              </video>
+          </div>
+        `;
+        collage.appendChild(videoSection);
+        
+
+
+                // Добавляем видео после коллажа с увеличенными размерами
+                var videoSection = document.createElement('div');
+        videoSection.className = 'video-section';
+        videoSection.style.textAlign = 'center';
+        videoSection.innerHTML = `
+          <div class="video-wrapper" style="display: inline-block;">
+              <video class="centered-video" autoplay loop muted playsinline style="width: 50vw; height: 100vh; object-fit: contain;">
+                  <source src="photos/красотка.mp4" type="video/mp4">
+              </video>
+              <p>Красотуля, модель!</p>
+          </div>
+        `;
+        collage.appendChild(videoSection);
+                        // Добавляем видео после коллажа с увеличенными размерами
+        var catVideoSection = document.createElement('div');
+        catVideoSection.className = 'video-section';
+        catVideoSection.style.textAlign = 'left';
+        catVideoSection.innerHTML = `
+          <div class="video-wrapper" style="display: inline-block;">
+              <video class="centered-video" autoplay loop muted playsinline style="width: 50vw; height: 50vh; object-fit: contain; margin-left: -350px;">
+                  <source src="photos/cat.mp4" type="video/mp4">
+              </video>
+                                <p> my feeling rn</p>
+
+          </div>
+        `;
+        collage.insertBefore(catVideoSection, collage.firstChild);
+        
+    // Добавляем end section после видео с отступом
+    setTimeout(() => {
+      generateEndSection();
+    }, 100);
+  }
+
+  // Глобальные переменные для размера карточек и промежутка
+  var cardWidth = 250, cardHeight = 350, gap = 20;
+
+  // Функция для создания излучающих сердечек при клике
+  function createRadiatingHearts(x, y) {
+    let count = Math.floor(Math.random() * 5) + 2; // Количество от 2 до 6
+    for (let i = 0; i < count; i++) {
+      let heart = document.createElement("div");
+      heart.className = "radiating-heart";
+      let offsetX = (Math.random() - 0.5) * 100;
+      let offsetY = (Math.random() - 0.5) * 100;
+      heart.style.left = (x + offsetX) + "px";
+      heart.style.top = (y + offsetY) + "px";
+      document.body.appendChild(heart);
+      setTimeout(function() {
+        heart.parentNode && heart.parentNode.removeChild(heart);
+      }, 800);
+    }
+  }
+
+  // Обработчик клика на интро-контейнер
+  document.getElementById('intro-container').addEventListener('click', function(e) {
+    var sound = document.getElementById('click-sound');
+    if (sound) {
+      sound.play();
+    }
+    console.log("intro-container clicked; Интерактив: переход к коллажу фотографий.");
+    
+    var overlay = document.getElementById('intro-overlay');
+    overlay.style.transition = 'opacity 0.5s';
+    overlay.style.opacity = '0';
+    setTimeout(function() {
+      overlay.style.display = 'none';
+      // Останавливаем фоновую музыку и запускаем музыку для коллажа
+      var bgMusic = document.getElementById("bg-music");
+      if(bgMusic){ bgMusic.pause(); bgMusic.currentTime = 0; }
+      var collageMusic = document.getElementById("collage-music");
+      if(collageMusic){ collageMusic.play(); }
+      // Генерируем коллаж (карточки рандомно разбросаны на белой плоскости)
+      generateCollage();
+      var collage = document.getElementById('collage');
+      collage.style.display = 'block';
+      collage.style.opacity = '1';
+      createRadiatingHearts(e.pageX, e.pageY);
+    }, 500);
+  });
+
+  document.addEventListener('click', function(e) {
+    if (e.target.closest("#intro-container")) return;
+
+    if (Math.random() < 0.4) {
+       var meowSound = document.getElementById("meow-sound");
+       if (meowSound) {
+         meowSound.currentTime = 0;
+         meowSound.play();
+       }
+    } else {
+       var mouseSound = document.getElementById("mouse-sound");
+       if (mouseSound) {
+         mouseSound.currentTime = 0;
+         mouseSound.play();
+       }
+    }
+    createRadiatingHearts(e.pageX, e.pageY);
+  });
+
+  // Функция для увеличения карточки (эффект берётся и рассматривается)
+  function enlargeCard(card) {
+    var rect = card.getBoundingClientRect();
+    var modal = document.createElement("div");
+    modal.id = "card-modal";
+    modal.style.position = "fixed";
+    modal.style.top = "0";
+    modal.style.left = "0";
+    modal.style.width = "100%";
+    modal.style.height = "100%";
+    modal.style.background = "rgba(0,0,0,0.5)";
+    modal.style.zIndex = "10000";
+    modal.style.display = "flex";
+    modal.style.alignItems = "center";
+    modal.style.justifyContent = "center";
+    
+    var clone = card.cloneNode(true);
+    clone.style.position = "absolute";
+    clone.style.left = rect.left + "px";
+    clone.style.top = rect.top + "px";
+    clone.style.width = rect.width + "px";
+    clone.style.height = rect.height + "px";
+    clone.style.margin = "0";
+    clone.style.transition = "transform 0.5s ease, opacity 0.5s ease";
+    clone.style.willChange = "transform, opacity";
+    clone.style.opacity = "0";
+    
+    // Add this: Regenerate heart animation when viewing photo
+    if (window.requestAnimationFrame) {
+      // Clear existing canvas
+      var canvas = document.getElementById('pinkboard');
+      var context = canvas.getContext('2d');
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Restart animation
+      onResize();
+      render();
+    }
+    
+    modal.appendChild(clone);
+    document.body.appendChild(modal);
+    
+    requestAnimationFrame(function(){
+      clone.style.opacity = "1";
+      var translateX = (-rect.left + window.innerWidth/2 - rect.width/2);
+      var translateY = (-rect.top + window.innerHeight/2 - rect.height/2);
+      clone.style.transform = "translate3d(" + translateX + "px, " + translateY + "px, 0) scale(1.5)";
+    });
+    
+    modal.addEventListener('click', function() {
+      clone.style.transform = "translate3d(0,0,0) scale(1)";
+      clone.style.opacity = "0";
+      setTimeout(function(){
+        modal.remove();
+      }, 500);
+    });
+  }
+
+  function createPhotoCard(photo, posX, posY) {
+    var heartTypes = ["heart-green", "heart-pink", "heart-yellow", "heart-white"];
+    var type = heartTypes[Math.floor(Math.random() * heartTypes.length)];
+    var div = document.createElement("div");
+    div.className = "photo-item " + type;
+    div.style.position = "absolute";
+    div.style.transition = "transform 1s ease, opacity 1s ease";
+    var centerX = (window.innerWidth - cardWidth) / 2;
+    var centerY = (window.innerHeight - cardHeight) / 2;
+    div.style.transform = "translate3d(" + centerX + "px," + centerY + "px,0) scale(0.8)";
+    div.style.opacity = "0";
+    setTimeout(function(){
+      div.style.transform = "translate3d(" + posX + "px," + posY + "px,0) scale(1)";
+      div.style.opacity = "1";
+    }, 50);
+    div.innerHTML = '<img src="' + photo.filename + '" alt="' + photo.description + '">' +
+                    '<div class="description">' + photo.description + '</div>' +
+                    '<div class="heart-overlay"></div>';
+    div.addEventListener('click', function(e) {
+      e.stopPropagation();
+      enlargeCard(this);
+    });
+    collage.appendChild(div);
+  }
+  function createPhotoGroup(photoArray, posX, posY) {
+    const container = document.createElement("div");
+    container.className = "photo-group";
+    container.style.position = "absolute";
+    container.style.width = `${cardWidth}px`;
+    container.style.height = `${cardHeight}px`;
+    container.style.cursor = "pointer";
+    container.style.transition = "transform 0.5s ease, opacity 0.5s ease";
+    container.style.transform = `translate3d(${posX}px, ${posY}px, 0)`;
+    container.style.opacity = "0";
+    container.style.zIndex = "10"; // гарантируем, что карточка выше соседних элементов
+
+    setTimeout(() => {
+      container.style.opacity = "1";
+    }, 50);
+
+    const count = photoArray.length;
+    const angleStep = 10; // угол поворота между картами
+    const totalAngle = (count - 1) * angleStep;
+    const startAngle = -totalAngle / 2;
+
+    photoArray.forEach((photo, index) => {
+      const card = document.createElement("div");
+      card.className = "photo-item";
+      card.style.position = "absolute";
+      card.style.width = "100%";
+      card.style.height = "100%";
+      const angle = startAngle + index * angleStep;
+      card.style.transform = `rotate(${angle}deg) translate(${index * 5}px, ${index * 5}px)`;
+      card.style.transformOrigin = "center center";
+      card.style.zIndex = count - index;
+      card.style.boxShadow = "0 4px 8px rgba(0,0,0,0.3)";
+      card.innerHTML = `
+        <img src="${photo.filename}" alt="${photo.description}" style="width:100%; height:100%; object-fit: cover;">
+        <div class="description" style="position: absolute; bottom: 0; background: rgba(0,0,0,0.5); color: #fff; width: 100%; text-align: center;">
+            ${photo.description}
+        </div>
+        <div class="heart-overlay"></div>
+      `;
+      container.appendChild(card);
+    });
+
+    // Добавляем прозрачный оверлей для перехвата кликов
+    const overlay = document.createElement("div");
+    overlay.style.position = "absolute";
+    overlay.style.top = "0";
+    overlay.style.left = "0";
+    overlay.style.width = "100%";
+    overlay.style.height = "100%";
+    overlay.style.zIndex = count + 1;
+    overlay.style.background = "transparent";
+    overlay.style.pointerEvents = "all";
+    overlay.addEventListener("click", function(e) {
+      e.stopPropagation();
+      console.log("Group overlay clicked");
+      if (typeof openGroupSlideshow === "function") {
+        openGroupSlideshow(photoArray);
+      } else {
+        console.error("openGroupSlideshow не определена");
+      }
+    });
+    container.appendChild(overlay);
+
+    document.getElementById("collage").appendChild(container);
+  }
+
+  // Добавляем функцию слайдшоу для сгруппированных фотографий
+  function openGroupSlideshow(photoArray) {
+    var index = 0;
+    var modal = document.createElement("div");
+    modal.id = "group-modal";
+    modal.style.position = "fixed";
+    modal.style.top = "0";
+    modal.style.left = "0";
+    modal.style.width = "100%";
+    modal.style.height = "100%";
+    modal.style.background = "rgba(0,0,0,0.8)";
+    modal.style.zIndex = "10000";
+    modal.style.display = "flex";
+    modal.style.alignItems = "center";
+    modal.style.justifyContent = "center";
+    
+    var imgContainer = document.createElement("div");
+    imgContainer.style.position = "relative";
+    imgContainer.style.maxWidth = "80%";
+    imgContainer.style.maxHeight = "80%";
+    
+    var img = document.createElement("img");
+    img.src = photoArray[index].filename;
+    img.style.maxWidth = "100%";
+    img.style.maxHeight = "100%";
+    img.style.display = "block";
+    img.style.margin = "0 auto";
+    imgContainer.appendChild(img);
+    
+    var leftArrow = document.createElement("div");
+    leftArrow.innerHTML = "&#10094;"; // левый символ стрелки
+    leftArrow.style.position = "absolute";
+    leftArrow.style.top = "50%";
+    leftArrow.style.left = "0";
+    leftArrow.style.fontSize = "50px";
+    leftArrow.style.color = "#fff";
+    leftArrow.style.cursor = "pointer";
+    leftArrow.style.userSelect = "none";
+    leftArrow.style.transform = "translateY(-50%)";
+    imgContainer.appendChild(leftArrow);
+    
+    var rightArrow = document.createElement("div");
+    rightArrow.innerHTML = "&#10095;"; // правый символ стрелки
+    rightArrow.style.position = "absolute";
+    rightArrow.style.top = "50%";
+    rightArrow.style.right = "0";
+    rightArrow.style.fontSize = "50px";
+    rightArrow.style.color = "#fff";
+    rightArrow.style.cursor = "pointer";
+    rightArrow.style.userSelect = "none";
+    rightArrow.style.transform = "translateY(-50%)";
+    imgContainer.appendChild(rightArrow);
+    
+    var closeBtn = document.createElement("div");
+    closeBtn.innerHTML = "&times;";
+    closeBtn.style.position = "absolute";
+    closeBtn.style.top = "10px";
+    closeBtn.style.right = "10px";
+    closeBtn.style.fontSize = "40px";
+    closeBtn.style.color = "#fff";
+    closeBtn.style.cursor = "pointer";
+    closeBtn.style.userSelect = "none";
+    imgContainer.appendChild(closeBtn);
+    
+    modal.appendChild(imgContainer);
+    document.body.appendChild(modal);
+    
+    leftArrow.addEventListener('click', function(e) {
+      e.stopPropagation();
+      index = (index - 1 + photoArray.length) % photoArray.length;
+      img.src = photoArray[index].filename;
+    });
+    rightArrow.addEventListener('click', function(e) {
+      e.stopPropagation();
+      index = (index + 1) % photoArray.length;
+      img.src = photoArray[index].filename;
+    });
+    closeBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      modal.remove();
+    });
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        modal.remove();
+      }
+    });
+    
+    if (window.requestAnimationFrame) {
+      var canvas = document.getElementById('pinkboard');
+      var context = canvas.getContext('2d');
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      
+      onResize();
+      render();
+    }
+  }
+
+  // Обновленная функция startKissesPresentation с единым контейнером для слайдов
+  function startKissesPresentation() {
+      const kissesPhotos = [
+          "kisses/1.jpg",
+          "kisses/2.jpg",
+          "kisses/3.jpg",
+          "kisses/4.jpg",
+          "kisses/5.jpg",
+          "kisses/6.jpg",
+          "kisses/8.jpg",
+          "kisses/9.jpg",
+          "kisses/10.jpg",
+          "kisses/11.jpg",
+          "kisses/12.jpg",
+          "kisses/13.jpg",
+          "kisses/14.jpg",
+          "kisses/15.jpg",
+
+      ];
+      let currentIndex = 0;
+      let currentView = "photo"; // два режима: "photo" — фото, "note" — записка
+
+      // Создаем модальное окно, аналогичное просмотру групповых фото
+      const modal = document.createElement('div');
+      modal.id = 'kisses-presentation-modal';
+      modal.style.position = 'fixed';
+      modal.style.top = '0';
+      modal.style.left = '0';
+      modal.style.width = '100%';
+      modal.style.height = '100%';
+      modal.style.background = 'rgba(0,0,0,0.8)';
+      modal.style.zIndex = '10000';
+      modal.style.display = 'flex';
+      modal.style.alignItems = 'center';
+      modal.style.justifyContent = 'center';
+      document.body.appendChild(modal);
+
+      // Контейнер для содержимого (фото или записки)
+      const container = document.createElement('div');
+      container.style.position = 'relative';
+      container.style.maxWidth = '90%';
+      container.style.maxHeight = '90%';
+      container.style.overflow = 'hidden';
+      container.style.display = 'flex';
+      container.style.alignItems = 'center';
+      container.style.justifyContent = 'center';
+      modal.appendChild(container);
+
+      // Создаем навигационные стрелки и кнопку закрытия
+      const leftArrow = document.createElement('div');
+      leftArrow.innerHTML = '&#10094;';
+      leftArrow.style.position = 'absolute';
+      leftArrow.style.top = '50%';
+      leftArrow.style.left = '10px';
+      leftArrow.style.fontSize = '50px';
+      leftArrow.style.color = '#fff';
+      leftArrow.style.cursor = 'pointer';
+      leftArrow.style.userSelect = 'none';
+      leftArrow.style.transform = 'translateY(-50%)';
+      modal.appendChild(leftArrow);
+
+      const rightArrow = document.createElement('div');
+      rightArrow.innerHTML = '&#10095;';
+      rightArrow.style.position = 'absolute';
+      rightArrow.style.top = '50%';
+      rightArrow.style.right = '10px';
+      rightArrow.style.fontSize = '50px';
+      rightArrow.style.color = '#fff';
+      rightArrow.style.cursor = 'pointer';
+      rightArrow.style.userSelect = 'none';
+      rightArrow.style.transform = 'translateY(-50%)';
+      modal.appendChild(rightArrow);
+
+      const closeBtn = document.createElement('div');
+      closeBtn.innerHTML = '&times;';
+      closeBtn.style.position = 'absolute';
+      closeBtn.style.top = '10px';
+      closeBtn.style.right = '10px';
+      closeBtn.style.fontSize = '40px';
+      closeBtn.style.color = '#fff';
+      closeBtn.style.cursor = 'pointer';
+      closeBtn.style.userSelect = 'none';
+      modal.appendChild(closeBtn);
+
+      // Элемент для отображения фото
+      const imgElement = document.createElement('img');
+      imgElement.style.maxWidth = '100%';
+      imgElement.style.maxHeight = '100%';
+      imgElement.style.objectFit = 'contain';
+      imgElement.style.display = 'block';
+      imgElement.style.margin = '0 auto';
+
+      // Функция обновления содержимого контейнера
+      function updateView() {
+          container.innerHTML = ""; // очищаем контейнер
+          if (currentView === "photo") {
+              imgElement.src = kissesPhotos[currentIndex];
+              container.appendChild(imgElement);
+          } else if (currentView === "note") {
+              container.innerHTML = `
+                  <div class="final-message" style="color:#fff; text-align:center; padding:20px;">
+                      <h2>С днем святого валентина любимая!</h2>
+                      <p>Я очень рад что мы уже год вместе, но не очень рад - что мы не рядом, жаль, что мы не можем провести этот романтический день вместе, но я четко помню прошлый 14 февраля и он греет душу. Надеюсь тебе понравился мой арт-хаус, немного криво так как у меня лапки <3. Следующий день влюбленных проведем вместе! </p>
+                      <p>С Любовью,</p>
+                      <p>Денис</p>
+                  </div>
+              `;
+          }
+      }
+
+      updateView();
+
+      // Обработчик для левой стрелки
+      leftArrow.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (currentView === "note") {
+              // Вернуться к последнему фото
+              currentView = "photo";
+              currentIndex = kissesPhotos.length - 1;
+              updateView();
+          } else if (currentIndex > 0) {
+              currentIndex--;
+              updateView();
+          }
+      });
+
+      // Обработчик для правой стрелки
+      rightArrow.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (currentView === "photo") {
+              if (currentIndex < kissesPhotos.length - 1) {
+                  currentIndex++;
+                  updateView();
+              } else {
+                  // После последнего фото переключаемся на блок с запиской
+                  currentView = "note";
+                  updateView();
+              }
+          }
+      });
+
+      // Обработчик для закрытия модального окна
+      closeBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          modal.remove();
+      });
+
+      // Закрываем модальное окно при клике вне контейнера
+      modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+              modal.remove();
+          }
+      });
+
+      // Перезапускаем анимацию сердечных частиц (как в групповом слайдшоу)
+      const canvas = document.getElementById('pinkboard');
+      if (canvas) {
+          const context = canvas.getContext('2d');
+          context.clearRect(0, 0, canvas.width, canvas.height);
+          canvas.width = canvas.clientWidth;
+          canvas.height = canvas.clientHeight;
+          if (window.render) { render(); }
+      }
+
+      // Воспроизводим звук при старте презентации
+      const meowSound = document.getElementById("meow-sound");
+      if (meowSound) {
+          meowSound.currentTime = 0;
+          meowSound.play();
+      }
+  }
+
+  // Обновленная функция generateEndSection для корректного позиционирования end.jpg ниже коллажа
+  function generateEndSection() {
+      var endSection = document.createElement('div');
+      endSection.className = 'end-section';
+      // Задаем блочное позиционирование, очистку обтекания и увеличенный отступ сверху (600px)
+      endSection.style.display = 'block';
+      endSection.style.position = 'relative';
+      endSection.style.clear = 'both';
+      endSection.style.marginTop = '100px';
+      // Центрируем содержимое
+      endSection.style.textAlign = 'center';
+
+      endSection.innerHTML = `
+          <div class="sparkle-wrapper" style="cursor: pointer; display: inline-block;">
+              <img src="end.jpg" alt="Final Image" class="end-image" style="display: block; margin: 0 auto;">
+              <div class="swarovski-effect"></div>
+              <div class="swarovski-sparkles"></div>
+              <div class="magic-stars"></div>
+              <div class="end-caption">kisses here</div>
+          </div>
+      `;
+      // Добавляем endSection внутрь контейнера collage
+      document.getElementById('collage').appendChild(endSection);
+
+      // Обработчик клика для запуска презентации
+      const sparkleWrapper = endSection.querySelector('.sparkle-wrapper');
+      if (sparkleWrapper) {
+          sparkleWrapper.addEventListener('click', (e) => {
+              e.stopPropagation();
+              startKissesPresentation();
+          });
+      }
+  }
+    </script>
+  </body>
+</html>
