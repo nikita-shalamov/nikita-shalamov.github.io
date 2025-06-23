@@ -1,0 +1,9 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*?*
+Disallow: /*/download/*
+
+Sitemap: https://Tonify-Space-Jam.github.io/pitch-deck/sitemap.xml
